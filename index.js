@@ -406,37 +406,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
  
 
 	
-
-if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
-
-
-	if (message.content.startsWith(ft + "delrol")) {           //  +delrol @user     = Elimina un rol establecido en por ID
-				let rUser = message.guild.member(message.mentions.users.first());
-				let role = message.guild.roles.find("id", "458226959907028992");
-				rUser.removeRole(role).catch(console.error);
-				message.channel.send({
-					embed: {
-						color: 0xc500ff,
-						description: "ROL eliminado a " + rUser + " correctamente",
-					}
-				});
-				message.delete();
-		}
-
-	if (message.content.startsWith(ft + "addrol")) {           //  +addrol @user      = Añade un rol establecido en por ID
-	
-				let rUser = message.guild.member(message.mentions.users.first());
-				let role = message.guild.roles.find("id", "458226959907028992");
-				let guild = bot.guilds.get("458220475957379074");
-				rUser.addRole(role).catch(console.error);
-				message.channel.send({
-					embed: {
-						color: 0xc500ff,
-						description: "ROL añadido a " + rUser + " correctamente",
-					}
-				});
-				message.delete();
-		}
 		
 	if (message.content.startsWith(ft + "serverinfo")) {       //  +serverinfo  = Muestra la informaciónd del servidor
 			  let sicon = message.guild.iconURL;
@@ -536,12 +505,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  }
 		}
 		
-	
-	
-	
 
-
-	
 
 	if (message.content.startsWith(ft + "infonormas")) {       //  +infonormas   = Envía toda la información sobre las normas canal INFO
 			let embed = {
@@ -670,35 +634,10 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 
 	
  
-	if (message.content.startsWith(ft + "infoinvi")) {         //  +infoinvi   = Envía toda la información sobre invitaciones canal INFO
-			let embed = {
-			"embed": {
-						
-                        color:  0x00dcff,
-						footer: {
-									  "text": message.guild.name
-									},
-						title: 'INFORMACIÓN SOBRE LINK DE INVITACIÓN',
-						url: "http://gamedev.es/",
-                        description: '**Conoces gente que le pueda interesar nuestro clan o quieres que entren contigo aquí. Invítalos usando el siguiente link**',
-						fields: [
-							{
-							name: "Copia y pega el enlace a un amigo/a",
-							value: `:beginner: https://discord.gg/czN3fEm`,	
-							}
-						]
-                    }
-			};	
-  
-	 message.channel.send(embed);	 
-     message.delete();
-  
-			}
+	
    
 
     
-    } // FIN COMANDOS STAFF
-
 
 			
 
