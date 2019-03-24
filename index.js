@@ -262,7 +262,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  
 	  .addField("**+roles**", "Comandos para añadirte roles de juegos")
 	  .addField("**+presentacion**", "Comandos para presentarse en el servidor")
-	  .addField("**+infosalas**", "Información de todas las salas y sus usos."
+	  .addField("**+infosalas**", "Información de todas las salas y sus usos.");
 	  
 	  bot.channels.get("481525340083191809").send(serverembed);
 	  }	
