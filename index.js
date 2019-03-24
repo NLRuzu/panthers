@@ -420,9 +420,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			  }			  
 
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-		  if(message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")){
+		  if(message.member.roles.find("name", "Diseñador"))){
 		  var comunicado = message.content.replace("+comunicar ", "");  
-		  let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
+		  let adminRoleObject = message.guild.roles.find("name", "Diseñador");
 			var embebido = {
 					  "embed": {
 										"color":  0x00dcff,
@@ -443,7 +443,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			
 
 			message.delete().catch(O_o=>{});
-			bot.channels.get("478647696245129216").send(`[${adminRoleObject}]`, embebido);
+			bot.channels.get("559327558752010240").send(`[${adminRoleObject}]`, embebido);
 
 			}
 		}
