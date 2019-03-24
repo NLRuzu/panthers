@@ -1,0 +1,16 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "bot next level",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ruzu",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "fortnite": "^4.1.1",
+    "fortnite-api": "^2.12.2"
+  }
+}
