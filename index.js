@@ -33,7 +33,7 @@ bot.on("guildMemberAdd", async member => {
   let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
     let embed = { embed: {
                 color: 0x04ff00,
-                title: "Hola bienvenido a Next Level",
+                title: "Hola bienvenido a P A N T H E R S esports club",
                 description: '**A continuación, te mostramos una breve guía sobre como entrar a nuestro servidor.**',
                 fields: [
                     {
@@ -48,12 +48,12 @@ bot.on("guildMemberAdd", async member => {
             }
     };
   
-  welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a Next-Level**`, embed)
+  welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a P A N T H E R S**`, embed)
 
     member.send({
         embed: {
                 color: 0x04ff00,
-                title: "Hola bienvenido a Next Level",
+                title: "Hola bienvenido a P A N T H E R S",
                 description: '**A continuación, te mostramos una breve guía sobre como entrar a nuestro servidor.**',
                 fields: [
                     {
@@ -232,7 +232,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
             }
         }
 	
-	if (message.content.startsWith(ft + "rolapex")) {
+	if (message.content.startsWith(ft + "rollol")) {
         message.delete();
             if(message.member.roles.find("name", "✅Verificado")){
                 let User = message.member;
@@ -243,45 +243,14 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 message.channel.send({
                     embed: {
                         color: 0xffffff,
-                        description: "**ROL de Apex Legends asignado a **" + User + " **correctamente**",
+                        description: "**ROL de League of Legends asignado a **" + User + " **correctamente**",
                     }
                 });
             }
         }
  
-	if (message.content.startsWith(ft + "rolfortnite")) {
-        message.delete();
-            if(message.member.roles.find("name", "✅Verificado")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "🤖 Fortnite");
-                let guild = bot.guilds.get("458220475957379074");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                message.channel.send({
-                    embed: {
-                        color: 0xc500ff,
-                        description: "**ROL de FORTNITE asignado a **" + User + " **correctamente**",
-                    }
-                });
-            }
-        }
+	
 		
-	if (message.content.startsWith(ft + "rolsalvar")) {
-        message.delete();
-            if(message.member.roles.find("name", "✅Verificado")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "💥Salvar el Mundo");
-                let guild = bot.guilds.get("458220475957379074");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                message.channel.send({
-                    embed: {
-                        color: 0xc500ff,
-                        description: "**ROL de Salvar el Mundo asignado a **" + User + " **correctamente**",
-                    }
-                });
-            }
-        }
 		
 	if (message.content.startsWith(ft + "help")) {
 	  let sicon = message.guild.iconURL;
@@ -290,14 +259,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  .setColor("#FE2E2E")
 	  .setThumbnail(sicon)
 	  .addField("**+serverinfo**", "información del servidor")
-	  .addField("**+fortnite**", "Comandos para uso de Fortnite")
+	  
 	  .addField("**+roles**", "Comandos para añadirte roles de juegos")
 	  .addField("**+presentacion**", "Comandos para presentarse en el servidor")
-	  .addField("**+infosalas**", "Información de todas las salas y sus usos.")
-	  .addField("**+infoascensos**", "Información referente a cómo ascender")
-	  .addField("**+sugerencia**", "Comandos para publicar sugerencias solo en sala #sugerencias (+sugerencia desarrollo)");
+	  .addField("**+infosalas**", "Información de todas las salas y sus usos."
 	  
-
 	  bot.channels.get("481525340083191809").send(serverembed);
 	  }	
 	
@@ -317,64 +283,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		  bot.channels.get("481525340083191809").send(serverembed);
 		  }
 	
-    if (message.content.startsWith(ft + "infoascensos")) {       //  +infoascensos   = Envía toda la información sobre valores para ascender
-			let embed = {
-			"embed": {
-						
-                        color:  0x00dcff,
-						footer: {
-									  "text": message.guild.name
-									},
-						title: 'INFORMACIÓN DE COMO ASCENDER EN LA COMUNIDAD',
-						url: "http://gamedev.es/",
-                        description: '**A Continuación se detallarán una serie de pautas que se tienen en cuenta a la hora de ascender a alguien.**',
-						fields: [
-							{
-							name: "Primero",
-							value: `**La actividad**, es decir, la presencia en nuestros canales de voz.`,
-							},	
-							{
-							name: "Segundo",
-							value: `**La participación**, es decir, participar en eventos que se organicen, jugar partidas con gente de la comunidad, requerir gente para jugar, etc...`,
-							},
-							{
-							name: "Tercero",
-							value: `**La involucración**, es decir, que quieran aportar sugerencias, ideas, proyectos para mejorar la comunidad.`,
-							},
-							{
-							name: "Cuarto",
-							value: `**El Interés**, es decir, las ganas de participar en las cosas, las ganas de hablar con otros miembros por los diferentes canales, rellenar encuestas etc...`,
-							},
-							{
-							name: "Quinto",
-							value: `**La cantidad de Respetos**, es decir, suponemos que si una persona tiene 20 respetos por ejemplo significa que esa persona ha sido bien valorada por los miembros de la comunidad ya sea por actitudes o acciones que ha realizado la persona a lo largo de su paso por aquí.`,
-							},
-							{
-							name: "Importante",
-							value: `No olvidemos que los ascensos no son automáticos, son a propuesta del STAFF, y si no has ascendido es porque no te han propuesto, los ascensos no se regalan, hay que ganarlos. Ya depende de tí si quieres o no.`,
-							}
-							
-						]
-                    }
-			};	
-  
-	 message.channel.send(embed);	 
-     message.delete();
-  
-		}
+   
 	
-	if (message.content.startsWith(ft + "peliculas")) {
-		  let sicon = message.guild.iconURL;
-		  let serverembed = new Discord.RichEmbed()
-		  .setDescription("**COMANDOS DE PELÍCULAS**")
-		  .setColor("#FE2E2E")
-		  .setThumbnail(sicon)
-		  .addField("**+cartelera \"Nombre de la película\" \"Día\"**", "Publicamos en <#499629460916797441> la película ganadora de hoy")
-		  .addField("**+votarpelicula \"Nombre de la película\" \"Día\"**", "Publicamos en <#499632058881146880> la película que queramos proponer para votación");
-		 
-		  
-		  message.channel.send(serverembed);
-		  }			  
 	 
 	if (message.content.startsWith(ft + "solicitar")) {
   let rUser = message.guild.member;
@@ -479,55 +389,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			torneochannel.send(apuntarme);
 		}
 	
-	if (message.content.startsWith(ft + "votarpelicula")) {  //  +participantes "Nick1" "Nick2"     = Participantes del torneo
-			var args = [];
-			var texto = message.content;
-			try{
-				while(texto.includes("\"")){
-					texto = texto.substr(texto.indexOf("\"")+1);
-					args.push(texto.substring(0,texto.indexOf("\"")));
-					texto = texto.substr(texto.indexOf("\"")+1);
-				}
-			}
-			catch(err){
-				message.channel.send("+votarpelicula \"Nombre de la película\" \"Día\"");
-				return;
-			}
-
-			let NickParticipante1 = args[0];
-			let NickParticipante2 = args[1];
-			let disponible = args[2];
-			var apuntarme = {
-				"embed": {
-					color: 0x7608AA ,
-					title: "**NUEVA VOTACIÓN DE PELÍCULA**",
-					url: "http://gamedev.es/",				
-
-					fields: [{
-						name: "👤 La propone:",
-						value: `${message.author}`,
-						},
-						{
-						name: "🎬 Película",
-						value: NickParticipante1,
-						},
-						{
-						name: "📆 Día",
-						value: NickParticipante2,
-						}
-									 						
-					]
-				}
-			};
-
-
-			let torneochannel = bot.channels.get("499632058881146880");
-			if(!torneochannel) return message.channel.send("No se encuentra la sala");
-
-
-			message.delete().catch(O_o=>{});
-			torneochannel.send(apuntarme);
-		}
 	
 	if (message.content.startsWith(ft + "roles")) {
 		  let sicon = message.guild.iconURL;
@@ -536,94 +397,15 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		  .setColor("#FE2E2E")
 		  .setThumbnail(sicon)
 		  .addField("**+rolcsgo**", "Te añade el rol de CSGO y te dará acceso a la sala exclusiva de chat y búsqueda de partidas")
-		  .addField("**+rolapex**", "Te añade el rol de Apex Legends y te dará acceso a la sala exclusiva de chat y búsqueda de partidas")
-		  .addField("**+rolsalvar**", "Te añade el rol de Salvar el Mundo y te dará acceso a la sala exclusiva de chat y búsqueda de partidas")
-		  .addField("**+rolfortnite**", "Te añade el rol de Fortnite y te dará acceso a la sala exclusiva de chat y búsqueda de partidas");
-		   
-		   
+		  .addField("**+rollol**", "Te añade el rol de League of Legends y te dará acceso a la sala exclusiva de chat y búsqueda de partidas");
+		    
 		  return message.channel.send(serverembed);
 		  }
 			  
 } //FIN DE COMANDOS GENERALES
  
-if (message.channel.id == message.channel.id) { 				    // COMANDOS TORNEO
-
 
 	
-
-	
-	if (message.content.startsWith(ft + "hall")) {   //  +hall "Usuario" "Fecha" "Descripción"     = Comunicamos un nuevo usario al HALL DE LA FAMA
-			var args = [];
-			var texto = message.content;
-			try{
-				while(texto.includes("\"")){
-					texto = texto.substr(texto.indexOf("\"")+1);
-					args.push(texto.substring(0,texto.indexOf("\"")));
-					texto = texto.substr(texto.indexOf("\"")+1);
-				}
-			}
-			catch(err){
-				message.channel.send("+hall \"Usuario\" \"Fecha\" \"Descripción\"");
-				return;
-			}
-
-			let NickParticipante1 = args[0];
-			let Fecha = args[1];
-			let ntorneo = args[2];
-			var torneo = {
-				"embed": {
-					color: 0x7608AA ,
-					title: "**🏆 NUEVA ALFOMBRA ROJA 🏆**",
-					url: "http://gamedev.es/",				
-
-					fields: [{
-						name: "🥇 Usuario:",
-						value: NickParticipante1,
-						},
-						{
-							name: "📆 Fecha:",
-							value: Fecha,
-						},
-						{
-							name: "🏆 Descripción:",
-							value: ntorneo,
-						}
-						 						
-					]
-				}
-			};
-
-
-			let torneochannel = bot.channels.get("494103861246558209");
-			if(!torneochannel) return message.channel.send("No se encuentra la sala");
-
-
-			message.delete().catch(O_o=>{});
-			torneochannel.send(torneo);
-		}
-
-	
-
-	if (message.content.startsWith(ft + "apuntarme")) {  //  +apuntarme    = Nos apuntamos al torneo
-  let rUser = message.guild.member;
-  if(!rUser) return message.channel.send("formato incorrecto +APUNTARME");
-
-  let reportEmbed = new Discord.RichEmbed()
-  .setTitle("NUEVA INSCRIPCIÓN")
-  .setColor("#52a255")
-  .addField("Participante:", `${message.author}`)
-
-
-
-			let torneochannel = bot.channels.get("494101904150888468");
-			if(!torneochannel) return message.channel.send("No se encuentra la sala");
-
-
-			message.delete().catch(O_o=>{});
-			torneochannel.send(reportEmbed);
-		}
-
-    } // FIN COMANDOS TORNEO
 
 if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 
@@ -697,33 +479,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			}
 		}
 
-	if (message.content.startsWith(ft + "donacion")) {         //  +donación mensaje   = Enviamos un mensaje de nueva donación en una sala concreta
-		  if(message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")){
-		   let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
-		  var comunicado = message.content.replace("+donacion ", "");  
-
-			var embebido = {
-					  "embed": {
-										color: 0xff0000,
-										author: {
-											name: message.author.tag,
-											icon_url: message.author.avatarURL
-										},
-										title: "**💰 NUEVA DONACIÓN RECIBIDA 💰**",
-				url: "http://gamedev.es/",				
-						
-				description: comunicado,
-				timestamp: message.createdAt,								
-									}
-				  };
-			
-			
-
-			message.delete().catch(O_o=>{});
-			bot.channels.get("496962307985899521").send(`[${adminRoleObject}]`, embebido);
-
-			}
-		}
 	
 	if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
             message.delete();
@@ -740,7 +495,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
                         color: 0x04ff00,
                         title: "**HAS SIDO VERIFICADO**",
 			                  url: "http://gamedev.es/",
-                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte         tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
+                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte tu rol para recibir las notificaciones las respectivas sala #comandos escribe +roles y usa el que quieras.**",
                     }
                 });
 				
@@ -782,80 +537,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		}
 		
 	
-	if (message.content.startsWith(ft + "infosalas")) {           //  +infosalas   = Muestra la información de uso de salas
-		
-			  let sicon = message.guild.iconURL;
-			  let serverembed = new Discord.RichEmbed()
-			  .setTitle ("INFORMACIÓN DE USO DE SALAS")
-			  
-			  .setColor("#00dcff")
-			  .setThumbnail(sicon)
-			  .addField("Todo lo relacionado con información de la comunidad, normas,roles, beneficios etc..", "Usar la sala <#485759738164936719>")
-			  .addField("Puedes darte a conocer en la comunidad presentándote", "Usar la sala <#486981605831999489>")
-			  .addField("Para todo lo relacionado con chat general", "Usar la sala <#458221661867606016>")
-			  .addField("Para buscar exclusivamente partida de Fortnite BR, SOLO BUSCAR PARTIDAS", "Usar la sala <#468716667506130944>")
-			  .addField("Para buscar exclusivamente partida de Ring Of Elysium BR, SOLO BUSCAR PARTIDAS", "Usar la sala <#515621718136717325>")
-			  .addField("Para hablar todo lo relacionado con Salvar el Mundo y buscar partidas del mismo SOLO EXCLUSIVAMENTE Salvar el Mundo", "Usar la sala <#508223204939005965>")
-			  .addField("Para consultas de dudas, preguntas, problemas", "Usar la sala <#501107883774181415>")
-			  .addField("Nota Importante:", "Para poder ver salas de juegos deberás asignarte manualmente el rol del juego en cuestión para más información usa el comando `+roles` en la sala <#481525340083191809>");
-			  
-			  message.delete().catch(O_o=>{});
-			  return message.channel.send(serverembed);
-			  }
-			
+	
+	
 
-	if (message.content.startsWith(ft + "puntos")) {           //  +puntos   = Muestra la lista de puntuaciones del torneo
-			if(message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")){
-			  let sicon = message.guild.iconURL;
-			  let serverembed = new Discord.RichEmbed()
-			  .setDescription("**TABLA DE PUNTACIONES**")
-			  .setColor("#00dcff")
-			  .setThumbnail(sicon)
-			  .addField("0.50 puntos", "Cada kill")
-			  .addField("0.10 puntos", "Puesto 60-55 (ámbos inclusive)")
-			  .addField("0.20 puntos", "Puesto 54-45(ámbos inclusive)")
-			  .addField("0.30 puntos", "Puesto 44-35(ámbos inclusive)")
-			  .addField("0.40 puntos", "Puesto 34-25(ámbos inclusive)")
-			  .addField("0.50 puntos", "Puesto 24-15(ámbos inclusive)")
-			  .addField("0.60 puntos", "Puesto 14-10(ámbos inclusive)")
-			  .addField("0.70 puntos", "Puesto 9-6(ámbos inclusive)")
-			  .addField("0.80 puntos", "Puesto 5-2(ámbos inclusive)")
-			  .addField("3 puntos", "Victoria");
-
-			  message.delete().catch(O_o=>{});
-			  return message.channel.send(serverembed);
-			  }
-			}
-
-	if (message.content.startsWith(ft + "normastorneo")) {     //  +normastorneo   = Muestra la lista de normas del torneo
-			if(message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")){
-			  let sicon = message.guild.iconURL;
-			  let embed1 = new Discord.RichEmbed()
-				  .setDescription("**NORMAS DEL TORNEO**")
-				  .setColor("#00dcff")
-				  .setThumbnail(sicon)
-				  .addField("Norma 1:", "Se celebrará por medio de 3 PARTIDAS DE DÚOS.")
-				  .addField("Norma 2:", "Las partidas serán continuas no se permiten pausas.")
-				  .addField("Norma 3:", "Las parejas serán Seleccionados de forma aleatoria.")
-				  .addField("Norma 4:", "Al finalizar, las 3 partidas cada miembro de la pareja deberá de pasar una captura de la sección grabaciones de fortnite en la sala de #📌stats")
-				  .addField("Norma 5:", "Cada DÚO deberá anotar la totalidad de puntos mediante la tabla de puntuaciones.")
-				  .addField("Norma 6:", "Deberán usar el comando `+finalizar \"Nick Participante 1\" \"Nick Partipante 2\" \"Total de Puntos\" \"Nº de Torneo\"` en la sala de #📓finalizar ");
-				 
-				let embed2 = new Discord.RichEmbed()
-				  .setDescription("**NOTAS IMPORTANTES**")
-				  .setColor("#00dcff")
-				  .setThumbnail(sicon)
-				  .addField("Nota 1:", "Cabe destacar que la contabilidad tanto de puntos como de partidas jugadas serán controladas con rigurosa atención.")
-				  .addField("Nota 2:", "En caso de encontrar alguna anomalía o irregularidad en alguna de las participaciones, dicho equipo será expulsado del torneo y sancionado en el clan.")
-				  .addField("Nota 3:", "Las normas no obstante se explicarán el día del torneo en una sala a todos los participantes para que no quede ninguna duda")
-				  .addField("Norma 4:", "Los premios están aun barajándose ya que es nuestro primer torneo organizado");
-
-				 bot.channels.get("494267127113711618").send(embed1);
-				 bot.channels.get("494267127113711618").send(embed2);	 
-			  message.delete().catch(O_o=>{});
-			  
-			  }
-			}
 
 	
 
@@ -902,15 +586,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 							{
 							name: ":eight:",
 							value: `╚> Es obligatorio mandar solicitud de verificación si entras por primera vez.`,
-							},
-							{
-							name: ":nine:",
-							value: `╚> Obligatorio participar, es decir, si vas a jugar pide gente del clan antes que gente externa, da señales de vida, en caso de no hacerlo se te darán toques de advertencia.`,
-							},
-							{
-							name: ":keycap_ten:",
-							value: `╚> Se dará prioridad **ABSOLUTA** a miembros del clan para guardar huecos en partida que a gente externa al clan.`,
 							}
+							
+							
 							
 						]
                     }
@@ -964,31 +642,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 							message.delete();
 							};	
 	
-	if (message.content.startsWith(ft + "infotoques")) {       //  +infotoques   = Envía toda la información sobre toques canal INFO
-			let embed = {
-			"embed": {
-						
-                        color:  0x00dcff,
-						footer: {
-									  "text": message.guild.name
-									},
-						title: 'INFORMACIÓN SOBRE TOQUES',
-						url: "http://gamedev.es/",
-                        description: '**A Continuación se explicará el sistema de toques.**',
-						fields: [
-							{
-							name: "Guía de toques:",
-							value: `:one: Se dará una advertencia, de que si sigue con esa actitud será expulsado. \n:two: Se procederá a una expulsión temporal de 1 día. \n:three: Se procederá a la expulsión.`,	
-							}
-						]
-                    }
-			};	
-  
-	 message.channel.send(embed);	 
-     message.delete();
-  
-			}
-
+	
 	if (message.content.startsWith(ft + "infoimportante")) {   //  +infoimportante   = Envía toda la información IMPORTANTE canal IMPORTANTE
 			let embed = {
 			"embed": {
@@ -1045,191 +699,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     
     } // FIN COMANDOS STAFF
 
-if (message.content.startsWith(ft + "buscarpartidas")) {         //  +buscarpartidas   = Envía toda la información sobre invitaciones canal INFO
-			let embed = {
-			"embed": {
-						
-                        color:  0x00dcff,
-						footer: {
-									  "text": message.guild.name
-									},
-						title: 'COMANDO PARA BUSCAR PARTIDAS',
-						url: "http://gamedev.es/",
-                        description: '**DEBERÁS ESTAR EN UNA SALA DE VOZ EN PRIMER LUGAR.**',
-						fields: [
-							{
-							name: "`+buscarfortnite descripción`",
-							value: `Para Fortnite BR, escribir el comando en la sala <#468716667506130944>`,		
-							},
-							{
-							name: "+buscarroe descripción",
-							value: `Para Ring Of Elysium BR, escribir el comando en la sala <#515621718136717325>`,	
-							}
-						]
-                    }
-			};	
-  
-	 message.channel.send(embed);	 
-     message.delete();
-  
-			}	
-	
-	
-	
-// +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
-if(message.content.startsWith("+buscarfortnite")) {
-                if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
-                    let desc = message.content.split("+buscarfortnite ")[1];
-                    if(desc != null){
-                        let options = {
-                            maxAge: 3600
-                        }
-                        let server = bot.guilds.get("458220475957379074");
-                        let adminRoleObject = server.roles.find("name", "🤖 Fortnite");
-                        message.member.voiceChannel.createInvite(options)
-                        .then(invite => {
-                            let invitacion = invite.code.split("invite/")[0];
-                            let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
 
-								var mdb = {
-							  "embed": {
-								"title": "BUSCANDO PARTIDA DE FORTNITE",
-								"url": "http://gamedev.es/",
-								"description": "Busco **" + users + "** personas para darle calor en **" + message.member.voiceChannel.name + "**",
-								"color": 0xc500ff,
-								"timestamp": message.createdAt,
-								"author": {
-								"name": message.author.tag,
-								"icon_url": message.author.avatarURL
-								},
-								"fields": [
-								  {
-									"name": "Descripción",
-									"value": "*" + desc + "*",
-								  },
-								  {
-									"name": "Únete a mi sala",
-									"value": "[Haz click para unirte](https://discord.gg/"+ invitacion +")"
-								  }
-								]
-							  }
-							}
-
-
-
-	message.delete().catch(O_o=>{});
-	bot.channels.get("468716667506130944").send(`[${adminRoleObject}]`, mdb);
-        
-						
-                           
-                        })
-                        .catch(console.error);
-                    }
-                }
-            }
-	
-	if(message.content.startsWith("+buscarapex")) {
-                if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
-                    let desc = message.content.split("+buscarapex ")[1];
-                    if(desc != null){
-                        let options = {
-                            maxAge: 3600
-                        }
-                        let server = bot.guilds.get("458220475957379074");
-                        let adminRoleObject = server.roles.find("name", "🅰️ Apex Legends");
-                        message.member.voiceChannel.createInvite(options)
-                        .then(invite => {
-                            let invitacion = invite.code.split("invite/")[0];
-                            let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
-
-								var mdb = {
-							  "embed": {
-								"title": "BUSCANDO PARTIDA DE APEX LEGENDS",
-								"url": "http://gamedev.es/",
-								"description": "Busco **" + users + "** personas para darle calor en **" + message.member.voiceChannel.name + "**",
-								"color": 0xc500ff,
-								"timestamp": message.createdAt,
-								"author": {
-								"name": message.author.tag,
-								"icon_url": message.author.avatarURL
-								},
-								"fields": [
-								  {
-									"name": "Descripción",
-									"value": "*" + desc + "*",
-								  },
-								  {
-									"name": "Únete a mi sala",
-									"value": "[Haz click para unirte](https://discord.gg/"+ invitacion +")"
-								  }
-								]
-							  }
-							}
-
-
-
-	message.delete().catch(O_o=>{});
-	bot.channels.get("542742272337379359").send(`[${adminRoleObject}]`, mdb);
-        
-						
-                           
-                        })
-                        .catch(console.error);
-                    }
-                }
-            }   
-   
-// +BUSCAR DESCRIPCION // PARTIDAS //    - FUNCIONANDO
-if(message.content.startsWith("+buscarcsgo")) {
-                if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
-                    let desc = message.content.split("+buscarcsgo ")[1];
-                    if(desc != null){
-                        let options = {
-                            maxAge: 3600
-                        }
-                        let server = bot.guilds.get("458220475957379074");
-                        let adminRoleObject = server.roles.find("name", "🏴 CSGO");
-                        message.member.voiceChannel.createInvite(options)
-                        .then(invite => {
-                            let invitacion = invite.code.split("invite/")[0];
-                            let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
-
-								var mdb = {
-							  "embed": {
-								"title": "BUSCANDO PARTIDA DE CSGO",
-								"url": "http://gamedev.es/",
-								"description": "Busco **" + users + "** personas para darle calor en **" + message.member.voiceChannel.name + "**",
-								"color": 0xc500ff,
-								"timestamp": message.createdAt,
-								"author": {
-								"name": message.author.tag,
-								"icon_url": message.author.avatarURL
-								},
-								"fields": [
-								  {
-									"name": "Descripción",
-									"value": "*" + desc + "*",
-								  },
-								  {
-									"name": "Únete a mi sala",
-									"value": "[Haz click para unirte](https://discord.gg/"+ invitacion +")"
-								  }
-								]
-							  }
-							}
-
-
-
-	message.delete().catch(O_o=>{});
-	bot.channels.get("537602601835823105").send(`[${adminRoleObject}]`, mdb);
-        
-						
-                           
-                        })
-                        .catch(console.error);
-                    }
-                }
-            } 
 			
 
 			
