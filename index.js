@@ -33,45 +33,26 @@ bot.on("guildMemberAdd", async member => {
   let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
     let embed = { embed: {
                 color: 0x04ff00,
-                title: "Hola bienvenido a P A N T H E R S esports club",
-                description: '**A continuación, te mostramos una breve guía sobre como entrar a nuestro servidor.**',
-                fields: [
-                    {
-                    name: "Advertencia:",
-                    value: `:warning: Si no ves contenido ninguno en el servidor, es normal, forma parte de un sistema de verificación, para así proteger nuestra intimidad.`,
-                    },
-                    {
-                    name: "Guía de verificación:",
-                    value: `:one: Tienes que verificar tu cuenta para tener acceso completo al servidor, ingresando en la sala <#471977292214566912> y escribiendo **+solicitar**  \n:two: Una vez verificado, serás notificado de ello mediante MP y podrás tener acceso.  \n:three: Ahora solo tendrás que ir a <#481525340083191809> y escribir **+roles** y asignarte el del juego que quieras para ver las salas`,
-                    }	
-                ]
+                title: "Hola bienvenido a la tripulación de La Venganza de Atenea marinero.",
+                description: '**Para mejorar tu experiencia aquí puedes usar el comando +roles en la sala <#561300365304397835> y así asignarte tu expecialización dentro de la tripulación. ¡Ojo! solo podrás elegir 2 especializaciones una primaria y una secundaria.**', 
             }
     };
   
-  welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a P A N T H E R S**`, embed)
+  welcomechannel.send(`**Bienvenido: Nuevo marinero ${member} a la tripulación**`, embed)
 
     member.send({
         embed: {
                 color: 0x04ff00,
-                title: "Hola bienvenido a P A N T H E R S",
-                description: '**A continuación, te mostramos una breve guía sobre como entrar a nuestro servidor.**',
-                fields: [
-                    {
-                    name: "Advertencia:",
-                    value: `:warning: Si no ves contenido ninguno en el servidor, es normal, forma parte de un sistema de verificación, para así proteger nuestra intimidad.`,
-                    },
-                    {
-                    name: "Guía de verificación:",
-                    value: `:one: Tienes que verificar tu cuenta para tener acceso completo al servidor, ingresando en la sala <#471977292214566912> y escribiendo **+solicitar**  \n:two: Una vez verificado, serás notificado de ello mediante MP y podrás tener acceso.  \n:three: Ahora solo tendrás que ir a <#481525340083191809> y escribir **+roles** y asignarte el del juego que quieras para ver las salas`,
-                    }	
-                ]
+                title: "Hola bienvenido a la tripulación de La Venganza de Atenea marinero.",
+                description: '**Para mejorar tu experiencia aquí puedes usar el comando +roles en la sala <#561300365304397835> y así asignarte tu expecialización dentro de la tripulación. ¡Ojo! solo podrás elegir 2 especializaciones una primaria y una secundaria.**', 
+                
             }
         });
  });
 
 // MENSAJE DE ABANDONO DE USUARIOS
 bot.on("guildMemberRemove", async member => {
-  console.log(`${member.nickname} ha abandonado el server `);
+  console.log(`${member.nickname} ha abandonado la tripulación `);
  
   let welcomechannel = member.guild.channels.find(`name`, "📉-abandonos");
   welcomechannel.send({
@@ -79,14 +60,14 @@ bot.on("guildMemberRemove", async member => {
                         color: 0xe52121,
                         title: "**HA ABANDONADO**",
 		       	url: "http://gamedev.es/",
-                        description: `${member} ha abandonado el clan`,
+                        description: `${member} ha abandonado la tripulación`,
                     }
                 });
 });
 
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "❎ No verificado");
+    let role = member.guild.roles.find("name", "Grumete");
     member.addRole(role).catch(console.error);
 });
 
@@ -147,86 +128,20 @@ if (message.channel.id == "475267748868390912" && message.author.bot) {
 
 if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 
-	if (message.content.startsWith(ft + "presentarse")) {
-			var args = [];
-			var texto = message.content;
-			try{
-				while(texto.includes("\"")){
-					texto = texto.substr(texto.indexOf("\"")+1);
-					args.push(texto.substring(0,texto.indexOf("\"")));
-					texto = texto.substr(texto.indexOf("\"")+1);
-				}
-			}
-			catch(err){
-				message.channel.send("+presentarse \"Nombre\" \"Nick de EpicGames\" \"Edad\" \"Ciudad\" \"Plataforma\" \"¿Cómo nos conociste\"");
-				return;
-			}
-
-			let nombre = args[0];
-			let nick = args[1];
-			let edad = args[2];
-			let ciudad = args[3];
-			let plataforma = args[4];
-			let conocernos = args[5];
-			var presentarse = {
-				"embed": {
-					color: 0x00d8ff ,
-					author: {
-						name: message.author.tag,
-						icon_url: message.author.avatarURL
-					},
-					title: "**NUEVA PRESENTACIÓN DE USUARIO**",
-					url: "http://gamedev.es/",				
-
-					fields: [{
-						name: "Nombre o Apodo:",
-						value: nombre,
-						},
-						{
-							name: "Nick de EpicGames:",
-							value: nick,
-						},
-						{
-							name: "Edad:",
-							value: edad,
-						},
-						{
-							name: "Ciudad:",
-							value: ciudad,
-						}, 
-						{
-							name: "Plataforma:",
-							value: plataforma,
-						}, 
-						{
-							name: "¿Cómo nos conociste?:",
-							value: conocernos,
-						} 						
-					]
-				}
-			};
-
-
-			let presentarsechannel = bot.channels.get("486981605831999489");
-			if(!presentarsechannel) return message.channel.send("No se encuentra la sala");
-
-
-			message.delete().catch(O_o=>{});
-			presentarsechannel.send(presentarse);
-		}
+	
 		 
-	if (message.content.startsWith(ft + "rolcsgo")) {
+	if (message.content.startsWith(ft + "rolprimerocarpintero")) {
         message.delete();
-            if(message.member.roles.find("name", "✅Verificado")){
+            if(message.member.roles.find("name", "Grumete")){
                 let User = message.member;
-                let role = message.guild.roles.find("name", "🏴 CSGO");
+                let role = message.guild.roles.find("name", "Primario: Carpintero");
                 let guild = bot.guilds.get("458220475957379074");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
                 message.channel.send({
                     embed: {
                         color: 0xffffff,
-                        description: "**ROL de CSGO asignado a **" + User + " **correctamente**",
+                        description: "**ROL Primario: Carpintero asignado a **" + User + " **correctamente** ahora toca reparar todos los agujeros del barco marinero",
                     }
                 });
             }
