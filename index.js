@@ -193,18 +193,18 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let User = message.member;
                 let role = message.guild.roles.find("name", "Primario: Timonel");
                 let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
-                 bot.channels.get("561300365304397835").send({
+                bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
 						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
 						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Primaria como Timonel asignado a **" + User + " **correctamente** ahora tu misión llevar por el buen rumbo el navío",
+                        description: "**Tu expecialización Primaria como Timonel asignado a **" + User + " **correctamente**",
                     }
                 });
             }
         }
+	
 	if (message.content.startsWith(ft + "rolsecundariocarpintero")) {
         message.delete();
             if(message.member.roles.find("name", "Grumete")){
@@ -262,25 +262,26 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
             }
         }
 	
-	if (message.content.startsWith(ft + "rolsecundariotimonel")) {
+	
+	if (message.content.startsWith(ft + "rolprimariotimonel")) {
         message.delete();
             if(message.member.roles.find("name", "Grumete")){
                 let User = message.member;
-                let role = message.guild.roles.find("name", "Secundario: Timonel");
+                let role = message.guild.roles.find("name", "Primario: Timonel");
                 let guild = bot.guilds.get("561212531058933771");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
                  bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
-						title: "**ESTABLECIDA ESPECIALIZACIÓN SECUNDARIA**",
+						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
 						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Secundaria como Timonel asignado a **" + User + " **correctamente** ahora tu misión llevar por el buen rumbo el navío",
+                        description: "**Tu expecialización Primaria como Timonel asignado a **" + User + " **correctamente** ahora tu misión llevar por el buen rumbo el navío",
                     }
                 });
             }
-        }
-	
+        }.
+0	
 	
  
 	
@@ -573,6 +574,57 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 							message.delete();
 							};	
 	
+	
+	if(message.content.startsWith("+busco")) {
+                if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
+                    let desc = message.content.split("+busco ")[1];
+                    if(desc != null){
+                        let options = {
+                            maxAge: 3600
+                        }
+                        let server = bot.guilds.get("561212531058933771");
+                        let adminRoleObject = server.roles.find("name", "Grumete");
+                        message.member.voiceChannel.createInvite(options)
+                        .then(invite => {
+                            let invitacion = invite.code.split("invite/")[0];
+                            let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
+
+								var mdb = {
+							  "embed": {
+								"title": "BUSCANDO TRIPULACIÓN",
+								"url": "http://gamedev.es/",
+								"description": "Busco **" + users + "** marineros para navegar en **" + message.member.voiceChannel.name + "**",
+								"color": 0xc500ff,
+								"timestamp": message.createdAt,
+								"author": {
+								"name": message.author.tag,
+								"icon_url": message.author.avatarURL
+								},
+								"fields": [
+								  {
+									"name": "Descripción",
+									"value": "*" + desc + "*",
+								  },
+								  {
+									"name": "Únete a mi sala",
+									"value": "[Haz click para unirte](https://discord.gg/"+ invitacion +")"
+								  }
+								]
+							  }
+							}
+
+
+
+	message.delete().catch(O_o=>{});
+	bot.channels.get("561532607108743229").send(`[${adminRoleObject}]`, mdb);
+        
+						
+                           
+                        })
+                        .catch(console.error);
+                    }
+                }
+            }
 	
 	if (message.content.startsWith(ft + "infoimportante")) {   //  +infoimportante   = Envía toda la información IMPORTANTE canal IMPORTANTE
 			let embed = {
