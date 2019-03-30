@@ -319,6 +319,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				message.channel.send("+quedada \"Descripción\" \"Día y Hora\"");
 				return;
 			}
+			let server = bot.guilds.get("561212531058933771");
 			let adminRoleObject = server.roles.find("name", "Grumete");
 			let NickParticipante1 = args[0];
 			let NickParticipante2 = args[1];
