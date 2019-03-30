@@ -275,7 +275,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  .setThumbnail(sicon)
 	  .addField("**+musica**", "Comandos de uso del bot musical")
 	  .addField("**+roles**", "Comandos para asignarte tus especializaciones en la tripulación")
-	  .addField("**+quedada \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de partida organizada. escribir en <#561300365304397835>");
+	  .addField("**+quedada \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de partida organizada. escribir en <#561300365304397835>")
 	  .addField("**+busco descripción**", "Mensaje de búsqueda de marineros para navegar. Importante estar en una sala del Puerto y escribir en <#561300365304397835>");
 	  bot.channels.get("561300365304397835").send(serverembed);
 	  }	
