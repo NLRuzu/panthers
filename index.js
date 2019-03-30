@@ -89,28 +89,14 @@ if (message.author.id == "298029791708315649") { 	// CREATOR COMMANDS
 	} // END CREATOR COMMANDS
 	
 // REACCION EMOJI SALA PROPUESTAS //
-if (message.channel.id == "472138215042842626" && message.author.bot) {
-    message.react("472146792339734565");
-    message.react("472147160423727105");
-	}
-  
-// REACCION EMOJI SALA VOTACION DE SANCIÓN //
-if (message.channel.id == "480414475904745507" && message.author.bot) {
-    message.react("472146792339734565");
-    message.react("472147160423727105");
-	}
+
 
 	// REACCION EMOJI SALA CARTELERA //
 if (message.channel.id == "561538721653063690" && message.author.bot) {
-    message.react("472146792339734565");
-    message.react("472147160423727105");
+    message.react("561539430985236500");
+    message.react("561539448836456448");
 	}
 	
-	// REACCION EMOJI SALA VOTACION //
-if (message.channel.id == "499632058881146880" && message.author.bot) {
-    message.react("472146792339734565");
-    message.react("472147160423727105");
-	}
 	
  // REACCION EMOJI SALA SUGERENCIAS //
 if (message.channel.id == "475267748868390912" && message.author.bot) {
