@@ -350,7 +350,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 
 
 			message.delete().catch(O_o=>{});
-			torneochannel.send(apuntarme);
+			
 		}
 	
 	
