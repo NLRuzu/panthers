@@ -319,7 +319,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				message.channel.send("+quedada \"Descripción\" \"Día y Hora\"");
 				return;
 			}
-
+			let adminRoleObject = server.roles.find("name", "Grumete");
 			let NickParticipante1 = args[0];
 			let NickParticipante2 = args[1];
 			let disponible = args[2];
@@ -344,7 +344,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			};
 
 
-			let torneochannel = bot.channels.get("561538721653063690");
+			let torneochannel = bot.channels.get("561538721653063690").send(`[${adminRoleObject}]`, apuntarme);
 			if(!torneochannel) return message.channel.send("No se encuentra la sala");
 
 
