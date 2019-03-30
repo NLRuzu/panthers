@@ -101,7 +101,7 @@ if (message.channel.id == "480414475904745507" && message.author.bot) {
 	}
 
 	// REACCION EMOJI SALA CARTELERA //
-if (message.channel.id == "499629460916797441" && message.author.bot) {
+if (message.channel.id == "561538721653063690" && message.author.bot) {
     message.react("472146792339734565");
     message.react("472147160423727105");
 	}
@@ -338,7 +338,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
               message.delete().catch(O_o=>{});
       }	
 			
-	if (message.content.startsWith(ft + "cartelera")) {  //  +participantes "Nick1" "Nick2"     = Participantes del torneo
+	if (message.content.startsWith(ft + "quedada")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
 			var args = [];
 			var texto = message.content;
 			try{
@@ -349,7 +349,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				}
 			}
 			catch(err){
-				message.channel.send("+cartelera \"Nombre de la película\" \"Día\"");
+				message.channel.send("+quedada \"Descripción\" \"Día y Hora\"");
 				return;
 			}
 
@@ -359,16 +359,16 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			var apuntarme = {
 				"embed": {
 					color: 0x7608AA ,
-					title: "**NUEVA PELÍCULA ELEGIDA**",
+					title: "**NUEVA QUEDADA PROPUESTA**",
 					url: "http://gamedev.es/",				
 
 					fields: [
 						{
-						name: "🎬 Película",
+						name: "📜 Descripción",
 						value: NickParticipante1,
 						},
 						{
-						name: "📆 Día",
+						name: "📆 Día y Hora",
 						value: NickParticipante2,
 						}
 									 						
@@ -377,7 +377,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			};
 
 
-			let torneochannel = bot.channels.get("499629460916797441");
+			let torneochannel = bot.channels.get("561538721653063690");
 			if(!torneochannel) return message.channel.send("No se encuentra la sala");
 
 
