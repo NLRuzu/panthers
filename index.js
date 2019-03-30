@@ -128,7 +128,22 @@ if (message.channel.id == "475267748868390912" && message.author.bot) {
 
 if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 
-	
+	if (message.content.startsWith(ft + "rolcsgo")) {
+        message.delete();
+            if(message.member.roles.find("name", "✅Verificado")){
+                let User = message.member;
+                let role = message.guild.roles.find("name", "🏴 CSGO");
+                let guild = bot.guilds.get("559319996162113537");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                message.channel.send({
+                    embed: {
+                        color: 0xffffff,
+                        description: "**ROL de CSGO asignado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+        }
 		 
 	if (message.content.startsWith(ft + "rolprimariocarpintero")) {
         message.delete();
