@@ -192,7 +192,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 message.channel.send({
                     embed: {
                         color: 0xffffff,
-                        description: "**Tu expecialización Primario: Timonel asignado a **" + User + " **correctamente** ahora tu misión llevar por el buen rumbo el navío",
+                        description: "**Tu expecialización Primario: Timonel asignado a **" + User + " **correctamente**",
                     }
                 });
             }
