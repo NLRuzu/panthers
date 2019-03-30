@@ -173,7 +173,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 message.channel.send({
                     embed: {
                         color: 0xffffff,
-                        description: "**Tu expecialización Primario: Asaltante asignado a **" + User + " **correctamente** ahora tu misión será asaltar navíos enemigos e intentar aniquilarlos",
+                        description: "**Tu expecialización Primaria como Asaltante asignado a **" + User + " **correctamente** ahora tu misión será asaltar navíos enemigos e intentar aniquilarlos",
                     }
                 });
             }
@@ -190,7 +190,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 message.channel.send({
                     embed: {
                         color: 0xffffff,
-                        description: "**Tu expecialización Primario: Artillero asignado a **" + User + " **correctamente** ahora tu misión será hundir navíos usando los cañones del barco",
+                        description: "**Tu expecialización Primaria como Artillero asignado a **" + User + " **correctamente** ahora tu misión será hundir navíos usando los cañones del barco",
                     }
                 });
             }
