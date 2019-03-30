@@ -280,7 +280,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                     }
                 });
             }
-        }.
+        }
 0	
 	
  
