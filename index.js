@@ -99,16 +99,10 @@ if (message.channel.id == "561538721653063690" && message.author.bot) {
 	
 	
  // REACCION EMOJI SALA SUGERENCIAS //
-if (message.channel.id == "475267748868390912" && message.author.bot) {
-                    message.react("472146792339734565");
-                    message.react("472147160423727105");
-                }	let ed1 = {
-                    embed: {
-                        color: 0x04ff00,
-                        title: "**:warning: LO SENTIMOS**",
-                        description: "Tu rol actual no dispone de suficientes privilegios, debes de participar e interactuar más con el clan para ascender a un rol superior. \n\n Para mas información ir al canal: <#485759738164936719> y sección **BENEFICIOS**",
-                    }
-                };
+if (message.channel.id == "561540728422137866" && message.author.bot) {
+                    message.react("561539430985236500");
+                    message.react("561539448836456448");
+                }	
 
 
 
@@ -281,25 +275,12 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  .setThumbnail(sicon)
 	  .addField("**+musica**", "Comandos de uso del bot musical")
 	  .addField("**+roles**", "Comandos para asignarte tus especializaciones en la tripulación")
-	  .addField("**+infoespecializaciones**", "Información de todas las especializaciones");
-	  bot.channels.get("481525340083191809").send(serverembed);
+	  .addField("**+quedada "descripción" "hora y dia" **", "Mensaje de búsqueda de partida organizada. escribir en <#561300365304397835>");
+	  .addField("**+busco descripción**", "Mensaje de búsqueda de marineros para navegar. Importante estar en una sala del Puerto y escribir en <#561300365304397835>");
+	  bot.channels.get("561300365304397835").send(serverembed);
 	  }	
 	
-	if (message.content.startsWith(ft + "musica")) {
-		  let sicon = message.guild.iconURL;
-		  let serverembed = new Discord.RichEmbed()
-		  .setDescription("**MÚSICA**")
-		  .setColor("#FE2E2E")
-		  .setThumbnail(sicon)
-		  .addField("**!play link o nombre**", "Comando para buscar canción.")
-		  .addField("**!stop**", "Comando para parar la música")
-		  .addField("**!skip**", "Pasar canción")
-		  .addField("**!loop**", "Hacer bucle")
-		  .addField("**!pause**", "Pausar música")
-		  .addField("**!resume**", "volver poner música después de pausa");
-		  
-		  bot.channels.get("481525340083191809").send(serverembed);
-		  }
+
 	
 	
 		
@@ -320,7 +301,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                           }
                   };
 			 
-			  bot.channels.get("475267748868390912").send(embebido);
+			  bot.channels.get("561540728422137866").send(embebido);
               message.delete().catch(O_o=>{});
       }	
 			
@@ -441,26 +422,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 
 	
 
-	if (message.content.startsWith(ft + "staff")) {            //  +staff   = Información de todos los comandos de STAFF
-		if(message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")){
-		  let sicon = message.guild.iconURL;
-		  let serverembed = new Discord.RichEmbed()
-		  .setDescription("**COMANDOS STAFF**")
-		  .setColor("#00dcff")
-		  .setThumbnail(sicon)
-		  .addField("**+report**", "Abrimos la lista de comandos para los toques")
-		  .addField("**+verificar @User**", "Asigna rol Verificado para acceder al contenido del discord")
-		  .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
-		  .addField("**+proponer @User Razón**", "Propone a un usuario ascenso de rango por x motivo")
-		  .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala #📋-comunicados")
-		  .addField("**+dm @user Mensaje**", "Le enviamos un DM a un usuario con un mensaje")
-		  
-		  
-		  
-		  
-		  return message.channel.send(serverembed);
-		  }
-		}
+	
 		
 
 
