@@ -186,7 +186,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
             if(message.member.roles.find("name", "Grumete")){
                 let User = message.member;
                 let role = message.guild.roles.find("name", "Primario: Timonel");
-                let guild = bot.guilds.get("458220475957379074");
+                let guild = bot.guilds.get("559319996162113537");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
                 message.channel.send({
