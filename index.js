@@ -423,7 +423,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				  
 
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-		  if(message.member.roles.find("name", "Capitán") || (message.member.roles.find("name", "Corsario")){
+		  if(message.member.roles.find("name", "Capitán") || message.member.roles.find("name", "Corsario")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
 		  let adminRoleObject = message.guild.roles.find("name", "Grumete");
 			var embebido = {
