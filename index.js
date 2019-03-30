@@ -141,6 +141,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
+						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
+						url: "http://gamedev.es/",
                         description: "**Tu expecialización Primaria como Carpintero asignado a **" + User + " **correctamente** ahora tu misión será impedir que se hunda el navío",
                     }
                 });
@@ -155,9 +157,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let guild = bot.guilds.get("561212531058933771");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
-                message.channel.send({
+                 bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
+						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
+						url: "http://gamedev.es/",
                         description: "**Tu expecialización Primaria como Asaltante asignado a **" + User + " **correctamente** ahora tu misión será asaltar navíos enemigos e intentar aniquilarlos",
                     }
                 });
@@ -172,9 +176,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let guild = bot.guilds.get("561212531058933771");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
-                message.channel.send({
+                 bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
+						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
+						url: "http://gamedev.es/",
                         description: "**Tu expecialización Primaria como Artillero asignado a **" + User + " **correctamente** ahora tu misión será hundir navíos usando los cañones del barco",
                     }
                 });
@@ -189,9 +195,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let guild = bot.guilds.get("559319996162113537");
                 
                 miembro.addRole(role).catch(console.error);
-                message.channel.send({
+                bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
+						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
+						url: "http://gamedev.es/",
                         description: "**Tu expecialización Primaria como Timonel asignado a **" + User + " **correctamente**",
                     }
                 });
@@ -206,9 +214,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let guild = bot.guilds.get("561212531058933771");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
-                message.channel.send({
+                 bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
+						title: "**ESTABLECIDA ESPECIALIZACIÓN SECUNDARIA**",
+						url: "http://gamedev.es/",
                         description: "**Tu expecialización Secundaria como Carpintero asignado a **" + User + " **correctamente** ahora tu misión será impedir que se hunda el navío",
                     }
                 });
@@ -223,9 +233,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let guild = bot.guilds.get("561212531058933771");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
-                message.channel.send({
+                 bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
+						title: "**ESTABLECIDA ESPECIALIZACIÓN SECUNDARIA**",
+						url: "http://gamedev.es/",
                         description: "**Tu expecialización Secundaria como Asaltante asignado a **" + User + " **correctamente** ahora tu misión será asaltar navíos enemigos e intentar aniquilarlos",
                     }
                 });
@@ -240,9 +252,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let guild = bot.guilds.get("561212531058933771");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
-                message.channel.send({
+                 bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
+						title: "**ESTABLECIDA ESPECIALIZACIÓN SECUNDARIA**",
+						url: "http://gamedev.es/",
                         description: "**Tu expecialización Secundaria como Artillero asignado a **" + User + " **correctamente** ahora tu misión será hundir navíos usando los cañones del barco",
                     }
                 });
@@ -257,9 +271,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let guild = bot.guilds.get("561212531058933771");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
-                message.channel.send({
+                 bot.channels.get("561300365304397835").send({
                     embed: {
                         color: 0x00FFE0,
+						title: "**ESTABLECIDA ESPECIALIZACIÓN SECUNDARIA**",
+						url: "http://gamedev.es/",
                         description: "**Tu expecialización Secundaria como Timonel asignado a **" + User + " **correctamente** ahora tu misión llevar por el buen rumbo el navío",
                     }
                 });
@@ -407,7 +423,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				  
 
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-		  if(message.member.roles.find("name", "Capitán") || message.member.roles.find("name", "Corsario")){
+		  if(message.member.roles.find("name", "Capitán") || (message.member.roles.find("name", "Corsario")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
 		  let adminRoleObject = message.guild.roles.find("name", "Grumete");
 			var embebido = {
@@ -436,38 +452,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		}
 
 	
-	if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
-            message.delete();
-      if(message.member.roles.find("name", "🌟 STAFF MÁSTER") || message.member.roles.find("name", "🌟 STAFF NIVEL 2") || message.member.roles.find("name", "🌟 STAFF NIVEL 1") || message.member.roles.find("name", "🌟 STAFF EN PRUEBAS")){
-                let User = message.mentions.users.first();
-                let role = message.guild.roles.find("name", "✅Verificado");
-                let role2 = message.guild.roles.find("name", "❎ No verificado");
-                let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                miembro.removeRole(role2).catch(console.error);
-                User.send({
-                    embed: {
-                        color: 0x04ff00,
-                        title: "**HAS SIDO VERIFICADO**",
-			                  url: "http://gamedev.es/",
-                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte tu rol para recibir las notificaciones las respectivas sala #comandos escribe +roles y usa el que quieras.**",
-                    }
-                });
-				
-			
-                bot.channels.get("471979673400770560").send({
-                    embed: {
-						author: {
-							name: message.author.tag,
-							icon_url: message.author.avatarURL
-						},
-                        color: 0x04ff00,
-                        description: "**Ha verificado a **" + User + " **correctamente**",
-                    }
-                });
-            }
-      }
 
 	
 
@@ -498,17 +482,17 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			let embed = {
 			"embed": {
 						
-                        color:  0x00dcff,
+                        color:  0x00FFE0,
 						footer: {
 									  "text": message.guild.name
 									},
-						title: 'INFORMACIÓN SOBRE LA NORMATIVA',
+						title: 'INFORMACIÓN SOBRE LA NORMATIVA DE LA TRIPULACIÓN',
 						url: "http://gamedev.es/",
                         description: '**A Continuación habrá una serie de reglas que todo usuario que se una a este Discord deberá seguir.**',
 						fields: [
 							{
 							name: ":one:",
-							value: `╚> No hacer spam de tu canal de Youtube/Twitch/Discord o cualquier web. También incluye spam de mensajes o emojis. (Si necesitas de hacerlo deberás solicitar previo rol  Streamer).`,
+							value: `╚> No hacer spam de tu canal de Youtube/Twitch/Discord o cualquier web. También incluye spam de mensajes o emojis.`,
 							},	
 							{
 							name: ":two:",
@@ -524,7 +508,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 							},
 							{
 							name: ":five:",
-							value: `╚> No utilizar chetos,ni hacer team killing.`,
+							value: `╚> No utilizar chetos.`,
 							},
 							{
 							name: ":six:",
@@ -532,12 +516,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 							},
 							{
 							name: ":seven:",
-							value: `╚> Todos los comandos se escriben en la sala <#481525340083191809>, excepto los de **+respeto** que será en <#495990509609943071> y música que será en su sala <#469985496974622755>.`,
-							},
-							{
-							name: ":eight:",
-							value: `╚> Es obligatorio mandar solicitud de verificación si entras por primera vez.`,
+							value: `╚> Todos los comandos se escriben en la sala <#561300365304397835>.`,
 							}
+							
 							
 							
 							
