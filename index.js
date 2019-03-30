@@ -271,9 +271,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  let sicon = message.guild.iconURL;
 	  let serverembed = new Discord.RichEmbed()
 	  .setTitle("**GENERALES**")
-	  .setColor("#FE2E2E")
+	  .setColor("#00FFE0")
 	  .setThumbnail(sicon)
-	  .addField("**+musica**", "Comandos de uso del bot musical")
+	  .addField("**+sugerencia descripción**", "Añade una sugerencia")
 	  .addField("**+roles**", "Comandos para asignarte tus especializaciones en la tripulación")
 	  .addField("**+quedada \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de partida organizada. escribir en <#561300365304397835>")
 	  .addField("**+busco descripción**", "Mensaje de búsqueda de marineros para navegar. Importante estar en una sala del Puerto y escribir en <#561300365304397835>");
@@ -288,7 +288,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		var comunicado = message.content.replace("+sugerencia ", "");
 		var embebido = {
                           "embed": {
-                              color: 0x84ff80 ,
+                              color: 0x00FFE0 ,
                               author: {
                                   name: message.author.tag,
                                   icon_url: message.author.avatarURL
@@ -325,7 +325,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			let disponible = args[2];
 			var apuntarme = {
 				"embed": {
-					color: 0x7608AA ,
+					color: 0x00FFE0 ,
 					title: "**NUEVA QUEDADA PROPUESTA**",
 					url: "http://gamedev.es/",				
 
@@ -479,48 +479,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
   
 		}
 
-	if (message.content.startsWith(ft + "inforoles")) {        //  +inforoles   = Envía toda la información sobre roles canal INFO
-			let embed = {
-			"embed": {
-						
-                        color:  0x00dcff,
-						footer: {
-									  "text": message.guild.name
-									},
-						title: 'INFORMACIÓN SOBRE ROLES',
-						url: "http://gamedev.es/",
-                        description: '**A Continuación se explican el uso y descripción de cada rol del servidor.**',
-						fields: [
-							{
-							name: "❎ No verificado",
-							value: `╚> Gente que entra por primera vez al servidor, y no ha realizado o esta a la espera de verificación por parte del STAFF.`,
-							},	
-							{
-							name: "✅Verificado",
-							value: `╚> Gente que su cuenta ha sido verificada por el STAFF.`,
-							},
-							{
-							name: "⚜️[NL] Novato",
-							value: `╚> Gente que tras llevar un periodo de días, se examina su actividad, participación, nivel de involucración en el clan y actitud en él. **Se consigue por medio de votación del STAFF a modo de propuesta**.`,
-							},
-							{
-							name: "⚜️[NL] Miembro",
-							value: `╚> Gente que es algo mas de confianza y lleva un tiempo indeterminado con nosotros donde se examina su actividad, participacion, nivel de involucracion en el clan y actitud en el. **Se consigue por medio de votación del STAFF a modo de propuesta**.`,
-							},
-							{	
-							name: "⚜️[NL] Veterano",
-							value: `╚> Gente que se ha ganado estar aquí, a base de actividad, involucrarse, participar, jugar y mucha confianza. **Este rol tiene beneficios y consigue por medio de votacion del STAFF a modo de propuesta**.`,
-							},
-							{
-							name: "💔 Colaborador",
-							value: `╚> Gente que se ha ganado estar aquí, a base de actividad, involucrarse, participar, jugar y mucha confianza. **Este rol tiene beneficios y consigue por medio de votacion del STAFF a modo de propuesta** .Si tienes este rol y necesitas cualquier cosa relacionada con diseño gráfico, streaming, etc... se te hará un presupuesto muy económico.`,
-							}
-							]							
-							}
-							}
-							message.channel.send(embed);	 
-							message.delete();
-							};	
+
 	
 	
 	if(message.content.startsWith("+busco")) {
@@ -542,7 +501,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 								"title": "BUSCANDO TRIPULACIÓN",
 								"url": "http://gamedev.es/",
 								"description": "Busco **" + users + "** marineros para navegar en **" + message.member.voiceChannel.name + "**",
-								"color": 0xc500ff,
+								"color": 0x00FFE0,
 								"timestamp": message.createdAt,
 								"author": {
 								"name": message.author.tag,
@@ -574,29 +533,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 }
             }
 	
-	if (message.content.startsWith(ft + "infoimportante")) {   //  +infoimportante   = Envía toda la información IMPORTANTE canal IMPORTANTE
-			let embed = {
-			"embed": {
-						
-                        color:  0x00dcff,
-						footer: {
-									  "text": message.guild.name
-									},
-						title: 'INFORMACIÓN IMPORTANTE',
-						url: "http://gamedev.es/",
-						fields: [
-							{
-							name: "Guía de acceso:",
-							value: `:one: Revisa tus Mensajes Privados y mira uno de P A N T H E R S. \n\n:two: Entra al canal <#485759738164936719> leete todas y cada una de las normas. \n\n:three: Solo tendrás que esperar a que un STAFF te verifique y te de accesos para ver todo el contenido. \n\n:four: Ve al canal <#486981605831999489> y preséntate sin miedo. \n\n:five: Una vez tengas los permisos ve al canal <#481525340083191809> y escribe **+roles** , asígnate los roles de los juegos que quieras recibir notificaciones.`,	
-							}
-						]
-                    }
-			};	
-  
-	 message.channel.send(embed);	 
-     message.delete();
-  
-		}
+	
 	
 
 	
