@@ -173,6 +173,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let User = message.member;
                 let role = message.guild.roles.find("name", "Primario: Timonel");
                 let guild = bot.guilds.get("561212531058933771");
+                let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
                 bot.channels.get("561300365304397835").send({
                     embed: {
