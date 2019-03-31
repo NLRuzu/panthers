@@ -244,25 +244,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
         }
 	
 	
-	if (message.content.startsWith(ft + "rolprimariotimonel")) {
-        message.delete();
-            if(message.member.roles.find("name", "Grumete")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "Primario: Timonel");
-                let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                 bot.channels.get("561300365304397835").send({
-                    embed: {
-                        color: 0x00FFE0,
-						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
-						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Primaria como Timonel asignado a **" + User + " **correctamente** ahora tu misión llevar por el buen rumbo el navío",
-                    }
-                });
-            }
-        }
-0	
+	
 	
  
 	
