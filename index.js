@@ -109,169 +109,26 @@ if (message.channel.id == "561540728422137866" && message.author.bot) {
 if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 
 	
-		 
-	if (message.content.startsWith(ft + "rolprimariocarpintero")) {
-        message.delete();
-            if(message.member.roles.find("name", "Grumete")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "Primario: Carpintero");
-                let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                bot.channels.get("561300365304397835").send({
-                    embed: {
-                        color: 0x00FFE0,
-						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
-						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Primaria como Carpintero asignado a **" + User + " **correctamente** ahora tu misión será impedir que se hunda el navío",
-                    }
-                });
-            }
-        }
-	
-	if (message.content.startsWith(ft + "rolprimarioasaltante")) {
-        message.delete();
-            if(message.member.roles.find("name", "Grumete")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "Primario: Asaltante");
-                let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                 bot.channels.get("561300365304397835").send({
-                    embed: {
-                        color: 0x00FFE0,
-						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
-						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Primaria como Asaltante asignado a **" + User + " **correctamente** ahora tu misión será asaltar navíos enemigos e intentar aniquilarlos",
-                    }
-                });
-            }
-        }
-	
-	if (message.content.startsWith(ft + "rolprimarioartillero")) {
-        message.delete();
-            if(message.member.roles.find("name", "Grumete")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "Primario: Artillero");
-                let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                 bot.channels.get("561300365304397835").send({
-                    embed: {
-                        color: 0x00FFE0,
-						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
-						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Primaria como Artillero asignado a **" + User + " **correctamente** ahora tu misión será hundir navíos usando los cañones del barco",
-                    }
-                });
-            }
-        }
-	
-	if (message.content.startsWith(ft + "rolprimariotimonel")) {
-        message.delete();
-            if(message.member.roles.find("name", "Grumete")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "Primario: Timonel");
-                let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                bot.channels.get("561300365304397835").send({
-                    embed: {
-                        color: 0x00FFE0,
-						title: "**ESTABLECIDA ESPECIALIZACIÓN PRIMARIA**",
-						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Primaria como Timonel asignado a **" + User + " **correctamente**",
-                    }
-                });
-            }
-        }
-	
-	if (message.content.startsWith(ft + "rolsecundariocarpintero")) {
-        message.delete();
-            if(message.member.roles.find("name", "Grumete")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "Secundario: Carpintero");
-                let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                 bot.channels.get("561300365304397835").send({
-                    embed: {
-                        color: 0x00FFE0,
-						title: "**ESTABLECIDA ESPECIALIZACIÓN SECUNDARIA**",
-						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Secundaria como Carpintero asignado a **" + User + " **correctamente** ahora tu misión será impedir que se hunda el navío",
-                    }
-                });
-            }
-        }
-	
-	if (message.content.startsWith(ft + "rolsecundarioasaltante")) {
-        message.delete();
-            if(message.member.roles.find("name", "Grumete")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "Secundario: Asaltante");
-                let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                 bot.channels.get("561300365304397835").send({
-                    embed: {
-                        color: 0x00FFE0,
-						title: "**ESTABLECIDA ESPECIALIZACIÓN SECUNDARIA**",
-						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Secundaria como Asaltante asignado a **" + User + " **correctamente** ahora tu misión será asaltar navíos enemigos e intentar aniquilarlos",
-                    }
-                });
-            }
-        }
-	
-	if (message.content.startsWith(ft + "rolsecundarioartillero")) {
-        message.delete();
-            if(message.member.roles.find("name", "Grumete")){
-                let User = message.member;
-                let role = message.guild.roles.find("name", "Secundario: Artillero");
-                let guild = bot.guilds.get("561212531058933771");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                 bot.channels.get("561300365304397835").send({
-                    embed: {
-                        color: 0x00FFE0,
-						title: "**ESTABLECIDA ESPECIALIZACIÓN SECUNDARIA**",
-						url: "http://gamedev.es/",
-                        description: "**Tu expecialización Secundaria como Artillero asignado a **" + User + " **correctamente** ahora tu misión será hundir navíos usando los cañones del barco",
-                    }
-                });
-            }
-        }
-	
-	
-	
-	
- 
-	
-		
-		
 	if (message.content.startsWith(ft + "help")) {
 	  let sicon = message.guild.iconURL;
 	  let serverembed = new Discord.RichEmbed()
 	  .setTitle("**GENERALES**")
-	  .setColor("#00FFE0")
+	  .setColor("#c500ff") 
 	  .setThumbnail(sicon)
 	  .addField("**+sugerencia descripción**", "Añade una sugerencia")
-	  .addField("**+roles**", "Comandos para asignarte tus especializaciones en la tripulación")
-	  .addField("**+quedada \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de partida organizada. escribir en <#561300365304397835>")
-	  .addField("**+busco descripción**", "Mensaje de búsqueda de marineros para navegar. Importante estar en una sala del Puerto y escribir en <#561300365304397835>");
+	  .addField("**+mitica \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de mítica organizada. escribir en <#561300365304397835>")
+	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#588370763409784842>")
+	  .addField("**+busco descripción**", "Mensaje de búsqueda personal para jugar. Importante estar en una sala de voz y escribir en <#561532607108743229>");
 	  bot.channels.get("561300365304397835").send(serverembed);
 	  }	
 	
 
-	
-	
 		
 	if (message.content.startsWith(ft + "sugerencia")) {
 		var comunicado = message.content.replace("+sugerencia ", "");
 		var embebido = {
                           "embed": {
-                              color: 0x00FFE0 ,
+                              color: 0xc500ff ,
                               author: {
                                   name: message.author.tag,
                                   icon_url: message.author.avatarURL
@@ -288,7 +145,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
               message.delete().catch(O_o=>{});
       }	
 			
-	if (message.content.startsWith(ft + "quedada")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
+	if (message.content.startsWith(ft + "mitica")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
 			var args = [];
 			var texto = message.content;
 			try{
@@ -299,18 +156,18 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				}
 			}
 			catch(err){
-				message.channel.send("+quedada \"Descripción\" \"Día y Hora\"");
+				message.channel.send("+mitica \"Descripción\" \"Día y Hora\"");
 				return;
 			}
 			let server = bot.guilds.get("561212531058933771");
-			let adminRoleObject = server.roles.find("name", "Grumete");
+			let adminRoleObject = server.roles.find("name", "ArtiK");
 			let NickParticipante1 = args[0];
 			let NickParticipante2 = args[1];
 			let disponible = args[2];
 			var apuntarme = {
 				"embed": {
-					color: 0x00FFE0 ,
-					title: "**NUEVA QUEDADA PROPUESTA**",
+					color: 0xc500ff ,
+					title: "**NUEVA MÍTICA PROPUESTA**",
 					url: "http://gamedev.es/",				
 
 					fields: [
@@ -336,23 +193,55 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			
 		}
 	
+	if (message.content.startsWith(ft + "raid")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
+			var args = [];
+			var texto = message.content;
+			try{
+				while(texto.includes("\"")){
+					texto = texto.substr(texto.indexOf("\"")+1);
+					args.push(texto.substring(0,texto.indexOf("\"")));
+					texto = texto.substr(texto.indexOf("\"")+1);
+				}
+			}
+			catch(err){
+				message.channel.send("+mitica \"Descripción\" \"Día y Hora\"");
+				return;
+			}
+			let server = bot.guilds.get("561212531058933771");
+			let adminRoleObject = server.roles.find("name", "ArtiK");
+			let NickParticipante1 = args[0];
+			let NickParticipante2 = args[1];
+			let disponible = args[2];
+			var apuntarme = {
+				"embed": {
+					color: 0xc500ff ,
+					title: "**NUEVA RAID PROGRAMADA**",
+					url: "http://gamedev.es/",				
+
+					fields: [
+						{
+						name: "📜 Descripción",
+						value: NickParticipante1,
+						},
+						{
+						name: "📆 Día y Hora",
+						value: NickParticipante2,
+						}
+									 						
+					]
+				}
+			};
+
+
+			let torneochannel = bot.channels.get("588370763409784842").send(`[${adminRoleObject}]`, apuntarme);
+			if(!torneochannel) return message.channel.send("No se encuentra la sala");
+
+
+			message.delete().catch(O_o=>{});
+			
+		}
 	
-	if (message.content.startsWith(ft + "roles")) {
-		  let sicon = message.guild.iconURL;
-		  let serverembed = new Discord.RichEmbed()
-		  .setDescription("**ELIGE TU ESPECIALIZACION**")
-		  .setColor("#00FFE0")
-		  .setThumbnail(sicon)
-		  .addField("**+rolprimariocarpintero**", "Te añade como especialización primaria CARPINTERO, debido a tus dotes maestras en reparación del navío en situaciones de extrema urgencia y necesidad.")
-		  .addField("**+rolprimarioasaltante**", "Te añade como especialización primaria ASALTANTE, debido a tus dotes maestras en asaltar navíos enemigos.")
-		   .addField("**+rolprimarioartillero**", "Te añade como especialización primaria ARTILLERO, debido a tus dotes maestras en hundir navíos enemigos.")
-		   .addField("**+rolprimariotimonel**", "Te añade como especialización primaria ASALTANTE, debido a tus dotes maestras dirigir por buen rumbo el navío.")
-		    .addField("**+rolsecundariocarpintero**", "Te añade como especialización secundaria CARPINTERO, debido a tus dotes maestras en reparación del navío en situaciones de extrema urgencia y necesidad.")
-		  .addField("**+rolsecundarioasaltante**", "Te añade como especialización secundaria ASALTANTE, debido a tus dotes maestras en asaltar navíos enemigos.")
-		   .addField("**+rolsecundarioartillero**", "Te añade como especialización secundaria ARTILLERO, debido a tus dotes maestras en hundir navíos enemigos.")
-		   .addField("**+rolsecundariotimonel**", "Te añade como especialización secundaria ASALTANTE, debido a tus dotes maestras dirigir por buen rumbo el navío.");
-		  return message.channel.send(serverembed);
-		  }
+	
 			  
 } //FIN DE COMANDOS GENERALES
  
@@ -376,10 +265,10 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
 		  if(message.member.roles.find("name", "Capitán") || message.member.roles.find("name", "Corsario")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
-		  let adminRoleObject = message.guild.roles.find("name", "Grumete");
+		  let adminRoleObject = message.guild.roles.find("name", "ArtiK");
 			var embebido = {
 					  "embed": {
-										"color":  0x00FFE0,
+										"color":  0xc500ff,
 										author: {
 											name: message.author.tag,
 											icon_url: message.author.avatarURL
@@ -414,11 +303,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			let embed = {
 			"embed": {
 						
-                        color:  0x00FFE0,
+                        color:  0xc500ff,
 						footer: {
 									  "text": message.guild.name
 									},
-						title: 'INFORMACIÓN SOBRE LA NORMATIVA DE LA TRIPULACIÓN',
+						title: 'INFORMACIÓN SOBRE LA NORMATIVA DE LA HERMANDAD',
 						url: "http://gamedev.es/",
                         description: '**A Continuación habrá una serie de reglas que todo usuario que se una a este Discord deberá seguir.**',
 						fields: [
@@ -428,7 +317,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 							},	
 							{
 							name: ":two:",
-							value: `╚> No faltar el respeto o ser una persona tóxica hacia el resto los usuarios de la comunidad, si te calientas en una partida es mejor desconectar un rato y despejarse. r links de webs o contenido +18.`,
+							value: `╚> No faltar el respeto o ser una persona tóxica hacia el resto los usuarios de la comunidad, si te calientas en una partida es mejor desconectar un rato y despejarse.`,
 							},
 							{
 							name: ":three:",
@@ -474,7 +363,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                             maxAge: 3600
                         }
                         let server = bot.guilds.get("561212531058933771");
-                        let adminRoleObject = server.roles.find("name", "Grumete");
+                        let adminRoleObject = server.roles.find("name", "ArtiK");
                         message.member.voiceChannel.createInvite(options)
                         .then(invite => {
                             let invitacion = invite.code.split("invite/")[0];
@@ -482,10 +371,10 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 
 								var mdb = {
 							  "embed": {
-								"title": "BUSCANDO TRIPULACIÓN",
+								"title": "BUSCANDO GENTE",
 								"url": "http://gamedev.es/",
-								"description": "Busco **" + users + "** marineros para navegar en **" + message.member.voiceChannel.name + "**",
-								"color": 0x00FFE0,
+								"description": "Busco **" + users + "** Gentusos para hacer algo en **" + message.member.voiceChannel.name + "**",
+								"color": 0xc500ff,
 								"timestamp": message.createdAt,
 								"author": {
 								"name": message.author.tag,
