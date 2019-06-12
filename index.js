@@ -120,7 +120,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#588370763409784842>")
 	  .addField("**+busco descripción**", "Mensaje de búsqueda personal para jugar. Importante estar en una sala de voz y escribir en <#561532607108743229>");
 	  bot.channels.get("561300365304397835").send(serverembed);
-	  }	
+	  };	
 	
 
 		
