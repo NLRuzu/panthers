@@ -67,7 +67,7 @@ bot.on("guildMemberRemove", async member => {
 
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "Grumete");
+    let role = member.guild.roles.find("name", "ArtiK");
     member.addRole(role).catch(console.error);
 });
 
