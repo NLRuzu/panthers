@@ -308,6 +308,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 						footer: {
 									  "text": message.guild.name
 									},
+						"image": {
+				     		 "url": "https://i.imgur.com/5CL02n2.png"
+				   			 },
 						title: 'INFORMACIÓN SOBRE LA NORMATIVA DE LA HERMANDAD',
 						url: "http://gamedev.es/",
                         description: '**A Continuación habrá una serie de reglas que todo usuario que se una a este Discord deberá seguir.**',
