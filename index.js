@@ -33,8 +33,8 @@ bot.on("guildMemberAdd", async member => {
   let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
     let embed = { embed: {
                 color: 0x04ff00,
-                title: "Hola bienvenido a la tripulación de La Venganza de Atenea marinero.",
-                description: '**Para mejorar tu experiencia aquí puedes usar el comando +roles en la sala <#561300365304397835> y así asignarte tu expecialización dentro de la tripulación. ¡Ojo! solo podrás elegir 2 especializaciones una primaria y una secundaria.**', 
+                title: "Hola bienvenido a la Hermandad ArtiK.",
+                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#561300365304397835> y ver que puedes hacer.**', 
             }
     };
   
@@ -43,8 +43,8 @@ bot.on("guildMemberAdd", async member => {
     member.send({
         embed: {
                 color: 0x04ff00,
-                title: "Hola bienvenido a la tripulación de La Venganza de Atenea marinero.",
-                description: '**Para mejorar tu experiencia aquí puedes usar el comando +roles en la sala <#561300365304397835> y así asignarte tu expecialización dentro de la tripulación. ¡Ojo! solo podrás elegir 2 especializaciones una primaria y una secundaria.**', 
+               title: "Hola bienvenido a la Hermandad ArtiK.",
+                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#561300365304397835> y ver que puedes hacer.**', 
                 
             }
         });
