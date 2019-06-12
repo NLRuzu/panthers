@@ -113,14 +113,15 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  let sicon = message.guild.iconURL;
 	  let serverembed = new Discord.RichEmbed()
 	  .setTitle("**GENERALES**")
-	  .setColor("#c500ff") 
+	  .setColor("#C6FF00") 
 	  .setThumbnail(sicon)
 	  .addField("**+sugerencia descripción**", "Añade una sugerencia")
 	  .addField("**+mitica \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de mítica organizada. escribir en <#561300365304397835>")
 	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#588370763409784842>")
 	  .addField("**+busco descripción**", "Mensaje de búsqueda personal para jugar. Importante estar en una sala de voz y escribir en <#561532607108743229>");
-	  bot.channels.get("561300365304397835").send(serverembed);
-	  };	
+	  
+	bot.channels.get("561300365304397835").send(serverembed);
+	  }
 	
 
 		
