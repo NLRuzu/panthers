@@ -104,12 +104,7 @@ if (message.channel.id == "561540728422137866" && message.author.bot) {
                     message.react("561539448836456448");
                 }	
 
-
-
-if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
-
-	
-	if (message.content.startsWith(ft + "help")) {
+if (message.content.startsWith(ft + "help")) {
 	  let sicon = message.guild.iconURL;
 	  let serverembed = new Discord.RichEmbed()
 	  .setTitle("**GENERALES**")
@@ -120,8 +115,13 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#588370763409784842>")
 	  .addField("**+busco descripción**", "Mensaje de búsqueda personal para jugar. Importante estar en una sala de voz y escribir en <#561532607108743229>");
 	  
-	bot.channels.get("561300365304397835").send(serverembed);
+	bot.channels.get("588369336226283520").send(serverembed);
 	  }
+
+if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
+
+	
+	
 	
 
 		
