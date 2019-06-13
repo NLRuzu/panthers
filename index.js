@@ -114,11 +114,7 @@ if (message.content.startsWith(ft + "help")) {
 	  let sicon = message.guild.iconURL;
 	  let serverembed = new Discord.RichEmbed()
 	  .setTitle("**GENERALES**")
-	  
-	  .setColor("#C6FF00") 
-	  "image": {
-				     		 "url": "https://i.imgur.com/AepEdiq.png"
-				   			 },
+	  .setColor("#ff0025") 
 	  .setThumbnail(sicon)
 	  .addField("**+sugerencia descripción**", "Añade una sugerencia")
 	  .addField("**+mitica \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de mítica organizada. escribir en <#561300365304397835>")
@@ -139,7 +135,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		var comunicado = message.content.replace("+sugerencia ", "");
 		var embebido = {
                           "embed": {
-                              color: 0xc500ff ,
+                              color: 0xff0025 ,
                               author: {
                                   name: message.author.tag,
                                   icon_url: message.author.avatarURL
@@ -177,7 +173,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			let disponible = args[2];
 			var apuntarme = {
 				"embed": {
-					color: 0xc500ff ,
+					color: 0xff0025 ,
 					"image": {
 				     		 "url": "https://i.imgur.com/HhMGvPL.png"
 				   			 },
@@ -228,7 +224,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			let disponible = args[2];
 			var apuntarme = {
 				"embed": {
-					color: 0xc500ff ,
+					color: 0xff0025 ,
 					"image": {
 				     		 "url": "https://i.imgur.com/dNWATTa.png"
 				   			 },
@@ -269,7 +265,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				rUser.removeRole(role).catch(console.error);
 				message.channel.send({
 					embed: {
-						color: 0xc500ff,
+						color: 0xff0025,
 						description: "ROL eliminado a " + rUser + " correctamente",
 					}
 				});
@@ -285,7 +281,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		  let adminRoleObject = message.guild.roles.find("name", "BLOODBROTHERS");
 			var embebido = {
 					  "embed": {
-										"color":  0xc500ff,
+										"color":  0xff0025,
 						  "image": {
 				     		 "url": "https://i.imgur.com/Tc5nDFH.png"
 				   			 },
@@ -323,7 +319,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			let embed = {
 			"embed": {
 						
-                        color:  0xc500ff,
+                        color:  0xff0025,
 						footer: {
 									  "text": message.guild.name
 									},
@@ -400,7 +396,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				     				 "url": "https://i.imgur.com/A32ry64.png"
 				   			 		},
 								"description": "Busco **" + users + "** Gentusos para hacer algo en **" + message.member.voiceChannel.name + "**",
-								"color": 0xc500ff,
+								"color": 0xff0025,
 								"timestamp": message.createdAt,
 								"author": {
 								"name": message.author.tag,
