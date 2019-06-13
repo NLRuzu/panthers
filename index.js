@@ -93,14 +93,16 @@ if (message.author.id == "298029791708315649") { 	// CREATOR COMMANDS
 
 	// REACCION EMOJI SALA MITICAS //
 if (message.channel.id == "561538721653063690" && message.author.bot) {
-    message.react("561539430985236500");
-    message.react("561539448836456448");
+    message.react("588873813148696596");
+    message.react("588873682643058698");
+    message.react("588873906991923211");
 	}
 	
 	// REACCION EMOJI SALA RAID //
 if (message.channel.id == "588370763409784842" && message.author.bot) {
-    message.react("561539430985236500");
-    message.react("561539448836456448");
+   message.react("588873813148696596");
+    message.react("588873682643058698");
+    message.react("588873906991923211");
 	}
 	
 	
