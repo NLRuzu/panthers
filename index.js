@@ -356,7 +356,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 							},
 							{
 							name: ":seven:",
-							value: `╚> Todos los comandos se escriben en la sala <#561300365304397835>.`,
+							value: `╚> Todos los comandos se escriben en la sala <#588369336226283520>.`,
 							}
 							
 							
