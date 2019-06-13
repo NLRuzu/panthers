@@ -33,7 +33,7 @@ bot.on("guildMemberAdd", async member => {
   let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
     let embed = { embed: {
                 color: 0x04ff00,
-                title: "Hola bienvenido a la Hermandad ArtiK.",
+                title: "Hola bienvenido a la Hermandad BloodBrothers.",
                 description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**', 
             }
     };
@@ -43,7 +43,7 @@ bot.on("guildMemberAdd", async member => {
     member.send({
         embed: {
                 color: 0x04ff00,
-               title: "Hola bienvenido a la Hermandad ArtiK.",
+               title: "Hola bienvenido a la Hermandad BloodBrothers.",
                 description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**', 
                 
             }
@@ -52,7 +52,7 @@ bot.on("guildMemberAdd", async member => {
 
 // MENSAJE DE ABANDONO DE USUARIOS
 bot.on("guildMemberRemove", async member => {
-  console.log(`${member.nickname} ha abandonado la tripulación `);
+  console.log(`${member.nickname} ha abandonado la hermandad `);
  
   let welcomechannel = member.guild.channels.find(`name`, "📉-abandonos");
   welcomechannel.send({
@@ -60,14 +60,14 @@ bot.on("guildMemberRemove", async member => {
                         color: 0xe52121,
                         title: "**HA ABANDONADO**",
 		       	url: "http://gamedev.es/",
-                        description: `${member} ha abandonado la tripulación`,
+                        description: `${member} ha abandonado la hermandad`,
                     }
                 });
 });
 
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "ArtiK");
+    let role = member.guild.roles.find("name", "BLOODBROTHERS");
     member.addRole(role).catch(console.error);
 });
 
@@ -91,8 +91,14 @@ if (message.author.id == "298029791708315649") { 	// CREATOR COMMANDS
 // REACCION EMOJI SALA PROPUESTAS //
 
 
-	// REACCION EMOJI SALA CARTELERA //
+	// REACCION EMOJI SALA MITICAS //
 if (message.channel.id == "561538721653063690" && message.author.bot) {
+    message.react("561539430985236500");
+    message.react("561539448836456448");
+	}
+	
+	// REACCION EMOJI SALA RAID //
+if (message.channel.id == "588370763409784842" && message.author.bot) {
     message.react("561539430985236500");
     message.react("561539448836456448");
 	}
@@ -108,7 +114,11 @@ if (message.content.startsWith(ft + "help")) {
 	  let sicon = message.guild.iconURL;
 	  let serverembed = new Discord.RichEmbed()
 	  .setTitle("**GENERALES**")
+	  
 	  .setColor("#C6FF00") 
+	  "image": {
+				     		 "url": "https://i.imgur.com/AepEdiq.png"
+				   			 },
 	  .setThumbnail(sicon)
 	  .addField("**+sugerencia descripción**", "Añade una sugerencia")
 	  .addField("**+mitica \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de mítica organizada. escribir en <#561300365304397835>")
@@ -161,13 +171,16 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				return;
 			}
 			let server = bot.guilds.get("561212531058933771");
-			let adminRoleObject = server.roles.find("name", "ArtiK");
+			let adminRoleObject = server.roles.find("name", "BLOODBROTHERS");
 			let NickParticipante1 = args[0];
 			let NickParticipante2 = args[1];
 			let disponible = args[2];
 			var apuntarme = {
 				"embed": {
 					color: 0xc500ff ,
+					"image": {
+				     		 "url": "https://i.imgur.com/HhMGvPL.png"
+				   			 },
 					title: "**NUEVA MÍTICA PROPUESTA**",
 					url: "http://gamedev.es/",				
 
@@ -205,17 +218,20 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				}
 			}
 			catch(err){
-				message.channel.send("+mitica \"Descripción\" \"Día y Hora\"");
+				message.channel.send("+raid \"Descripción\" \"Día y Hora\"");
 				return;
 			}
 			let server = bot.guilds.get("561212531058933771");
-			let adminRoleObject = server.roles.find("name", "ArtiK");
+			let adminRoleObject = server.roles.find("name", "BLOODBROTHERS");
 			let NickParticipante1 = args[0];
 			let NickParticipante2 = args[1];
 			let disponible = args[2];
 			var apuntarme = {
 				"embed": {
 					color: 0xc500ff ,
+					"image": {
+				     		 "url": "https://i.imgur.com/dNWATTa.png"
+				   			 },
 					title: "**NUEVA RAID PROGRAMADA**",
 					url: "http://gamedev.es/",				
 
@@ -266,10 +282,13 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
 		  if(message.member.roles.find("name", "Capitán") || message.member.roles.find("name", "Corsario")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
-		  let adminRoleObject = message.guild.roles.find("name", "ArtiK");
+		  let adminRoleObject = message.guild.roles.find("name", "BLOODBROTHERS");
 			var embebido = {
 					  "embed": {
 										"color":  0xc500ff,
+						  "image": {
+				     		 "url": "https://i.imgur.com/Tc5nDFH.png"
+				   			 },
 										author: {
 											name: message.author.tag,
 											icon_url: message.author.avatarURL
@@ -309,7 +328,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 									  "text": message.guild.name
 									},
 						"image": {
-				     		 "url": "https://i.imgur.com/5CL02n2.png"
+				     		 "url": "https://i.imgur.com/ETieOPR.png"
 				   			 },
 						title: 'INFORMACIÓN SOBRE LA NORMATIVA DE LA HERMANDAD',
 						url: "http://gamedev.es/",
@@ -367,7 +386,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                             maxAge: 3600
                         }
                         let server = bot.guilds.get("561212531058933771");
-                        let adminRoleObject = server.roles.find("name", "ArtiK");
+                        let adminRoleObject = server.roles.find("name", "BLOODBROTHERS");
                         message.member.voiceChannel.createInvite(options)
                         .then(invite => {
                             let invitacion = invite.code.split("invite/")[0];
@@ -377,6 +396,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 							  "embed": {
 								"title": "BUSCANDO GENTE",
 								"url": "http://gamedev.es/",
+								  "image": {
+				     				 "url": "https://i.imgur.com/A32ry64.png"
+				   			 		},
 								"description": "Busco **" + users + "** Gentusos para hacer algo en **" + message.member.voiceChannel.name + "**",
 								"color": 0xc500ff,
 								"timestamp": message.createdAt,
