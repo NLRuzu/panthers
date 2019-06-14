@@ -325,9 +325,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let role = message.guild.roles.find("name", "BLOODBROTHERS");
                 let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
                 let guild = bot.guilds.get("458220475957379074");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                miembro.removeRole(role2).catch(console.error);
+                member.addRole(role).catch(console.error);
+                member.removeRole(role2).catch(console.error);
                 User.send({
                     embed: {
                         color: 0x04ff00,
