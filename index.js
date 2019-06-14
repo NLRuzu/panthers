@@ -38,7 +38,7 @@ bot.on("guildMemberAdd", async member => {
             }
     };
   
-  welcomechannel.send(`**Bienvenido: Nuevo marinero ${member} a la tripulación**`, embed)
+  welcomechannel.send(`**Bienvenido: Nuevo miembro ${member} a la hermandad**`, embed)
 
     member.send({
         embed: {
@@ -93,16 +93,16 @@ if (message.author.id == "298029791708315649") { 	// CREATOR COMMANDS
 
 	// REACCION EMOJI SALA MITICAS //
 if (message.channel.id == "561538721653063690" && message.author.bot) {
-    message.react("588873813148696596");
-    message.react("588873682643058698");
-    message.react("588873906991923211");
+    message.react("588995914258186240");
+    message.react("588995906817228841");
+    message.react("588995898067910668");
 	}
 	
 	// REACCION EMOJI SALA RAID //
 if (message.channel.id == "588370763409784842" && message.author.bot) {
-   message.react("588873813148696596");
-    message.react("588873682643058698");
-    message.react("588873906991923211");
+   message.react("588995914258186240");
+    message.react("588995906817228841");
+    message.react("588995898067910668");
 	}
 	
 	
@@ -372,6 +372,92 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
      message.delete();
   
 		}
+	
+	
+	if (message.channel.id == message.channel.id) { 	// COMANDOS DE MUSICA BOTS
+
+if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
+	 let adminRoleObject = message.guild.roles.find("name", "BLOODBROTHERS");	
+			let embed1 = {
+				"embed": {
+				    "title": "LISTA DE COMANDOS BOT MÚSICA",
+				    "color": 13041408,
+				    "timestamp": "2019-04-29T12:14:55.011Z",
+				    "footer": {
+				      "icon_url": "https://i.imgur.com/7mJTWso.png",
+				      "text": "Hermandad BloodBrothers"
+				    },
+				    "thumbnail": {
+				      "url": "https://i.imgur.com/7mJTWso.png"
+				    },
+				    "image": {
+				      "url": "https://i.imgur.com/l6jZidP.png"
+				    },
+				    "fields": [
+				      {
+					"name": "!play nombre de la canción o link",
+					"value": "Reproduce una canción y si ponemos muchas seguidas se añaden a una lista de reproducción"
+				      },
+				      {
+					"name": "!pause y !stop",
+					"value": "Para una canción o la deja en pause"
+				      },
+				      {
+					"name": "!loop",
+					"value": "Ponemos en reprodución en ciclo la lista de reproducción"
+				      },
+				      {
+					 "name": "!leave y !skip",
+					"value": "El primero hace que se marche el bot de nuestra sala y el segundo hace pasar a la siguiente canción"  
+				      }
+
+				    ]
+					}
+				  };	
+				let embed2 = {
+				"embed": {
+				    "title": "LISTA DE COMANDOS BOT MÚSICA 2",
+				    "color": 13041408,
+				    "timestamp": "2019-04-29T12:14:55.011Z",
+				    "footer": {
+				      "icon_url": "https://i.imgur.com/7mJTWso.png",
+				      "text": "Hermandad BloodBrothers"
+				    },
+				    "thumbnail": {
+				      "url": "https://i.imgur.com/7mJTWso.png"
+				    },
+				    "image": {
+				      "url": "https://i.imgur.com/BTi6Es7.png"
+				    },
+				    "fields": [
+				      {
+					"name": "-play nombre de la canción o link",
+					"value": "Reproduce una canción y si ponemos muchas seguidas se añaden a una lista de reproducción"
+				      },
+				      {
+					"name": "-pause y -stop",
+					"value": "Para una canción o la deja en pause"
+				      },
+				      {
+					"name": "-loop",
+					"value": "Ponemos en reprodución en ciclo la lista de reproducción"
+				      },
+				      {
+					 "name": "-leave y -next",
+					"value": "El primero hace que se marche el bot de nuestra sala y el segundo hace pasar a la siguiente canción"  
+				      }
+
+				    ]
+					}
+				  };	
+				
+	message.channel.send(`[${adminRoleObject}]`, embed1);
+	message.channel.send(embed2);
+	
+	
+	
+}
+}
 
 
 	
