@@ -119,6 +119,8 @@ if (message.content.startsWith(ft + "help")) {
 	  .setColor("#ff0025") 
 	  .setThumbnail(sicon)
 	  .addField("**+sugerencia descripción**", "Añade una sugerencia")
+	  .addField("**+musica**", "Comandos de uso de los bot musicales")
+	  .addField("**+afijos**", "Nos muestra los afijos de míticas+ activos esta semana")
 	  .addField("**+mitica \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de mítica organizada. escribir en <#561300365304397835>")
 	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#588370763409784842>")
 	  .addField("**+busco descripción**", "Mensaje de búsqueda personal para jugar. Importante estar en una sala de voz y escribir en <#561532607108743229>");
