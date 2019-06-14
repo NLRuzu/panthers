@@ -75,55 +75,6 @@ bot.on("guildMemberAdd", function(member) {
 
 
 
-if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
-            message.delete();
-      if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM") || message.member.roles.find("name", "CO-GM") || message.member.roles.find("name", "OFICIAL")){
-                let User = message.mentions.users.first();
-                let role = message.guild.roles.find("name", "BLOODBROTHERS");
-                let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
-                let guild = bot.guilds.get("458220475957379074");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                miembro.removeRole(role2).catch(console.error);
-                User.send({
-                    embed: {
-                        color: 0x04ff00,
-                        title: "**HAS SIDO VERIFICADO**",
-			                  url: "http://gamedev.es/",
-                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidorn. \n\nPara más información accede al canal de texto <#561212531868303379>.**",
-                    }
-                });
-				
-			
-                bot.channels.get("589083868674392065").send({
-                    embed: {
-						author: {
-							name: message.author.tag,
-							icon_url: message.author.avatarURL
-						},
-                        color: 0x04ff00,
-                        description: "**Ha verificado a **" + User + " **correctamente**",
-                    }
-                });
-            }
-      }
-
-if (message.content.startsWith(ft + "solicitar")) {
-  let rUser = message.guild.member;
-  if(!rUser) return message.channel.send("formato incorrecto +solicitar");
-
-  let reportEmbed = new Discord.RichEmbed()
-  .setTitle("NUEVA PETICIÓN DE ACCESO")
-  .setColor("#52a255")
-  .addField("Solicitante:", `${message.author}`)
-  .addField("Fecha:", message.createdAt)
-
-  let reportschannel = message.guild.channels.find(`name`, "❎-solicitar");
-  if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-
-  message.delete().catch(O_o=>{});
-  reportschannel.send(reportEmbed);
-  }  
 
 
 // LISTA DE COMANDOS
@@ -429,6 +380,59 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
      message.delete();
   
 		}
+	
+	
+	
+	
+if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
+            message.delete();
+      if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM") || message.member.roles.find("name", "CO-GM") || message.member.roles.find("name", "OFICIAL")){
+                let User = message.mentions.users.first();
+                let role = message.guild.roles.find("name", "BLOODBROTHERS");
+                let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                miembro.removeRole(role2).catch(console.error);
+                User.send({
+                    embed: {
+                        color: 0x04ff00,
+                        title: "**HAS SIDO VERIFICADO**",
+			                  url: "http://gamedev.es/",
+                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidorn. \n\nPara más información accede al canal de texto <#561212531868303379>.**",
+                    }
+                });
+				
+			
+                bot.channels.get("589083868674392065").send({
+                    embed: {
+						author: {
+							name: message.author.tag,
+							icon_url: message.author.avatarURL
+						},
+                        color: 0x04ff00,
+                        description: "**Ha verificado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+      }
+
+if (message.content.startsWith(ft + "solicitar")) {
+  let rUser = message.guild.member;
+  if(!rUser) return message.channel.send("formato incorrecto +solicitar");
+
+  let reportEmbed = new Discord.RichEmbed()
+  .setTitle("NUEVA PETICIÓN DE ACCESO")
+  .setColor("#52a255")
+  .addField("Solicitante:", `${message.author}`)
+  .addField("Fecha:", message.createdAt)
+
+  let reportschannel = message.guild.channels.find(`name`, "❎-solicitar");
+  if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
+
+  message.delete().catch(O_o=>{});
+  reportschannel.send(reportEmbed);
+  }  
 	
 	
 	if (message.channel.id == message.channel.id) { 	// COMANDOS DE MUSICA BOTS
