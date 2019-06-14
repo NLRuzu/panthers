@@ -463,10 +463,8 @@ if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
 			"embed": {
 						
                         color:  0xff0025,
-						footer: {
-									  "text": message.guild.name
-									},
-						title: 'INFORMACIÓN AFIJOS DE ESTA SEMANA',
+						
+						title: 'AFIJOS DE ESTA SEMANA',
 						url: "http://gamedev.es/",
 						fields: [
         { name: " 💥Estos son los afijos esta semana💥", value: "Reforzada\nPotenciante\nInquieta\nSegadora", inline: true},
