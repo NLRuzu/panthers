@@ -466,9 +466,6 @@ if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
 						footer: {
 									  "text": message.guild.name
 									},
-						"image": {
-				     		 "url": "https://i.imgur.com/9LThfEa.png"
-				   			 },
 						title: 'INFORMACIÓN AFIJOS DE ESTA SEMANA',
 						url: "http://gamedev.es/",
 						fields: [
