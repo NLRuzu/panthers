@@ -270,20 +270,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 } //FIN DE COMANDOS GENERALES
  
  
- if (message.content.startsWith(ft + "delrol")) {           //  +delrol @user     = Elimina un rol establecido en por ID
-				let rUser = message.guild.member(message.mentions.users.first());
-				let role = message.guild.roles.find("id", "589084128947732502");
-				let role2 = message.guild.roles.find("id", "561214863301541908");
-				rUser.removeRole(role).catch(console.error);
-				rUser.addRole2(role).catch(console.error);
-				message.channel.send({
-					embed: {
-						color: 0xff0025,
-						description: "ROL eliminado a " + rUser + " correctamente",
-					}
-				});
-				message.delete();
-		}
+ 
 
 	
 				  
@@ -323,11 +310,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
             message.delete();
       if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM") || message.member.roles.find("name", "CO-GM") || message.member.roles.find("name", "OFICIAL")){
-                let rUser = message.guild.member(message.mentions.users.first());
-		let role = message.guild.roles.find("id", "589084128947732502");
-		let role2 = message.guild.roles.find("id", "561214863301541908");
-		rUser.removeRole(role).catch(console.error);
-		rUser.addRole2(role).catch(console.error);
+                
                 User.send({
                     embed: {
                         color: 0x04ff00,
