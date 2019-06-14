@@ -513,7 +513,8 @@ if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
 	if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
             message.delete();
       if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM") || message.member.roles.find("name", "CO-GM") || message.member.roles.find("name", "OFICIAL")){
-                let User = message.mentions.users.first();
+                let rUser = message.guild.member;
+  		if(!rUser) return message.channel.send("formato incorrecto +verificar @user");
                 let role = message.guild.roles.find("name", "BLOODBROTHERS");
                 let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
                 let guild = bot.guilds.get("559319996162113537");
