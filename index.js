@@ -319,12 +319,14 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			console.log("3");
                 let guild = bot.guilds.get("559319996162113537");
 				console.log("4");
-	      	let miembro = message.guild.member(User);
+	      	let miembro = guild.member(User);
 			console.log("5");
-                message.member.removeRole(role).catch(console.error);
+                miembro.removeRole(role).catch(console.error);
 				console.log("6");
-	      	message.member.addRole(role2).catch(console.error);
+	      	miembro.addRole(role2).catch(console.error);
 			console.log("7");
+	      
+ 
                 User.send({
                     embed: {
                         color: 0x04ff00,
