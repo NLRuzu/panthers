@@ -71,22 +71,8 @@ bot.on("guildMemberAdd", function(member) {
     member.addRole(role).catch(console.error);
 });
 
-if (message.content.startsWith(ft + "solicitar")) {
-  let rUser = message.guild.member;
-  if(!rUser) return message.channel.send("formato incorrecto +solicitar");
 
-  let reportEmbed = new Discord.RichEmbed()
-  .setTitle("NUEVA PETICIÓN DE ACCESO")
-  .setColor("#52a255")
-  .addField("Solicitante:", `${message.author}`)
-  .addField("Fecha:", message.createdAt)
 
-  let reportschannel = message.guild.channels.find(`name`, "❎-solicitar");
-  if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-
-  message.delete().catch(O_o=>{});
-  reportschannel.send(reportEmbed);
-  }  
 
 
 if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
@@ -121,6 +107,24 @@ if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user 
                 });
             }
       }
+
+if (message.content.startsWith(ft + "solicitar")) {
+  let rUser = message.guild.member;
+  if(!rUser) return message.channel.send("formato incorrecto +solicitar");
+
+  let reportEmbed = new Discord.RichEmbed()
+  .setTitle("NUEVA PETICIÓN DE ACCESO")
+  .setColor("#52a255")
+  .addField("Solicitante:", `${message.author}`)
+  .addField("Fecha:", message.createdAt)
+
+  let reportschannel = message.guild.channels.find(`name`, "❎-solicitar");
+  if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
+
+  message.delete().catch(O_o=>{});
+  reportschannel.send(reportEmbed);
+  }  
+
 
 // LISTA DE COMANDOS
 bot.on("message", (message) => {
