@@ -313,7 +313,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let User = message.mentions.users.first();
                 let role = message.guild.roles.find("name", "BLOODBROTHERS");
                 let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
-                let guild = bot.guilds.get("458220475957379074");
+                let guild = bot.guilds.get("559319996162113537");
                 
                 message.member.addRole(role).catch(console.error);
                 message.member.removeRole(role2).catch(console.error);
