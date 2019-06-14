@@ -34,7 +34,7 @@ bot.on("guildMemberAdd", async member => {
     let embed = { embed: {
                 color: 0x04ff00,
                 title: "Hola bienvenido a la Hermandad BloodBrothers.",
-                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**', 
+                description: '**Antes de nada tienes que verificar tu cuenta, para ello tendrás que ir a la sala <#589084546054619166> y escribir +solicitar. \nTendrás que esperar a que un STAFF te verifique y tengas acceso a todas las salas. \nPara mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**', 
             }
     };
   
@@ -44,7 +44,7 @@ bot.on("guildMemberAdd", async member => {
         embed: {
                 color: 0x04ff00,
                title: "Hola bienvenido a la Hermandad BloodBrothers.",
-                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**', 
+                description: '**Antes de nada tienes que verificar tu cuenta, para ello tendrás que ir a la sala <#589084546054619166> y escribir +solicitar. \nTendrás que esperar a que un STAFF te verifique y tengas acceso a todas las salas. \nPara mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**',  
                 
             }
         });
