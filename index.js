@@ -319,11 +319,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			console.log("3");
                 let guild = bot.guilds.get("559319996162113537");
 				console.log("4");
-	      	let miembro = guild.member(User);
-			console.log("5");
-                miembro.removeRole(role).catch(console.error);
+                User.removeRole(role).catch(console.error);
 				console.log("6");
-	      	miembro.addRole(role2).catch(console.error);
+	      	User.addRole(role2).catch(console.error);
 			console.log("7");
 	      
  
