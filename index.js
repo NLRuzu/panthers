@@ -28,34 +28,7 @@ fs.readdir("./commands/", (err, files) => {
 // MENSAJE DE BIENVENIDA NUEVOS USUARIOS //
 bot.on("guildMemberAdd", async member => {
 	
-	if(message.content.toUpperCase().startsWith("+VERIFICAR")){
-            message.delete();
-      if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM") ||message.member.roles.find("name", "CO-GM")){
-                let User = message.mentions.users.first();
-                let role = message.guild.roles.find("name", "BLOODBROTHERS");
-                let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
-                let guild = bot.guilds.get("559319996162113537");
-                let miembro = guild.member(User);
-                miembro.addRole(role).catch(console.error);
-                miembro.removeRole(role2).catch(console.error);
-                User.send({
-                    embed: {
-                        color: 0x04ff00,
-                        title: "**HAS SIDO VERIFICADO**",
-			                  url: "http://gamedev.es/",
-                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte         tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
-                    }
-                });
-                message.channel.send({
-                    embed: {
-                        color: 0x04ff00,
-                        title: message.member.nickname,
-                        description: "**Ha verificado a **" + User + " **correctamente**",
-                    }
-                });
-            }
-      }
-	  
+
   console.log(`${member.id} ha entrado al server `);
             
   let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
@@ -345,6 +318,38 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			}
 		}
 
+	if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
+            message.delete();
+      if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM") || message.member.roles.find("name", "CO-GM") || message.member.roles.find("name", "OFICIAL")){
+                let User = message.mentions.users.first();
+                let role = message.guild.roles.find("name", "BLOODBROTHERS");
+                let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
+                let guild = bot.guilds.get("458220475957379074");
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                miembro.removeRole(role2).catch(console.error);
+                User.send({
+                    embed: {
+                        color: 0x04ff00,
+                        title: "**HAS SIDO VERIFICADO**",
+			                  url: "http://gamedev.es/",
+                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
+                    }
+                });
+				
+			
+                bot.channels.get("589084546054619166").send({
+                    embed: {
+						author: {
+							name: message.author.tag,
+							icon_url: message.author.avatarURL
+						},
+                        color: 0x04ff00,
+                        description: "**Ha verificado a **" + User + " **correctamente**",
+                    }
+                });
+            }
+      }
 	
 
 	
