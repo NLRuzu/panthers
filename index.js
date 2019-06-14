@@ -516,7 +516,7 @@ if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
                 let User = message.mentions.users.first();
                 let role = message.guild.roles.find("name", "BLOODBROTHERS");
                 let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
-                let guild = bot.guilds.get("458220475957379074");
+                let guild = bot.guilds.get("559319996162113537");
                 let miembro = guild.member(User);
                 miembro.addRole(role).catch(console.error);
                 miembro.removeRole(role2).catch(console.error);
