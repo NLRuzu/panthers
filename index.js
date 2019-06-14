@@ -310,11 +310,10 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
             message.delete();
       if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM") || message.member.roles.find("name", "CO-GM") || message.member.roles.find("name", "OFICIAL")){
-                let User = message.mentions.users.first();
-                let role = message.guild.roles.find("name", "BLOODBROTHERS");
-                let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
-                let guild = bot.guilds.get("559319996162113537");
-                
+                let User = message.mentions.users.first().catch(console.error);
+                let role = message.guild.roles.find("name", "BLOODBROTHERS").catch(console.error);
+                let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO").catch(console.error);
+                let guild = bot.guilds.get("559319996162113537").catch(console.error);
                 message.member.addRole(role).catch(console.error);
                 message.member.removeRole(role2).catch(console.error);
                 User.send({
