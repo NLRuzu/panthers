@@ -325,19 +325,20 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                 let role = message.guild.roles.find("name", "BLOODBROTHERS");
                 let role2 = message.guild.roles.find("name", "❎ NO VERIFICADO");
                 let guild = bot.guilds.get("458220475957379074");
-                member.addRole(role).catch(console.error);
-                member.removeRole(role2).catch(console.error);
+                let miembro = guild.member(User);
+                miembro.addRole(role).catch(console.error);
+                miembro.removeRole(role2).catch(console.error);
                 User.send({
                     embed: {
                         color: 0x04ff00,
                         title: "**HAS SIDO VERIFICADO**",
 			                  url: "http://gamedev.es/",
-                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto #info. \n\nNo olvides asignarte tu rol para recibir las notificaciones de fortnite en sala #comandos escribe +roles y usa el que quieras.**",
+                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor del clan. \n\nPara más información accede al canal de texto <#485759738164936719>. \n\nNo olvides asignarte         tu rol para recibir las notificaciones de fortnite en sala <#481525340083191809> escribe +roles y usa el que quieras.**",
                     }
                 });
 				
 			
-                bot.channels.get("589084546054619166").send({
+                bot.channels.get("589083868674392065").send({
                     embed: {
 						author: {
 							name: message.author.tag,
@@ -346,7 +347,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
                         color: 0x04ff00,
                         description: "**Ha verificado a **" + User + " **correctamente**",
                     }
-                });
+
+                })
+
             }
       }
 	
