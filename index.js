@@ -474,10 +474,12 @@ if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
                         description: '**A Continuación se marcará con un ICONO el afijo que esté en esta semana actualmente en míticas+**',
 						fields: [
 							{
-							name: "Reforzada",		
+							name: ":one:",
+							value: "ACTIVA",
 							},	
 							{
-							name: "Tiránica",
+							name: ":two:",
+							value: "ACTIVA",
 							}
 							
 							
