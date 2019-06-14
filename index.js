@@ -315,8 +315,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 	     	let role2 = message.guild.roles.find("name", "BLOODBROTHERS");
                 let guild = bot.guilds.get("559319996162113537");
 	      	let miembro = message.guild.member(User);
-                message.member.removeRole(role);
-	      	message.member.addRole(role2);
+                message.member.removeRole(role).catch(console.error);
+	      	message.member.addRole(role2).catch(console.error);
                 User.send({
                     embed: {
                         color: 0x04ff00,
