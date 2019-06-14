@@ -461,7 +461,8 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 }
 }
 if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
-			let embed = {
+	let adminRoleObject = server.roles.find("name", "BLOODBROTHERS");	
+	let embed = {
 			"embed": {
 						
                         color:  0xff0025,
@@ -475,8 +476,8 @@ if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
                     }
 			};	
   
-	 message.channel.send(embed);	 
-     message.delete();
+	 message.delete().catch(O_o=>{});
+	bot.channels.get("589072830021238793").send(`[${adminRoleObject}]`, embebido);
   
 		}
 	
