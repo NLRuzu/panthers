@@ -473,9 +473,9 @@ if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
 						url: "http://gamedev.es/",
                         description: '**A Continuación se marcará con un ICONO el afijo que esté en esta semana actualmente en míticas+**',
 						fields: [
-        { name: ".", value: "Reforzada\Potenciante\Furibunda\Necrótica\Volcánica", inline: true},
- 	{ name: ".", value: "Sísmica\Infestada\Tiránica\Segadora\Dolorosa", inline: true},
-        { name: ".", value: "Sanguina\Bullente\Detonante\Inquieta\Explosiva", inline: true}
+        { name: ".", value: " 💥Reforzada\n 💥Potenciante\nFuribunda\nNecrótica\nVolcánica", inline: true},
+ 	{ name: ".", value: "Sísmica\nInfestada\nTiránica\n 💥Segadora\nDolorosa", inline: true},
+        { name: ".", value: "Sanguina\nBullente\nDetonante\n 💥Inquieta\nExplosiva", inline: true}
       ]
                     }
 			};	
