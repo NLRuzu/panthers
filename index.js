@@ -311,11 +311,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
             message.delete();
       if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM") || message.member.roles.find("name", "CO-GM") || message.member.roles.find("name", "OFICIAL")){
                 let User = message.mentions.members.first();
-                let role = message.guild.roles.find(role => role.name === "BLOODBROTHERS"); 
-                let role2 = message.guild.roles.find(role => role.name === "❎ NO VERIFICADO");
+	     	const role = message.guild.roles.find('name', 'BLOODBROTHERS');
+	       	const role2 = message.guild.roles.find('name', '❎ NO VERIFICADO');
                 let guild = bot.guilds.get("559319996162113537");
-                message.member.addRole(role).catch(console.error);
-                message.member.removeRole(role2).catch(console.error);
+                guildMember.addRole(role);
+	      	guildMember.removeRole(role2);
                 User.send({
                     embed: {
                         color: 0x04ff00,
