@@ -458,7 +458,42 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 	
 }
 }
-
+if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
+			let embed = {
+			"embed": {
+						
+                        color:  0xff0025,
+						footer: {
+									  "text": message.guild.name
+									},
+						"image": {
+				     		 "url": "https://i.imgur.com/9LThfEa.png"
+				   			 },
+						title: 'INFORMACIÓN AFIJOS DE ESTA SEMANA',
+						url: "http://gamedev.es/",
+                        description: '**A Continuación se marcará con un ICONO el afijo que esté en esta semana actualmente en míticas+**',
+						fields: [
+							{
+							name: "Reforzada",		
+							},	
+							{
+							name: "Tiránica",
+							}
+							
+							
+							
+							
+							
+						]
+                    }
+			};	
+  
+	 message.channel.send(embed);	 
+     message.delete();
+  
+		}
+	
+	
 
 	
 	
