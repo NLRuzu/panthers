@@ -287,9 +287,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			var apuntarme = {
 				"embed": {
 					color: 0xff0025 ,
-					"image": {
-				     		 "url": "https://i.imgur.com/dNWATTa.png"
-				   			 },
 					title: "**NUEVA TAREA PENDIENTE**",
 					url: "http://gamedev.es/",				
 
