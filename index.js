@@ -266,6 +266,55 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		}
 	
 	
+	if (message.content.startsWith(ft + "tarea")) {  //  +quedada "Nick1" 
+			var args = [];
+			var texto = message.content;
+			try{
+				while(texto.includes("\"")){
+					texto = texto.substr(texto.indexOf("\"")+1);
+					args.push(texto.substring(0,texto.indexOf("\"")));
+					texto = texto.substr(texto.indexOf("\"")+1);
+				}
+			}
+			catch(err){
+				message.channel.send("+tarea \"Descripción\"");
+				return;
+			}
+			let server = bot.guilds.get("561212531058933771");
+			let adminRoleObject = server.roles.find("name", "GM");
+			let NickParticipante1 = args[0];
+			let disponible = args[1];
+			var apuntarme = {
+				"embed": {
+					color: 0xff0025 ,
+					"image": {
+				     		 "url": "https://i.imgur.com/dNWATTa.png"
+				   			 },
+					title: "**NUEVA TAREA PENDIENTE**",
+					url: "http://gamedev.es/",				
+
+					fields: [
+						{
+						name: "📜 Descripción",
+						value: NickParticipante1,
+						}
+						
+									 						
+					]
+				}
+			};
+
+
+			let torneochannel = bot.channels.get("590107451240742916").send(`[${adminRoleObject}]`, apuntarme);
+			if(!torneochannel) return message.channel.send("No se encuentra la sala");
+
+
+			message.delete().catch(O_o=>{});
+			
+		}
+	
+	
+	
 			  
 } //FIN DE COMANDOS GENERALES
  
