@@ -34,8 +34,8 @@ bot.on("guildMemberAdd", async member => {
   let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
     let embed = { embed: {
                 color: 0x04ff00,
-                title: "Hola bienvenido a la Hermandad BloodBrothers.",
-                description: '**Antes de nada tienes que verificar tu cuenta, para ello tendrás que ir a la sala <#589084546054619166> y escribir +solicitar. \nTendrás que esperar a que un STAFF te verifique y tengas acceso a todas las salas. \nPara mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**', 
+                title: "Hola bienvenido a la Hermandad ArtiK.",
+                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**', 
             }
     };
   
@@ -44,8 +44,8 @@ bot.on("guildMemberAdd", async member => {
     member.send({
         embed: {
                 color: 0x04ff00,
-               title: "Hola bienvenido a la Hermandad BloodBrothers.",
-                description: '**Antes de nada tienes que verificar tu cuenta, para ello tendrás que ir a la sala <#589084546054619166> y escribir +solicitar. \nTendrás que esperar a que un STAFF te verifique y tengas acceso a todas las salas. \nPara mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**',  
+               title: "Hola bienvenido a la Hermandad ArtiK.",
+                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**',  
                 
             }
         });
@@ -68,7 +68,7 @@ bot.on("guildMemberRemove", async member => {
 
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "❎ NO VERIFICADO");
+    let role = member.guild.roles.find("name", "INICIADO");
     member.addRole(role).catch(console.error);
 });
 
@@ -125,12 +125,8 @@ if (message.content.startsWith(ft + "help")) {
 	  .setTitle("**GENERALES**")
 	  .setColor("#ff0025") 
 	  .setThumbnail(sicon)
-	  .addField("**+sugerencia descripción**", "Añade una sugerencia")
 	  .addField("**+musica**", "Comandos de uso de los bot musicales")
-	  .addField("**+afijos**", "Nos muestra los afijos de míticas+ activos esta semana")
-	  .addField("**+mitica \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de mítica organizada. escribir en <#561300365304397835>")
 	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#588370763409784842>")
-	  .addField("**+busco descripción**", "Mensaje de búsqueda personal para jugar. Importante estar en una sala de voz y escribir en <#561532607108743229>");
 	  
 	bot.channels.get("588369336226283520").send(serverembed);
 	  }
@@ -163,56 +159,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
               message.delete().catch(O_o=>{});
       }	
 			
-	if (message.content.startsWith(ft + "mitica")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
-			var args = [];
-			var texto = message.content;
-			try{
-				while(texto.includes("\"")){
-					texto = texto.substr(texto.indexOf("\"")+1);
-					args.push(texto.substring(0,texto.indexOf("\"")));
-					texto = texto.substr(texto.indexOf("\"")+1);
-				}
-			}
-			catch(err){
-				message.channel.send("+mitica \"Descripción\" \"Día y Hora\"");
-				return;
-			}
-			let server = bot.guilds.get("561212531058933771");
-			let adminRoleObject = server.roles.find("name", "BLOODBROTHERS");
-			let NickParticipante1 = args[0];
-			let NickParticipante2 = args[1];
-			let disponible = args[2];
-			var apuntarme = {
-				"embed": {
-					color: 0xff0025 ,
-					"image": {
-				     		 "url": "https://i.imgur.com/HhMGvPL.png"
-				   			 },
-					title: "**NUEVA MÍTICA PROPUESTA**",
-					url: "http://gamedev.es/",				
-
-					fields: [
-						{
-						name: "📜 Descripción",
-						value: NickParticipante1,
-						},
-						{
-						name: "📆 Día y Hora",
-						value: NickParticipante2,
-						}
-									 						
-					]
-				}
-			};
-
-
-			let torneochannel = bot.channels.get("561538721653063690").send(`[${adminRoleObject}]`, apuntarme);
-			if(!torneochannel) return message.channel.send("No se encuentra la sala");
-
-
-			message.delete().catch(O_o=>{});
-			
-		}
+	
 	
 	if (message.content.startsWith(ft + "raid")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
 			var args = [];
@@ -302,7 +249,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			};
 
 
-			let torneochannel = bot.channels.get("590107451240742916").send(`[${adminRoleObject}]`, apuntarme);
+			let torneochannel = bot.channels.get("597723057418797071").send(`[${adminRoleObject}]`, apuntarme);
 			if(!torneochannel) return message.channel.send("No se encuentra la sala");
 
 
