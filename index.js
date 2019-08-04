@@ -221,7 +221,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				message.channel.send("+tarea \"Descripción\"");
 				return;
 			}
-			let server = bot.guilds.get("561212531058933771");
+			let server = bot.guilds.get("597732937659842581");
 			let adminRoleObject = server.roles.find("name", "GM");
 			let NickParticipante1 = args[0];
 			let disponible = args[1];
