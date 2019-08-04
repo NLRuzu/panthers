@@ -98,18 +98,12 @@ if (message.author.id == "298029791708315649") { 	// CREATOR COMMANDS
 // REACCION EMOJI SALA PROPUESTAS //
 
 
-	// REACCION EMOJI SALA MITICAS //
-if (message.channel.id == "561538721653063690" && message.author.bot) {
-    message.react("588995914258186240");
-    message.react("588995906817228841");
-    message.react("588995898067910668");
-	}
 	
 	// REACCION EMOJI SALA RAID //
-if (message.channel.id == "588370763409784842" && message.author.bot) {
-   message.react("588995914258186240");
-    message.react("588995906817228841");
-    message.react("588995898067910668");
+if (message.channel.id == "597727542694117396" && message.author.bot) {
+   message.react("607518140557033483");
+    message.react("607518140468953099");
+    message.react("607518140376678435");
 	}
 	
 	
@@ -126,9 +120,9 @@ if (message.content.startsWith(ft + "help")) {
 	  .setColor("#ff0025") 
 	  .setThumbnail(sicon)
 	  .addField("**+musica**", "Comandos de uso de los bot musicales")
-	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#588370763409784842>")
+	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#597727542694117396>")
 	  
-	bot.channels.get("588369336226283520").send(serverembed);
+	bot.channels.get("607520977215160330").send(serverembed);
 	  }
 
 if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
@@ -176,7 +170,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				return;
 			}
 			let server = bot.guilds.get("561212531058933771");
-			let adminRoleObject = server.roles.find("name", "BLOODBROTHERS");
+			let adminRoleObject = server.roles.find("name", "ArtiK");
 			let NickParticipante1 = args[0];
 			let NickParticipante2 = args[1];
 			let disponible = args[2];
@@ -184,7 +178,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				"embed": {
 					color: 0xff0025 ,
 					"image": {
-				     		 "url": "https://i.imgur.com/dNWATTa.png"
+				     		 "url": "https://i.imgur.com/2DjZCws.png"
 				   			 },
 					title: "**NUEVA RAID PROGRAMADA**",
 					url: "http://gamedev.es/",				
@@ -204,7 +198,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			};
 
 
-			let torneochannel = bot.channels.get("588370763409784842").send(`[${adminRoleObject}]`, apuntarme);
+			let torneochannel = bot.channels.get("597727542694117396").send(`[${adminRoleObject}]`, apuntarme);
 			if(!torneochannel) return message.channel.send("No se encuentra la sala");
 
 
@@ -269,14 +263,14 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				  
 
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-		  if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM")){
+		  if(message.member.roles.find("name", "GM") || message.member.roles.find("name", "CO-GM")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
-		  let adminRoleObject = message.guild.roles.find("name", "BLOODBROTHERS");
+		  let adminRoleObject = message.guild.roles.find("name", "ArtiK");
 			var embebido = {
 					  "embed": {
 										"color":  0xff0025,
 						  "image": {
-				     		 "url": "https://i.imgur.com/Tc5nDFH.png"
+				     		 "url": "https://i.imgur.com/tlFyDCk.png"
 				   			 },
 										author: {
 											name: message.author.tag,
@@ -295,61 +289,12 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			
 
 			message.delete().catch(O_o=>{});
-			bot.channels.get("561253163097653278").send(`[${adminRoleObject}]`, embebido);
+			bot.channels.get("597722035447136256").send(`[${adminRoleObject}]`, embebido);
 
 			}
 		}
 
-	if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
-            message.delete();
-      if(message.member.roles.find("name", "ADMIN") || message.member.roles.find("name", "GM") || message.member.roles.find("name", "CO-GM") || message.member.roles.find("name", "OFICIAL")){
-	  console.log("1");
-                let User = message.mentions.members.first();
-				console.log("2");
-	       	let role = message.member.guild.roles.find("name", "❎ NO VERIFICADO");
-			console.log("3");
-	     	let role2 = message.member.guild.roles.find("name", "BLOODBROTHERS");
-			console.log("3");
-                let guild = bot.guilds.get("559319996162113537");
-				console.log("4");
-                User.removeRole(role).catch(console.error);
-				console.log("6");
-	      	User.addRole(role2).catch(console.error);
-			console.log("7");
-	      
- 
-                User.send({
-                    embed: {
-                        color: 0x04ff00,
-                        title: "**HAS SIDO VERIFICADO**",
-			                  url: "http://gamedev.es/",
-                        description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del servidor. \n\nPara más información accede al canal de texto <#561212531868303379>.**",
-                    }
-                });
-				
-			
-                bot.channels.get("589083868674392065").send({
-                    embed: {
-						author: {
-							name: message.author.tag,
-							icon_url: message.author.avatarURL
-						},
-                        color: 0x04ff00,
-                        description: "**Ha verificado a **" + User + " **correctamente**",
-                    }
-
-                })
-
-            }
-      }
 	
-
-	
-
-	
-		
-
-
 	if (message.content.startsWith(ft + "infonormas")) {       //  +infonormas   = Envía toda la información sobre las normas canal INFO
 			let embed = {
 			"embed": {
@@ -359,7 +304,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 									  "text": message.guild.name
 									},
 						"image": {
-				     		 "url": "https://i.imgur.com/ETieOPR.png"
+				     		 "url": "https://i.imgur.com/MXRlPE5.png"
 				   			 },
 						title: 'INFORMACIÓN SOBRE LA NORMATIVA DE LA HERMANDAD',
 						url: "http://gamedev.es/",
@@ -391,7 +336,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 							},
 							{
 							name: ":seven:",
-							value: `╚> Todos los comandos se escriben en la sala <#588369336226283520>.`,
+							value: `╚> Todos los comandos se escriben en la sala <#607520977215160330>.`,
 							}
 							
 							
@@ -407,46 +352,25 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		}
 	
 	
-	
-	
 
-
-if (message.content.startsWith(ft + "solicitar")) {
-  let rUser = message.guild.member;
-  if(!rUser) return message.channel.send("formato incorrecto +solicitar");
-
-  let reportEmbed = new Discord.RichEmbed()
-  .setTitle("NUEVA PETICIÓN DE ACCESO")
-  .setColor("#52a255")
-  .addField("Solicitante:", `${message.author}`)
-  .addField("Fecha:", message.createdAt)
-
-  let reportschannel = message.guild.channels.find(`name`, "❎-solicitar");
-  if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-
-  message.delete().catch(O_o=>{});
-  reportschannel.send(reportEmbed);
-  }  
-	
-	
 	if (message.channel.id == message.channel.id) { 	// COMANDOS DE MUSICA BOTS
 
 if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
-	 let adminRoleObject = message.guild.roles.find("name", "BLOODBROTHERS");	
+	 let adminRoleObject = message.guild.roles.find("name", "ArtiK");	
 			let embed1 = {
 				"embed": {
 				    "title": "LISTA DE COMANDOS BOT MÚSICA",
 				    "color": 13041408,
 				    "timestamp": "2019-04-29T12:14:55.011Z",
 				    "footer": {
-				      "icon_url": "https://i.imgur.com/7mJTWso.png",
-				      "text": "Hermandad BloodBrothers"
+				      "icon_url": "https://i.imgur.com/7uSvMbb.png",
+				      "text": "Hermandad ArtiK"
 				    },
 				    "thumbnail": {
-				      "url": "https://i.imgur.com/7mJTWso.png"
+				      "url": "https://i.imgur.com/7uSvMbb.png"
 				    },
 				    "image": {
-				      "url": "https://i.imgur.com/l6jZidP.png"
+				      "url": "https://i.imgur.com/GpYJjFM.png"
 				    },
 				    "fields": [
 				      {
@@ -475,14 +399,14 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 				    "color": 13041408,
 				    "timestamp": "2019-04-29T12:14:55.011Z",
 				    "footer": {
-				      "icon_url": "https://i.imgur.com/7mJTWso.png",
-				      "text": "Hermandad BloodBrothers"
+				      "icon_url": "https://i.imgur.com/7uSvMbb.png",
+				      "text": "Hermandad ArtiK"
 				    },
 				    "thumbnail": {
-				      "url": "https://i.imgur.com/7mJTWso.png"
+				      "url": "https://i.imgur.com/7uSvMbb.png"
 				    },
 				    "image": {
-				      "url": "https://i.imgur.com/BTi6Es7.png"
+				      "url": "https://i.imgur.com/kgtxWQZ.png"
 				    },
 				    "fields": [
 				      {
@@ -513,102 +437,8 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 	
 }
 }
-if (message.content.startsWith(ft + "afijos")) {       //  afijos semanales
-	let server = bot.guilds.get("561212531058933771");
-	let adminRoleObject = server.roles.find("name", "BLOODBROTHERS");	
-	let embed = {
-			"embed": {
-						
-                        color:  0xff0025,
-						
-						title: 'AFIJOS DE ESTA SEMANA',
-						url: "http://gamedev.es/",
-						fields: [
-        { name: " 💥Estos son los afijos esta semana💥", value: "Reforzada\nPotenciante\nInquieta\nSegadora", inline: true},
- 	
-      ]
-                    }
-			};	
-  
-	 message.delete().catch(O_o=>{});
-	bot.channels.get("589072830021238793").send(`[${adminRoleObject}]`, embed);
-  
-		}
-	
-	
-
-	
-	
-	if(message.content.startsWith("+busco")) {
-                if(message.member.voiceChannel != null || message.member.voiceChannel != undefined){
-                    let desc = message.content.split("+busco ")[1];
-                    if(desc != null){
-                        let options = {
-                            maxAge: 3600
-                        }
-                        let server = bot.guilds.get("561212531058933771");
-                        let adminRoleObject = server.roles.find("name", "BLOODBROTHERS");
-                        message.member.voiceChannel.createInvite(options)
-                        .then(invite => {
-                            let invitacion = invite.code.split("invite/")[0];
-                            let users = message.member.voiceChannel.userLimit - message.member.voiceChannel.members.size;
-
-								var mdb = {
-							  "embed": {
-								"title": "BUSCANDO GENTE",
-								"url": "http://gamedev.es/",
-								  "image": {
-				     				 "url": "https://i.imgur.com/A32ry64.png"
-				   			 		},
-								"description": "Busco **" + users + "** Gentusos para hacer algo en **" + message.member.voiceChannel.name + "**",
-								"color": 0xff0025,
-								"timestamp": message.createdAt,
-								"author": {
-								"name": message.author.tag,
-								"icon_url": message.author.avatarURL
-								},
-								"fields": [
-								  {
-									"name": "Descripción",
-									"value": "*" + desc + "*",
-								  },
-								  {
-									"name": "Únete a mi sala",
-									"value": "[Haz click para unirte](https://discord.gg/"+ invitacion +")"
-								  }
-								]
-							  }
-							}
 
 
-
-	message.delete().catch(O_o=>{});
-	bot.channels.get("561532607108743229").send(`[${adminRoleObject}]`, mdb);
-        
-						
-                           
-                        })
-                        .catch(console.error);
-                    }
-                }
-            }
-	
-	
-	
-
-	
- 
-	
-   
-
-    
-
-			
-
-			
-
-
-   
 // CONFIG BOT 
 if(message.channel.type === "dm") return;
 		if(message.author.bot) return;
