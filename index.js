@@ -170,7 +170,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				return;
 			}
 			let server = bot.guilds.get("597732937659842581");
-			let adminRoleObject = server.roles.find("name", "ArtiK");
+			let adminRoleObject = message.guild.roles.find("name", "ArtiK");
 			let NickParticipante1 = args[0];
 			let NickParticipante2 = args[1];
 			let disponible = args[2];
@@ -222,7 +222,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				return;
 			}
 			let server = bot.guilds.get("597732937659842581");
-			let adminRoleObject = server.roles.find("name", "GM");
+			let adminRoleObject = message.guild.roles.find("name", "GM");
 			let NickParticipante1 = args[0];
 			let disponible = args[1];
 			var apuntarme = {
