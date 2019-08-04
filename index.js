@@ -35,7 +35,7 @@ bot.on("guildMemberAdd", async member => {
     let embed = { embed: {
                 color: 0x04ff00,
                 title: "Hola bienvenido a la Hermandad ArtiK.",
-                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**', 
+                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#607520977215160330> y ver que puedes hacer.**', 
             }
     };
   
@@ -45,7 +45,7 @@ bot.on("guildMemberAdd", async member => {
         embed: {
                 color: 0x04ff00,
                title: "Hola bienvenido a la Hermandad ArtiK.",
-                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#588369336226283520> y ver que puedes hacer.**',  
+                description: '**Para mejorar tu experiencia aquí puedes usar el comando +help en la sala <#607520977215160330> y ver que puedes hacer.**',  
                 
             }
         });
@@ -68,7 +68,7 @@ bot.on("guildMemberRemove", async member => {
 
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "INICIADO");
+    let role = member.guild.roles.find("name", "ArtiK");
     member.addRole(role).catch(console.error);
 });
 
@@ -117,7 +117,7 @@ if (message.content.startsWith(ft + "help")) {
 	  let sicon = message.guild.iconURL;
 	  let serverembed = new Discord.RichEmbed()
 	  .setTitle("**GENERALES**")
-	  .setColor("#ff0025") 
+	  .setColor("#afff00") 
 	  .setThumbnail(sicon)
 	  .addField("**+musica**", "Comandos de uso de los bot musicales")
 	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#597727542694117396>")
@@ -169,14 +169,14 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 				message.channel.send("+raid \"Descripción\" \"Día y Hora\"");
 				return;
 			}
-			let server = bot.guilds.get("561212531058933771");
+			let server = bot.guilds.get("597732937659842581");
 			let adminRoleObject = server.roles.find("name", "ArtiK");
 			let NickParticipante1 = args[0];
 			let NickParticipante2 = args[1];
 			let disponible = args[2];
 			var apuntarme = {
 				"embed": {
-					color: 0xff0025 ,
+					color: 0xafff00 ,
 					"image": {
 				     		 "url": "https://i.imgur.com/2DjZCws.png"
 				   			 },
@@ -227,7 +227,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			let disponible = args[1];
 			var apuntarme = {
 				"embed": {
-					color: 0xff0025 ,
+					color: 0xafff00 ,
 					title: "**NUEVA TAREA PENDIENTE**",
 					url: "http://gamedev.es/",				
 
@@ -268,7 +268,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		  let adminRoleObject = message.guild.roles.find("name", "ArtiK");
 			var embebido = {
 					  "embed": {
-										"color":  0xff0025,
+										"color":  0xafff00,
 						  "image": {
 				     		 "url": "https://i.imgur.com/tlFyDCk.png"
 				   			 },
@@ -299,7 +299,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 			let embed = {
 			"embed": {
 						
-                        color:  0xff0025,
+                        color:  0xafff00 ,
 						footer: {
 									  "text": message.guild.name
 									},
