@@ -120,6 +120,7 @@ if (message.content.startsWith(ft + "help")) {
 	  .setColor("#afff00") 
 	  .setThumbnail(sicon)
 	  .addField("**+musica**", "Comandos de uso de los bot musicales")
+	  .addField("**+addons**", "Nos muestra la lista de addons recomendados por la hermandad")
 	  .addField("**+raid \"Descripción\" \"Día y Hora\"**", "Mensaje de búsqueda de raid organizada. escribir en <#597727542694117396>")
 	  
 	bot.channels.get("607520977215160330").send(serverembed);
