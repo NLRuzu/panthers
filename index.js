@@ -352,6 +352,80 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS GENERALES
 		}
 	
 	
+	
+	if (message.content.startsWith(ft + "addons")) {       //  +addons nos muestra la lista de addons recomendados
+			let embed = {
+			"embed": {
+						
+                        color:  0xafff00 ,
+						footer: {
+									  "text": message.guild.name
+									},
+						"image": {
+				     		 "url": "https://i.imgur.com/lTCIQmR.png"
+				   			 },
+						title: 'ESTOS SON NUESTRA RECOMENDACIÓN DE ADDONS',
+						url: "http://gamedev.es/",
+                        description: '**Aquí exponemos la lista de addons que recomendamos a todo miembro de la hermandad, para ello deberán instalarlos vía TWITCH o de forma manual, en caso de no saber hacerlo o tener dudas preguntar.**',
+						fields: [
+							{
+							name: "Raider.IO Mythic Plus and Raid Progress",
+							value: `╚> Addon base de Raiderio`,
+							},	
+							{
+							name: "Raider.IO LOD Database EU Alliance",
+							value: `╚> Base de datos de Raiderio. Hay que actualizarlo TODOS los días.`,
+							},
+							{
+							name: "World Quest Tracker & World Quest List",
+							value: `╚> Nos muestra las misiones de mundo organizadas y con mayor facilidad.`,
+							},
+							{
+							name: "Angry Keystones",
+							value: `╚> Nos dice el tiempo que nos queda para meter la piedra en X nivel.`,
+							},
+							{
+							name: "Simulationcraft & Pawn",
+							value: `╚> Fundamentales para optimizar nuestro PJ al máximo (en caso de no saber hacerlo pedir ayuda a la hermandad).`,
+							},
+							{
+							name: "Handynotes & Instance Portals",
+							value: `╚> Nos muestra en los mapas las entradas de las Bandas y las Mazmorras.`,
+							},
+							{
+							name: "Bigwigs Bossmods & LittleWigs",
+							value: `╚> Addon OBLIGATORIO fundamental para mecánicas de raid y mazmorras (Opcional DBM)(Si no sabes usarlo pedir ayuda a la hermandad).`,
+							},
+							{
+							name: "MaxDps Rotation Helper & MaxDPS tu clase",
+							value: `╚> Para aprender de la manera mas eficiente y correcta rotación a seguir con tu PJ.`,
+							},
+							{
+							name: "O Item Level(OiLvL)",
+							value: `╚> Addon para facilitar la visualización tanto de nuestro iLevel actual como de los objetos en la mochila, loot etc...`,
+							},
+							{
+							name: "GTFO",
+							value: `╚> Addon fundamental para raidear y hacer míticas nos suena muy fuerte cuando pisamos un área que nos hace daño.`,
+							},
+							{
+							name: "MaxCam",
+							value: `╚> Addon para alejar la cámara al máximo de lo permitido.`,
+							}
+							
+							
+							
+							
+						]
+                    }
+			};	
+  
+	 message.channel.send(embed);	 
+     message.delete();
+  
+		}
+	
+	
 
 	if (message.channel.id == message.channel.id) { 	// COMANDOS DE MUSICA BOTS
 
