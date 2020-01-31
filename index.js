@@ -220,7 +220,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 			}
 			catch(err){
-				message.channel.send("+crearclan \"NombredelClan\" \"Líder\"\"Miembros\"");
+				message.channel.send("+crearclan \"NombredelClan\" \"Líder\" \"Miembros\" \"Facción\"");
 				return;
 			}
 			let server = bot.guilds.get("597732937659842581");
@@ -228,6 +228,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			let NickParticipante1 = args[0];
 			let NickParticipante2 = args[1];
 			let NickParticipante3 = args[2];
+			let NickParticipante4 = args[3];
 			let disponible = args[2];
 			var apuntarme = {
 				"embed": {
@@ -247,6 +248,10 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 						{
 						name: "📜 Miembros",
 						value: NickParticipante3,
+						},
+						{
+						name: "📜 Facción",
+						value: NickParticipante4,
 						}
 									 						
 					]
