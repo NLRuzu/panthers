@@ -78,8 +78,8 @@ bot.on("message", (message) => {
 
 	// REACCION EMOJI SUGERENCIAS//
 if (message.channel.id == "672785811888013321" && message.author.bot) {
-    message.react("6727861279205621965");
     message.react("672786146006401044");
+    message.react("672786127920562196");
 	}
 	
 
