@@ -162,61 +162,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			}
 		}
 
-	// fin comunicar general
-	
-	if (message.content.startsWith(ft + "partidared")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
-			var args = [];
-			var texto = message.content;
-			try{
-				while(texto.includes("\"")){
-					texto = texto.substr(texto.indexOf("\"")+1);
-					args.push(texto.substring(0,texto.indexOf("\"")));
-					texto = texto.substr(texto.indexOf("\"")+1);
-				}
-			}
-			catch(err){
-				message.channel.send("+partidared \"Descripci贸n\" \"D铆a y Hora\"");
-				return;
-			}
-			let server = bot.guilds.get("597732937659842581");
-			let adminRoleObject = message.guild.roles.find("name", "Red Dead");
-			let NickParticipante1 = args[0];
-			let NickParticipante2 = args[1];
-			let disponible = args[2];
-			var apuntarme = {
-				"embed": {
-					color: 0xafff00 ,
-					title: "**NUEVA PARTIDA PROGRAMADA**",
-					url: "http://gamedev.es/",				
-
-					fields: [
-						{
-						name: "馃摐 Descripci贸n",
-						value: NickParticipante1,
-						},
-						{
-						name: "馃搯 D铆a y Hora",
-						value: NickParticipante2,
-						}
-									 						
-					]
-				}
-			};
-
-
-			let torneochannel = bot.channels.get("649325138289885209").send(`[${adminRoleObject}]`, apuntarme);
-			if(!torneochannel) return message.channel.send("No se encuentra la sala");
-
-
-			message.delete().catch(O_o=>{});
-			
-		}
 	
 	
-
-
-
-	// fin comunicar general
 	
 
 	if (message.content.startsWith(ft + "staff")) {            //  +staff   = Informaci贸n de todos los comandos de STAFF
@@ -245,7 +192,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	 let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
 			let embed1 = {
 				"embed": {
-				    
 				    "color": 13041408,
 				    "timestamp": "2019-04-29T12:14:55.011Z",
 				    },
@@ -258,6 +204,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				  };	
 							
 	message.channel.send(`[${adminRoleObject}]`, embed1);
+
 		
 	
 	
