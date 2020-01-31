@@ -186,52 +186,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     } // FIN COMANDOS STAFF
 	
 	
-	// solicitar bandera blanca
-	if (message.content.startsWith(ft + "banderablanca")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
-			var args = [];
-			var texto = message.content;
-			try{
-				while(texto.includes("\"")){
-					texto = texto.substr(texto.indexOf("\"")+1);
-					args.push(texto.substring(0,texto.indexOf("\"")));
-					texto = texto.substr(texto.indexOf("\"")+1);
-				}
-			}
-			catch(err){
-				message.channel.send("+banderablanca \"NombredelClan\"");
-				return;
-			}
-			let server = bot.guilds.get("597732937659842581");
-			let adminRoleObject = message.guild.roles.find("name", "STAFF");
-			let NickParticipante1 = args[0];
-			let disponible = args[2];
-			var apuntarme = {
-				"embed": {
-					color: 0xafff00 ,
-					title: "**NUEVA PETICIÓN DE BANDERA BLANCA**",
-					url: "http://gamedev.es/",				
+	
 
-					fields: [
-						{
-						name: "📜 Nombre del Clan",
-						value: NickParticipante1,
-						},
-						
-									 						
-					]
-				}
-			};
-
-
-			let torneochannel = bot.channels.get("672800388184801310").send(`[${adminRoleObject}]`, apuntarme);
-			if(!torneochannel) return message.channel.send("No se encuentra la sala");
-
-
-			message.delete().catch(O_o=>{});
-			
-		}
-
-	// fin solicitar bandera
+	
 	
 	// INICIO ACEPTAR BANDERA
 	
@@ -432,6 +389,30 @@ let adminRoleObject = message.guild.roles.find("name", "STAFF");
                   };
 
               bot.channels.get("672785811888013321").send(`[${adminRoleObject}]`, embebido);
+              message.delete().catch(O_o=>{});
+      }	
+	/// FIN SUGERENCIA ///
+	
+	/ +solicitar //
+if(message.content.toUpperCase().startsWith("+solicitar")){
+let adminRoleObject = message.guild.roles.find("name", "STAFF");	
+  var comunicado = message.content.replace("+solicitar ", "");
+    var embebido = {
+                          "embed": {
+                              color: 0xc6ff00,
+                              author: {
+                                  name: message.author.tag,
+                                  icon_url: message.author.avatarURL
+                              },
+                              title: "**NUEVA SOLICITUD BANDERA BLANCA**",
+              url: "http://gamedev.es/",
+
+              description: comunicado,
+              timestamp: message.createdAt,
+                          }
+                  };
+
+              bot.channels.get("672800388184801310").send(`[${adminRoleObject}]`, embebido);
               message.delete().catch(O_o=>{});
       }	
 	/// FIN SUGERENCIA ///
