@@ -186,61 +186,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     } // FIN COMANDOS STAFF
 	
 	
-	
-
-	
-	
-	// INICIO ACEPTAR BANDERA
-	
-	if (message.content.startsWith(ft + "aceptarbandera")) {        //  +ad1 @user   =  Advertimos al usuario
-		message.delete();
-  if(message.member.roles.find("name", "STAFF")){
-			let User = message.mentions.users.first();
-			let guild = bot.guilds.get("597732937659842581");
-			let miembro = guild.member(User);
-			
-			User.send({
-				embed: {
-					color: 0xFF0000,
-					title: "**PETICIÓN ACEPTADA DE BANDERA BLANCA**",
-					url: "http://gamedev.es/",
-					description: "**Hemos recibido su solicitud de bandera blanca para su clan o estructura, por consiguiente aceptada e instalada en sus estructuras**",
-				}
-			});
-			
-		
-			bot.channels.get("672800388184801310").send({
-				embed: {
-					author: {
-						name: message.author.tag,
-						icon_url: message.author.avatarURL
-					},
-					color: 0xFF0000,
-					description: "Ha aceptado la petición de bandera blanca de **" + User + "**",
-					fields: [
-					
-					  ]
-				
-				
-				
-				
-				
-				}
-			});
-	  
-		}
-  }
-
-// FIN ACEPTAR BANDERA
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	// crear clan
 	if (message.content.startsWith(ft + "crearclan")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
 			var args = [];
@@ -311,22 +256,18 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			var embebido = {
 				"embed": {
  
-    "color": 13041408,
-    "timestamp": "2020-01-31T15:11:42.980Z",
-    "footer": {
-      "icon_url": "https://i.imgur.com/8YiKMm4.png",
-      "text": "GA-METH"
-    },
-   
-    "image": {
-      "url": "https://i.imgur.com/1jYU0Z9.jpg"
-    },
-    
-    "fields": [
-      
-    ]
-  }
-}
+				"color": 13041408,
+    				"timestamp": "2020-01-31T15:11:42.980Z",
+				"title": "VOLVEMOS A ESTAR ONLINE",
+		"description": "El servidor vuelve a estar ONLINE de nuevo, disculpen las molestias y gracias por la paciencia.",
+    				"footer": {
+     				"icon_url": "https://i.imgur.com/8YiKMm4.png",
+     				"text": "GA-METH"
+  				  },
+   				"fields": [
+      				]
+  				}
+				}
 				  	
 							
 	bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
@@ -341,18 +282,14 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
  
     "color": 13041408,
     "timestamp": "2020-01-31T15:11:42.980Z",
+					"title": "ESTAMOS EN MANTENIMIENTO",
+		"description": "El servidor en este momento se encuentra OFFLINE, disculpen las molestias y gracias por la paciencia.",
     "footer": {
       "icon_url": "https://i.imgur.com/Lddby4e.jpg",
       "text": "GA-METH"
     },
-   
-    "image": {
-      "url": "https://i.imgur.com/Lddby4e.jpg"
-    },
-    
     "fields": [
-      
-    ]
+ ]
   }
 }
 				  	
@@ -360,14 +297,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
 	
 	};
-	
-	
-	
-	
-	
-	
-	
-	
 	
 // +SUGERENCIA //
 if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
