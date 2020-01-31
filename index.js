@@ -239,48 +239,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     } // FIN COMANDOS STAFF
 	
 	
-if (message.channel.id == message.channel.id) { 	// COMANDOS DE MUSICA BOTS
-
-if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
-	 let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
-			let embed1 = {
-				"embed": {
-				    "title": "LISTA DE COMANDOS BOT MÚSICA",
-				    "color": 13041408,
-				    "timestamp": "2019-04-29T12:14:55.011Z",
-				    },
-				    "thumbnail": {
-				      "url": "https://i.imgur.com/scHLkXu.png"
-				    },
-				   
-				    "fields": [
-				      {
-					"name": "!play nombre de la canción o link",
-					"value": "Reproduce una canción y si ponemos muchas seguidas se añaden a una lista de reproducción"
-				      },
-				      {
-					"name": "!pause y !stop",
-					"value": "Para una canción o la deja en pause"
-				      },
-				      {
-					"name": "!loop",
-					"value": "Ponemos en reprodución en ciclo la lista de reproducción"
-				      },
-				      {
-					 "name": "!leave y !skip",
-					"value": "El primero hace que se marche el bot de nuestra sala y el segundo hace pasar a la siguiente canción"  
-				      }
-
-				    ]
-					}
-				  };	
-							
-	message.channel.send(`[${adminRoleObject}]`, embed1);
-	
-	
-	
-}
-
        
        // SISTEMA NOTIFICACIONES //
        if (message.content.startsWith(ft + "online")) {         //  ONLINE
