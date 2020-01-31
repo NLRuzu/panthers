@@ -302,7 +302,6 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 	message.channel.send(`[${adminRoleObject}]`, embed1);
 		
 	
-}
 	
 	
 	
