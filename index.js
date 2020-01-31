@@ -209,7 +209,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	// aceptar bandera
 	if (message.content.startsWith(ft + "aceptarbandera")) {        //  +aceptarbandera @user   =  Advertimos al usuario
 		message.delete();
-  if(message.member.roles.find("name", "STAFF")){
+ 		 if(message.member.roles.find("name", "STAFF")){
 			let User = message.mentions.users.first();
 			let guild = bot.guilds.get("597732937659842581");
 			let miembro = guild.member(User);
@@ -224,22 +224,13 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			});
 			
 		
-			bot.channels.get("672867254618030089").send({
-				embed: {
-					author: {
-						name: message.author.tag,
-						icon_url: message.author.avatarURL
-					},
-					color: 0xFF0000,
-					description: "Ha aceptado la bandera blanca de **" + User + "**",
-					fields: [
-						
-					  ]
-					
-				}
-			});
-		}
-  }
+			bot.channels.get("672867254618030089").send
+			 
+		 }
+	}
+			 
+// 			 
+				
 	
 	// fin aceptar bandera
 	
