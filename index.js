@@ -186,7 +186,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     } // FIN COMANDOS STAFF
 	 
 	
- // SISTEMA NOTIFICACIONES //
+  // SISTEMA NOTIFICACIONES //
        if (message.content.startsWith(ft + "online")) {         //  ONLINE
 	   let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
 			var embebido = {
@@ -208,9 +208,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     ]
   }
 }
-				  };	
+				  	
 							
 	bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
+	
+	};
 	
 	
 	
