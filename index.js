@@ -252,7 +252,24 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			});
 			
 		
-			bot.channels.get("672800388184801310").send();
+			bot.channels.get("672800388184801310").send({
+				embed: {
+					author: {
+						name: message.author.tag,
+						icon_url: message.author.avatarURL
+					},
+					color: 0xFF0000,
+					description: "Ha aceptado la petición de bandera blanca de **" + User + "**",
+					fields: [
+					
+					  ]
+				
+				
+				
+				
+				
+				}
+			});
 	  
 		}
   }
