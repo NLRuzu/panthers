@@ -194,10 +194,10 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				"embed": {
 				    "color": 13041408,
 				    "timestamp": "2019-04-29T12:14:55.011Z",
-				    },
-				    "image": {
+				}
+					"image": {
 				      "url": "https://i.imgur.com/1jYU0Z9.jpg"
-				    },
+				    }
 				    
 				    
 					}
