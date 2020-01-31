@@ -206,33 +206,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 
 	// fin solicitar bandera
 	
-	// aceptar bandera
-	if (message.content.startsWith(ft + "aceptarbandera")) {        //  +aceptarbandera @user   =  Advertimos al usuario
-		message.delete();
- 		 if(message.member.roles.find("name", "STAFF")){
-			let User = message.mentions.users.first();
-			let guild = bot.guilds.get("597732937659842581");
-			let miembro = guild.member(User);
-			
-			User.send({
-				embed: {
-					color: 0xFF0000,
-					title: "**PETICIÓN ACEPTADA DE BANDERA BLANCA**",
-						  url: "http://gamedev.es/",
-					description: "**Hemos recibido su solicitud de bandera blanca para su clan o estructura, por consiguiente aceptada e instalada en sus estructuras**",
-				}
-			});
-			
-		
-			bot.channels.get("672867254618030089").send
-			 
-		 }
-	}
-			 
-// 			 
-				
 	
-	// fin aceptar bandera
 	
 	// crear clan
 	if (message.content.startsWith(ft + "crearclan")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
