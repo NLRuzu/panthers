@@ -204,6 +204,103 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  reportschannel.send(reportEmbed);
 		  }  
 
+	// fin solicitar bandera
+	
+	// aceptar bandera
+	if (message.content.startsWith(ft + "aceptarbandera")) {        //  +aceptarbandera @user   =  Advertimos al usuario
+		message.delete();
+  if(message.member.roles.find("name", "STAFF")){
+			let User = message.mentions.users.first();
+			let guild = bot.guilds.get("597732937659842581");
+			let miembro = guild.member(User);
+			
+			User.send({
+				embed: {
+					color: 0xFF0000,
+					title: "**PETICIÓN ACEPTADA DE BANDERA BLANCA**",
+						  url: "http://gamedev.es/",
+					description: "**Hemos recibido su solicitud de bandera blanca para su clan o estructura, por consiguiente aceptada e instalada en sus estructuras**",
+				}
+			});
+			
+		
+			bot.channels.get("672867254618030089").send({
+				embed: {
+					author: {
+						name: message.author.tag,
+						icon_url: message.author.avatarURL
+					},
+					color: 0xFF0000,
+					description: "Ha aceptado la bandera blanca de **" + User + "**",
+					fields: [
+						
+					  ]
+					
+				}
+			});
+		}
+  }
+	
+	// fin aceptar bandera
+	
+	// crear clan
+	if (message.content.startsWith(ft + "crearclan")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
+			var args = [];
+			var texto = message.content;
+			try{
+				while(texto.includes("\"")){
+					texto = texto.substr(texto.indexOf("\"")+1);
+					args.push(texto.substring(0,texto.indexOf("\"")));
+					texto = texto.substr(texto.indexOf("\"")+1);
+				}
+			}
+			catch(err){
+				message.channel.send("+crearclan \"NombredelClan\" \"Líder\"\"Miembros\"");
+				return;
+			}
+			let server = bot.guilds.get("597732937659842581");
+			let adminRoleObject = message.guild.roles.find("name", "STAFF");
+			let NickParticipante1 = args[0];
+			let NickParticipante2 = args[1];
+			let NickParticipante3 = args[2];
+			let disponible = args[2];
+			var apuntarme = {
+				"embed": {
+					color: 0xafff00 ,
+					title: "**NUEVA SOLICITUD DE CREACIÓN DE CLAN**",
+					url: "http://gamedev.es/",				
+
+					fields: [
+						{
+						name: "📜 Nombre del Clan",
+						value: NickParticipante1,
+						},
+						{
+						name: "📜 Líder",
+						value: NickParticipante2,
+						},
+						{
+						name: "📜 Miembros",
+						value: NickParticipante3,
+						}
+									 						
+					]
+				}
+			};
+
+
+			let torneochannel = bot.channels.get("672894817650606130").send(`[${adminRoleObject}]`, apuntarme);
+			if(!torneochannel) return message.channel.send("No se encuentra la sala");
+
+
+			message.delete().catch(O_o=>{});
+			
+		}
+	
+	// fin crear clan
+	
+	
+	
 	
   // SISTEMA NOTIFICACIONES //
        if (message.content.startsWith(ft + "online")) {         //  ONLINE
