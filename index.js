@@ -228,7 +228,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     },
    
     "image": {
-      "url": "https://i.imgur.com/1jYU0Z9.jpg"
+      "url": "https://i.imgur.com/Lddby4e.jpg"
     },
     
     "fields": [
