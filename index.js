@@ -187,24 +187,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	
        
-       // SISTEMA NOTIFICACIONES //
-       if (message.content.startsWith(ft + "online")) {         //  ONLINE
-	 let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
-			let embed1 = {
-				"embed": {
-				    "color": 13041408,
-				    "timestamp": "2019-04-29T12:14:55.011Z",
-				}
-					"image": {
-				      "url": "https://i.imgur.com/1jYU0Z9.jpg"
-				    }
-				    
-				    
-					}
-				  };	
-							
-	message.channel.send(`[${adminRoleObject}]`, embed1);
-
 		
 	
 	
