@@ -280,7 +280,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 	
 	
 }
-}
+
        
        // SISTEMA NOTIFICACIONES //
        if (message.content.startsWith(ft + "online")) {         //  ONLINE
