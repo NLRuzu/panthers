@@ -252,7 +252,7 @@ if (message.content.startsWith(ft + "musica")) {         //  BOT MUSICAS
 				    "thumbnail": {
 				      "url": "https://i.imgur.com/scHLkXu.png"
 				    },
-				    },
+				   
 				    "fields": [
 				      {
 					"name": "!play nombre de la canción o link",
