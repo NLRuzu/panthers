@@ -394,7 +394,7 @@ let adminRoleObject = message.guild.roles.find("name", "STAFF");
 	/// FIN SUGERENCIA ///
 	
 	// +solicitar //
-if(message.content.toUpperCase().startsWith("+solicitar")){
+if(message.content.toUpperCase().startsWith("+SOLICITAR")){
 let adminRoleObject = message.guild.roles.find("name", "STAFF");	
   var comunicado = message.content.replace("+solicitar ", "");
     var embebido = {
