@@ -215,6 +215,39 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	};
 	
 	
+	 if (message.content.startsWith(ft + "offline")) {         //  ONLINE
+	   let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+			var embebido = {
+				"embed": {
+ 
+    "color": 13041408,
+    "timestamp": "2020-01-31T15:11:42.980Z",
+    "footer": {
+      "icon_url": "https://i.imgur.com/Lddby4e.jpg",
+      "text": "GA-METH"
+    },
+   
+    "image": {
+      "url": "https://i.imgur.com/1jYU0Z9.jpg"
+    },
+    
+    "fields": [
+      
+    ]
+  }
+}
+				  	
+							
+	bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
+	
+	};
+	
+	
+	
+	
+	
+	
+	
 	
 	
 // +SUGERENCIA //
