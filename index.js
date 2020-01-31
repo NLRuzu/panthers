@@ -187,24 +187,83 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	
 	// solicitar bandera blanca
-	if (message.content.startsWith(ft + "solicitar")) {
- 		 let rUser = message.guild.member;
- 		 if(!rUser) return message.channel.send("formato incorrecto +solicitar");
+	if (message.content.startsWith(ft + "banderablanca")) {  //  +quedada "Nick1" "Nick2"     = Participantes del torneo
+			var args = [];
+			var texto = message.content;
+			try{
+				while(texto.includes("\"")){
+					texto = texto.substr(texto.indexOf("\"")+1);
+					args.push(texto.substring(0,texto.indexOf("\"")));
+					texto = texto.substr(texto.indexOf("\"")+1);
+				}
+			}
+			catch(err){
+				message.channel.send("+banderablanca \"NombredelClan\"");
+				return;
+			}
+			let server = bot.guilds.get("597732937659842581");
+			let adminRoleObject = message.guild.roles.find("name", "STAFF");
+			let NickParticipante1 = args[0];
+			let disponible = args[2];
+			var apuntarme = {
+				"embed": {
+					color: 0xafff00 ,
+					title: "**NUEVA PETICIÓN DE BANDERA BLANCA**",
+					url: "http://gamedev.es/",				
 
-		  let reportEmbed = new Discord.RichEmbed()
-		  .setTitle("NUEVA PETICIÓN DE BANDERA BLANCA")
-		  .setColor("#c6ff00")
-		  .addField("Solicitante:", `${message.author}`)
-		  .addField("Fecha:", message.createdAt)
+					fields: [
+						{
+						name: "📜 Nombre del Clan",
+						value: NickParticipante1,
+						},
+						
+									 						
+					]
+				}
+			};
 
-		  let reportschannel = message.guild.channels.find(`name`, "❕-solicitudes-bandera");
-		  if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 
-		  message.delete().catch(O_o=>{});
-		  reportschannel.send(reportEmbed);
-		  }  
+			let torneochannel = bot.channels.get("672800388184801310").send(`[${adminRoleObject}]`, apuntarme);
+			if(!torneochannel) return message.channel.send("No se encuentra la sala");
+
+
+			message.delete().catch(O_o=>{});
+			
+		}
 
 	// fin solicitar bandera
+	
+	// INICIO ACEPTAR BANDERA
+	
+	if (message.content.startsWith(ft + "aceptarbandera")) {        //  +ad1 @user   =  Advertimos al usuario
+		message.delete();
+  if(message.member.roles.find("name", "🌟 STAFF")){
+			let User = message.mentions.users.first();
+			let guild = bot.guilds.get("597732937659842581");
+			let miembro = guild.member(User);
+			
+			User.send({
+				embed: {
+					color: 0xFF0000,
+					title: "**PETICIÓN ACEPTADA DE BANDERA BLANCA**",
+					url: "http://gamedev.es/",
+					description: "**Hemos recibido su solicitud de bandera blanca para su clan o estructura, por consiguiente aceptada e instalada en sus estructuras**",
+				}
+			});
+			
+		
+			bot.channels.get("672800388184801310").send();
+	  
+		}
+  }
+
+// FIN ACEPTAR BANDERA
+	
+	
+	
+	
+	
+	
 	
 	
 	
