@@ -237,7 +237,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	if (message.content.startsWith(ft + "aceptarbandera")) {        //  +ad1 @user   =  Advertimos al usuario
 		message.delete();
-  if(message.member.roles.find("name", "🌟 STAFF")){
+  if(message.member.roles.find("name", "STAFF")){
 			let User = message.mentions.users.first();
 			let guild = bot.guilds.get("597732937659842581");
 			let miembro = guild.member(User);
