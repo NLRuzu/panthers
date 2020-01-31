@@ -184,7 +184,26 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 
 	
     } // FIN COMANDOS STAFF
-	 
+	
+	
+	// solicitar bandera blanca
+	if (message.content.startsWith(ft + "solicitar")) {
+ 		 let rUser = message.guild.member;
+ 		 if(!rUser) return message.channel.send("formato incorrecto +solicitar");
+
+		  let reportEmbed = new Discord.RichEmbed()
+		  .setTitle("NUEVA PETICIÓN DE BANDERA BLANCA")
+		  .setColor("#c6ff00")
+		  .addField("Solicitante:", `${message.author}`)
+		  .addField("Fecha:", message.createdAt)
+
+		  let reportschannel = message.guild.channels.find(`name`, "❕-solicitudes-bandera");
+		  if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
+
+		  message.delete().catch(O_o=>{});
+		  reportschannel.send(reportEmbed);
+		  }  
+
 	
   // SISTEMA NOTIFICACIONES //
        if (message.content.startsWith(ft + "online")) {         //  ONLINE
