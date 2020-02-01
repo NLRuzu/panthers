@@ -64,7 +64,7 @@ strClan = "Ninguno";
             description: "Toda la información referente al perfil del usuario",
             
 		thumbnail: {
-            url: "https://i.imgur.com/v2Sm3d6.png",
+            url: "https://i.imgur.com/8YiKMm4.png",
            },
             
             fields:
