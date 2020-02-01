@@ -91,34 +91,6 @@ if (message.channel.id == "672785811888013321" && message.author.bot) {
 
 if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 
-
-	if (message.content.startsWith(ft + "delrol")) {           //  +delrol @user     = Elimina un rol establecido en por ID
-				let rUser = message.guild.member(message.mentions.users.first());
-				let role = message.guild.roles.find("id", "458226959907028992");
-				rUser.removeRole(role).catch(console.error);
-				message.channel.send({
-					embed: {
-						color: 0xc500ff,
-						description: "ROL eliminado a " + rUser + " correctamente",
-					}
-				});
-				message.delete();
-		}
-
-	if (message.content.startsWith(ft + "addrol")) {           //  +addrol @user      = A帽ade un rol establecido en por ID
-	
-				let rUser = message.guild.member(message.mentions.users.first());
-				let role = message.guild.roles.find("id", "458226959907028992");
-				let guild = bot.guilds.get("458220475957379074");
-				rUser.addRole(role).catch(console.error);
-				message.channel.send({
-					embed: {
-						color: 0xc500ff,
-						description: "ROL a帽adido a " + rUser + " correctamente",
-					}
-				});
-				message.delete();
-		}
 		
 	if (message.content.startsWith(ft + "serverinfo")) {       //  +serverinfo  = Muestra la informaci贸nd del servidor
 			  let sicon = message.guild.iconURL;
@@ -174,8 +146,27 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  .setColor("#C6FF00")
 		  .setThumbnail(sicon)
 		  .addField("**+clear cantidad**", "Elimina X cantidad de mensajes de un canal de texto")
-		  .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala <#561601089460371457>")
+		  .addField("**+comunicar Desarrollo**", "Redactamos un comunicado, solo usar en sala <#672783077700796430>")
+		  .addField("**+online**", "Publicamos un anuncio de ONLINE")
+		  .addField("**+offline**", "Publicamos un anuncio de OFFLINE")
+		  .addField("**+restart**", "Publicamos un anuncio de RESTART servidor")
 		  .addField("**+dm @user Mensaje**", "Le enviamos un DM a un usuario con un mensaje")
+		  
+		  return message.channel.send(serverembed);
+		  }
+		}
+	
+	if (message.content.startsWith(ft + "ayuda")) {            //  +staff   = Informaci贸n de todos los comandos de STAFF
+		if(message.member.roles.find("name", "✅Verificado")){
+		  let sicon = message.guild.iconURL;
+		  let serverembed = new Discord.RichEmbed()
+		  .setDescription("**COMANDOS GA-METH**")
+		  .setColor("#C6FF00")
+		  .setThumbnail(sicon)
+		  .addField("**+crearclan \"NombredelClan\" \"Líder\" \"Miembros separados por coma\" \"Facción\"**", "Escribir esto en la sala <#672784602674364416> para crear vuestro clan.")
+		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#672785811888013321>")
+		  .addField("**+banderablanca nombre del clan**", "Solicitamos una bandera blanca para nuestro clan o estructuras, solo usar en sala <#672784602674364416>")
+		  .addField("**+perfil**", "Nos muestra el perfil. Solo usar en la sala <#672784602674364416>")
 		  
 		  return message.channel.send(serverembed);
 		  }
@@ -260,6 +251,30 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     				"timestamp": "2020-01-31T15:11:42.980Z",
 				"title": "VOLVEMOS A ESTAR ONLINE",
 		"description": "El servidor vuelve a estar ONLINE de nuevo, disculpen las molestias y gracias por la paciencia.",
+    				"footer": {
+     				"icon_url": "https://i.imgur.com/8YiKMm4.png",
+     				"text": "GA-METH"
+  				  },
+   				"fields": [
+      				]
+  				}
+				}
+				  	
+							
+	bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
+	
+	};
+	
+	
+	 if (message.content.startsWith(ft + "restart")) {         //  RESTART
+	   let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+			var embebido = {
+				"embed": {
+ 
+				"color": 13041408,
+    				"timestamp": "2020-01-31T15:11:42.980Z",
+				"title": "REINICIANDO SERVIDOR",
+		"description": "El servidor será reiniciado, en breves podras volver a entrar y disfrutar de él. Disculpen las molestias",
     				"footer": {
      				"icon_url": "https://i.imgur.com/8YiKMm4.png",
      				"text": "GA-METH"
