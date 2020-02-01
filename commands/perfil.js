@@ -31,12 +31,12 @@ var eventos = ["633025474808774697", "638002315348934658"];
 }
 	
 
-var exp = ["633959653012668416", "633959800715083787", "634001148180955136", "634001183211520020", "634001209417662485", "634001240950571018", "634001268641366037", "634001297078484993", "634001321250258944", "634001358025916428"];
- var strExp =""; 
+var clan = ["672778361394823179", "672778497881538598", "672778525920591896", "672778667885330442", "672778586775748620", "672778622603493424"];
+ var strClan =""; 
     
-    for(let i=0; i<exp.length; i++){
-    if(guildMember.roles.has(exp[i])){
-        strExp = strExp + message.guild.roles.get(exp[i]) + " \n";
+    for(let i=0; i<clan.length; i++){
+    if(guildMember.roles.has(clan[i])){
+        strClan = strClan + message.guild.roles.get(clan[i]) + " \n";
     }
 }
 	
@@ -49,8 +49,8 @@ if (!strEventos) {
 strEventos = "Ninguno";
 }
 	
-if (!strExp) {
-strExp = "Ninguno";
+if (!strClan) {
+strClan = "Ninguno";
 }
 	
 
@@ -75,11 +75,10 @@ strExp = "Ninguno";
 		inline:false 
 		},
 		{
-		name: "🔰 Rango EXP",
-		value: `${strExp}`,
+		name: "🔰 Clan",
+		value: `${strClan}`,
 		inline:false
 		},
-		
 		{   
 		name: "💿 Eventos Participados",
       		value: `${strEventos}`,
