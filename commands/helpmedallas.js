@@ -69,19 +69,12 @@ strFortnite = "Ninguno";
             
             fields:
 	[
-	
-		
-		
-		{
-                name: "**Para ver toda la información de medallas por secciones de Juegos**",
-                value: "```usa +medallas```",  
-	inline:false 	
-                 },
+
                  {
                 name: "**Para ver los detalles de las medallas**",
                 value: "```usa +infomedallas```",  
 	inline:false 	
-                 }
+                 },
 	
 	]
               }
