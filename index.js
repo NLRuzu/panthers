@@ -252,12 +252,13 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				"title": "VOLVEMOS A ESTAR ONLINE",
 		"description": "El servidor vuelve a estar ONLINE de nuevo, disculpen las molestias y gracias por la paciencia.",
     				"footer": {
-     				"icon_url": "https://i.imgur.com/8YiKMm4.png",
-					"image": {
+     				"icon_url": "https://i.imgur.com/PqFyBdO.png",
+				"text": "GAMETH"
+  				  },
+				"image": {
       				"url": "https://i.imgur.com/9ffNkhz.png"
     				},
-     				"text": "GA-METH"
-  				  },
+     				
    				"fields": [
       				]
   				}
@@ -279,12 +280,12 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				"title": "REINICIANDO SERVIDOR",
 		"description": "El servidor será reiniciado, en breves podras volver a entrar y disfrutar de él. Disculpen las molestias",
     				"footer": {
-     				"icon_url": "https://i.imgur.com/8YiKMm4.png",
+     				"icon_url": "https://i.imgur.com/PqFyBdO.png",
+				"text": "GAMETH"
+  				  },
 				"image": {
       				"url": "https://i.imgur.com/p54Ljo1.png"
     				},
-     				"text": "GA-METH"
-  				  },
    				"fields": [
       				]
   				}
@@ -306,7 +307,10 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 					"title": "ESTAMOS EN MANTENIMIENTO",
 		"description": "El servidor en este momento se encuentra OFFLINE, disculpen las molestias y gracias por la paciencia.",
     "footer": {
-      "icon_url": "https://i.imgur.com/Lddby4e.jpg",
+     				"icon_url": "https://i.imgur.com/PqFyBdO.png",
+				"text": "GAMETH"
+  				  },
+	    
 	    "image": {
       				"url": "https://i.imgur.com/J9UQgr9.png"
     				},
