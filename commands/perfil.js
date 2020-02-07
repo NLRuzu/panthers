@@ -20,6 +20,15 @@ module.exports.run = async (bot, message, args) => {
         strMedallas = strMedallas + message.guild.roles.get(medallas[i]) + " \n";
     }
 }
+	
+var faccion = ["672943899811119124", "672949957522882585", "673501046546628608", "672778622603493424", "673620365993574422"];
+  var strFaccion =""; 
+    
+    for(let i=0; i<faccion.length; i++){
+    if(guildMember.roles.has(faccion[i])){
+        strFaccion = strFaccion + message.guild.roles.get(faccion[i]) + " \n";
+    }
+}	
 
 var eventos = ["633025474808774697", "638002315348934658"];
   var strEventos =""; 
@@ -43,6 +52,10 @@ var clan = ["672778361394823179", "672778497881538598", "672778525920591896", "6
 	
 if (!strMedallas) {
 strMedallas = "Ninguna";
+}
+
+if (!strFaccion) {
+strFaccion = "Ninguno";
 }
 	
 if (!strEventos) {
@@ -79,6 +92,11 @@ strClan = "Ninguno";
 		value: `${strClan}`,
 		inline:false
 		},
+		{   
+		name: "🔰 Facción",
+      		value: `${strFaccion}`,
+    		inline:false 
+                        },  
 		{   
 		name: "💿 Eventos Participados",
       		value: `${strEventos}`,
