@@ -64,7 +64,7 @@ strClan = "Ninguno";
             description: "Toda la información referente al perfil del usuario",
             
 		thumbnail: {
-            url: "https://i.imgur.com/8YiKMm4.png",
+            url: "https://i.imgur.com/Jtpery6.png",
            },
             
             fields:
@@ -88,12 +88,8 @@ strClan = "Ninguno";
                 name: "📀 Medallas Obtenidas",
                 value: `${strMedallas}`,  
 	inline:false 	
-                 },
-		{
-                name: "Para ver todas las medallas por secciones de juegos",
-                value: "```usa +medallas```",  
-	inline:false 	
                  }
+		
 	
 	]
               }
