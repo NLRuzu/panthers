@@ -302,25 +302,22 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			var embebido = {
 				"embed": {
  
-    "color": 13041408,
-    "timestamp": "2020-01-31T15:11:42.980Z",
-					"title": "ESTAMOS EN MANTENIMIENTO",
-		"description": "El servidor en este momento se encuentra OFFLINE, disculpen las molestias y gracias por la paciencia.",
-    "footer": {
+    				"color": 13041408,
+    				"timestamp": "2020-01-31T15:11:42.980Z",
+				"title": "ESTAMOS EN MANTENIMIENTO",
+				"description": "El servidor en este momento se encuentra OFFLINE, disculpen las molestias y gracias por la paciencia.",
+    				"footer": {
      				"icon_url": "https://i.imgur.com/PqFyBdO.png",
 				"text": "GAMETH"
   				  },
-	    
-	    "image": {
+	   		 	"image": {
       				"url": "https://i.imgur.com/J9UQgr9.png"
     				},
-	    
-      "text": "GA-METH"
-    },
-    "fields": [
- ]
-  }
-}
+
+				    "fields": [
+				 ]
+				  }
+				}
 				  	
 							
 	bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
