@@ -353,7 +353,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 }
 				  	
 							
-	bot.channels.get("674730628062773258").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("675694171062796348").send(`[${adminRoleObject}]`, embebido);
 	
 	};
 	
