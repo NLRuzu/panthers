@@ -333,24 +333,19 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			var embebido = {
 				
   
-  "embed": {
-    "title": "Para conectar al servidor clic aquí",
-    
-    "url": "steam://connect/31.214.205.59:27016",
-    "color": 14278821,
-    
-    
-    
-    
-    "author": {
-      "name": "GametH",
-      "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
-    },
-    "fields": [
+				 "embed": {
+		    		"title": "Para conectar al servidor clic aquí",
+		    		"url": "steam://connect/31.214.205.59:27016",
+		    		"color": 14278821,
+    				"author": {
+      					"name": "GametH",
+      					"icon_url": "https://i.imgur.com/PqFyBdO.png"
+   				 },
+    			"fields": [
       
-    ]
-  }
-}
+    			]
+  			}
+			}
 				  	
 							
 	bot.channels.get("675694171062796348").send(`[${adminRoleObject}]`, embebido);
