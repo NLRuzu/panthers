@@ -334,9 +334,9 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				
   
 				 "embed": {
-		    		"title": "Para conectar al servidor clic aquí",
-				"description": "this supports [named links](https://steam://connect/31.214.205.59:27016)",
-		    		"color": 14278821,
+		    		"title": "CONECTAR DIRECTAMENTE",
+				"description": "[HAZ CLIC AQUÍ PARA CONECTAR AL SERVIDOR](https://steam://connect/31.214.205.59:27016)",
+		    		"color": 13041408,
     				"author": {
       					"name": "GametH",
       					"icon_url": "https://i.imgur.com/PqFyBdO.png"
