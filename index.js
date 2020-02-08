@@ -324,6 +324,39 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	};
 	
+	
+	
+	// conectar
+	
+	 if (message.content.startsWith(ft + "conectar")) {         //  ONLINE
+	   let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+			var embebido = {
+				
+  
+  "embed": {
+    "title": "Para conectar al servidor clic aquí",
+    
+    "url": "steam://connect/31.214.205.59:27016",
+    "color": 14278821,
+    
+    
+    
+    
+    "author": {
+      "name": "GametH",
+      "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+    },
+    "fields": [
+      
+    ]
+  }
+}
+				  	
+							
+	bot.channels.get("674730628062773258").send(`[${adminRoleObject}]`, embebido);
+	
+	};
+	
 // +SUGERENCIA //
 if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
 let adminRoleObject = message.guild.roles.find("name", "STAFF");	
