@@ -49,7 +49,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	  
 // comunicar general
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-		  if(message.member.roles.find("name", "Discord Master")){
+		  if(message.member.roles.find("name", "STAFF")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
 		  let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
 			var embebido = {
@@ -104,7 +104,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	
   // SISTEMA NOTIFICACIONES //
-       if (message.content.startsWith(ft + "online")) {         //  ONLINE
+        if (message.content.startsWith(ft + "online")) {         //  ONLINE
+	       if(message.member.roles.find("name", "STAFF")){
 	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
 			var embebido = {
 				"embed": {
@@ -128,7 +129,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				  	
 							
 	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
-	
+		   },
 	};
 	
 	
