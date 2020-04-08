@@ -107,7 +107,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
   // SISTEMA NOTIFICACIONES //
        if (message.content.startsWith(ft + "online")) {         //  ONLINE
-	   let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
 			var embebido = {
 				"embed": {
  
@@ -129,13 +129,13 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 				  	
 							
-	bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
 	
 	};
 	
 	
 	 if (message.content.startsWith(ft + "restart")) {         //  RESTART
-	   let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
 			var embebido = {
 				"embed": {
  
@@ -156,13 +156,13 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 				  	
 							
-	bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
 	
 	};
 	
 	
 	 if (message.content.startsWith(ft + "offline")) {         //  ONLINE
-	   let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
 			var embebido = {
 				"embed": {
  
@@ -184,7 +184,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 				  	
 							
-	bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
 	
 	};
 	
@@ -193,7 +193,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	// conectar
 	
 	 if (message.content.startsWith(ft + "conectar")) {         //  ONLINE
-	   let adminRoleObject = message.guild.roles.find("name", "✅Verificado");	
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
 			var embebido = {
 				
   
