@@ -49,7 +49,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	  
 // comunicar general
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
-		  if(message.member.roles.find("name", "STAFF")){
+		  if(message.member.roles.find("name", "Discord Master")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
 		  let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
 			var embebido = {
@@ -73,7 +73,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			
 
 			message.delete().catch(O_o=>{});
-			bot.channels.get("672783077700796430").send(`[${adminRoleObject}]`, embebido);
+			bot.channels.get("694894695838384158").send(`[${adminRoleObject}]`, embebido);
 
 			}
 		}
@@ -83,16 +83,14 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 
 	
 	if (message.content.startsWith(ft + "ayuda")) {            //  +staff   = Informaci贸n de todos los comandos de STAFF
-		if(message.member.roles.find("name", "✅Verificado")){
+		if(message.member.roles.find("name", "Whitelist✅")){
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
-		  .setDescription("**COMANDOS GA-METH**")
+		  .setDescription("**COMANDOS BANDOLEROSRP**")
 		  .setColor("#C6FF00")
 		  .setThumbnail(sicon)
-		  .addField("**+crearclan \"NombredelClan\" \"Líder\" \"Miembros separados por coma\" \"Facción\"**", "Escribir esto en la sala <#672784602674364416> para crear vuestro clan.")
-		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#672785811888013321>")
-		  .addField("**+banderablanca nombre del clan**", "Solicitamos una bandera blanca para nuestro clan o estructuras, solo usar en sala <#672784602674364416>")
-		  .addField("**+perfil**", "Nos muestra el perfil. Solo usar en la sala <#672784602674364416>")
+		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#697409367565271060>")
+		  .addField("**+bug texto**", "Redactamos un nuevo reporte de BUG para el servidor, solo usar en sala <#697409367565271060>")
 		  
 		  return message.channel.send(serverembed);
 		  }
