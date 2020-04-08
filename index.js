@@ -213,7 +213,6 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 // +SUGERENCIA //
 if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
-let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
   var comunicado = message.content.replace("+sugerencia ", "");
     var embebido = {
                           "embed": {
@@ -230,7 +229,7 @@ let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");
                           }
                   };
 
-              bot.channels.get("697411368369913856").send(`[${adminRoleObject}]`, embebido);
+              bot.channels.get("697411368369913856").send(embebido);
               message.delete().catch(O_o=>{});
       }	
 	/// FIN SUGERENCIA ///
