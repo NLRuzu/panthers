@@ -123,6 +123,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  .setColor("#C6FF00")
 		  .setThumbnail(sicon)
 		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#697409367565271060>")
+		  .addField("**+twt texto**", "Redactamos un tweet **IC**, solo usar en sala <#697409367565271060>")
 		  .addField("**+bug texto**", "Redactamos un nuevo reporte de BUG para el servidor, solo usar en sala <#697409367565271060>")
 		  
 		  return message.channel.send(serverembed);
@@ -253,7 +254,7 @@ if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
   var comunicado = message.content.replace("+sugerencia ", "");
     var embebido = {
                           "embed": {
-                              color: 0xc6ff00,
+                              color: 0x3EFF7B,
                               author: {
                                   name: message.author.tag,
                                   icon_url: message.author.avatarURL
@@ -277,7 +278,7 @@ let adminRoleObject = message.guild.roles.find("name", "Programador👨‍💻")
   var comunicado = message.content.replace("+bug ", "");
     var embebido = {
                           "embed": {
-                              color: 0xc6ff00,
+                              color: 0xFF0000,
                               author: {
                                   name: message.author.tag,
                                   icon_url: message.author.avatarURL
@@ -291,6 +292,31 @@ let adminRoleObject = message.guild.roles.find("name", "Programador👨‍💻")
                   };
 
               bot.channels.get("697411968096665610").send(`[${adminRoleObject}]`, embebido);
+              message.delete().catch(O_o=>{});
+      }	
+	/// FIN BUG ///	
+	
+	
+	// +TWT //
+if(message.content.toUpperCase().startsWith("+TWT")){
+
+  var comunicado = message.content.replace("+twt ", "");
+    var embebido = {
+                          "embed": {
+                              color: 0x33F6FF,
+                              author: {
+                                  name: message.author.tag,
+                                  icon_url: message.author.avatarURL
+                              },
+                              title: "** 🐤 NUEVO TWEET 🐤**",
+              url: "http://gamedev.es/",
+
+              description: comunicado,
+              timestamp: message.createdAt,
+                          }
+                  };
+
+              bot.channels.get("697538823571374200").send(embebido);
               message.delete().catch(O_o=>{});
       }	
 	/// FIN BUG ///	
