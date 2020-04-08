@@ -31,9 +31,9 @@ bot.on("message", (message) => {
 
 
 	// REACCION EMOJI SUGERENCIAS//
-if (message.channel.id == "672785811888013321" && message.author.bot) {
-    message.react("672786146006401044");
-    message.react("672786127920562196");
+if (message.channel.id == "697411368369913856" && message.author.bot) {
+    message.react("697411723858018324");
+    message.react("697411738559184956");
 	}
 	
 
@@ -215,7 +215,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 // +SUGERENCIA //
 if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
-let adminRoleObject = message.guild.roles.find("name", "STAFF");	
+let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
   var comunicado = message.content.replace("+sugerencia ", "");
     var embebido = {
                           "embed": {
@@ -232,14 +232,14 @@ let adminRoleObject = message.guild.roles.find("name", "STAFF");
                           }
                   };
 
-              bot.channels.get("672785811888013321").send(`[${adminRoleObject}]`, embebido);
+              bot.channels.get("697411368369913856").send(`[${adminRoleObject}]`, embebido);
               message.delete().catch(O_o=>{});
       }	
 	/// FIN SUGERENCIA ///
 	
 // +BUG //
 if(message.content.toUpperCase().startsWith("+BUG")){
-let adminRoleObject = message.guild.roles.find("name", "STAFF");	
+let adminRoleObject = message.guild.roles.find("name", "Programador👨‍💻");	
   var comunicado = message.content.replace("+bug ", "");
     var embebido = {
                           "embed": {
@@ -256,7 +256,7 @@ let adminRoleObject = message.guild.roles.find("name", "STAFF");
                           }
                   };
 
-              bot.channels.get("672785811888013321").send(`[${adminRoleObject}]`, embebido);
+              bot.channels.get("697411968096665610").send(`[${adminRoleObject}]`, embebido);
               message.delete().catch(O_o=>{});
       }	
 	/// FIN BUG ///	
