@@ -77,6 +77,39 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 
 			}
 		}
+	
+	
+	// actualizacion
+    if (message.content.startsWith(ft + "actualizacion")) {        //  +actualizacion mensaje  = Enviamos un comunicado en una sala concreta
+		  if(message.member.roles.find("name", "STAFF")){
+		  var comunicado = message.content.replace("+actualizacion ", "");  
+		  let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");
+			var embebido = {
+					  "embed": {
+										"color":  0xc6ff00,
+										author: {
+											name: message.author.tag,
+											icon_url: message.author.avatarURL
+										},
+										"image": {
+									
+										},
+										footer: {
+											  text: message.guild.name
+											},
+										description: comunicado,
+										timestamp: message.createdAt,								
+									}
+									};
+			
+			
+
+			message.delete().catch(O_o=>{});
+			bot.channels.get("691057461146288128").send(`[${adminRoleObject}]`, embebido);
+
+			}
+		}
+
 
 	
 	
