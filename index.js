@@ -51,7 +51,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
 		  if(message.member.roles.find("name", "STAFF")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
-		  let adminRoleObject = message.guild.roles.find("name", "✅Verificado");
+		  let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");
 			var embebido = {
 					  "embed": {
 										"color":  0xc6ff00,
@@ -134,6 +134,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	
 	 if (message.content.startsWith(ft + "restart")) {         //  RESTART
+		  if(message.member.roles.find("name", "STAFF")){
 	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
 			var embebido = {
 				"embed": {
@@ -156,11 +157,12 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				  	
 							
 	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
-	
+		  }
 	};
 	
 	
 	 if (message.content.startsWith(ft + "offline")) {         //  ONLINE
+		  if(message.member.roles.find("name", "STAFF")){
 	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
 			var embebido = {
 				"embed": {
@@ -184,7 +186,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				  	
 							
 	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
-	
+		  }
 	};
 	
 	
@@ -192,6 +194,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	// conectar
 	
 	 if (message.content.startsWith(ft + "conectar")) {         //  ONLINE
+		if(message.member.roles.find("name", "STAFF")){
 	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
 			var embebido = {
 				
@@ -209,7 +212,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				  	
 							
 	bot.channels.get("675694171062796348").send(`[${adminRoleObject}]`, embebido);
-	
+		}
 	};
 	
 // +SUGERENCIA //
