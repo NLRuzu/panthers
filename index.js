@@ -170,6 +170,67 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	};
 	
 	
+	 if (message.content.startsWith(ft + "actuprogramada")) {         //  ACTUALIZACIÓN PROGRAMADA
+	       if(message.member.roles.find("name", "STAFF")){
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+			var embebido = {
+				"embed": {
+ 
+				"color": 13041408,
+    				"timestamp": "2020-01-31T15:11:42.980Z",
+				"title": "NUEVA ACTUALIZACIÓN PROGRAMADA",
+		"description": "Se vieneee ¡paree!.",
+    				"footer": {
+     				"icon_url": "https://i.imgur.com/8dGnJ8c.png",
+				"text": "BandolerosRP"
+  				  },
+				"image": {
+      				"url": "https://i.imgur.com/N4nchKD.png"
+    				},
+     				
+   				"fields": [
+      				]
+  				}
+				}
+				  	
+							
+	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+		        message.delete().catch(O_o=>{});
+		   }
+	};
+	
+	
+	 if (message.content.startsWith(ft + "actuprogramada")) {         //  ACTUALIZACIÓN PROGRAMADA
+	       if(message.member.roles.find("name", "Whitelist✅")){
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+			var embebido = {
+				"embed": {
+ 
+				"color": 13041408,
+    				"timestamp": "2020-01-31T15:11:42.980Z",
+				"title": "HYPE",
+		"description": "Se vieneee ¡paree!.",
+    				"footer": {
+     				"icon_url": "https://i.imgur.com/8dGnJ8c.png",
+				"text": "BandolerosRP"
+  				  },
+				"image": {
+      				"url": "https://i.imgur.com/cAqqDY4.png"
+    				},
+     				
+   				"fields": [
+      				]
+  				}
+				}
+				  	
+							
+	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+		        message.delete().catch(O_o=>{});
+		   }
+	};
+	
+
+	
 	 if (message.content.startsWith(ft + "restart")) {         //  RESTART
 		  if(message.member.roles.find("name", "STAFF")){
 	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
