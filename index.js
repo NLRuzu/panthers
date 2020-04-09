@@ -115,7 +115,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 
 	
-	if (message.content.startsWith(ft + "ayuda")) {            //  +staff   = Informaci贸n de todos los comandos de STAFF
+		if (message.content.startsWith(ft + "ayuda")) {            //  +staff   = Informaci贸n de todos los comandos de STAFF
 		if(message.member.roles.find("name", "Whitelist✅")){
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
@@ -124,7 +124,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  .setThumbnail(sicon)
 		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#697409367565271060>")
 		  .addField("**+twt texto**", "Redactamos un tweet **IC**, solo usar en sala <#697409367565271060>")
-		  .addField("**+badu texto**", "Redactamos un nuevo anuncio **IC**, solo usar en sala <#697409367565271060>")
+		  .addField("**+badu texto**", "Redactamos un nuevo anuncio **IC**, solo usar en sala <#697409367565271060> **Solo podrán usarlo @Jefatura Badulake🛒**")
 		  .addField("**+bug texto**", "Redactamos un nuevo reporte de BUG para el servidor, solo usar en sala <#697409367565271060>")
 		  
 		  return message.channel.send(serverembed);
