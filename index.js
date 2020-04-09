@@ -164,6 +164,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				  	
 							
 	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+		        message.delete().catch(O_o=>{});
 		   }
 	};
 	
@@ -192,6 +193,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				  	
 							
 	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+			   message.delete().catch(O_o=>{});
 		  }
 	};
 	
@@ -221,6 +223,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				  	
 							
 	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+			   message.delete().catch(O_o=>{});
 		  }
 	};
 	
@@ -249,6 +252,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				  	
 							
 	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+			   message.delete().catch(O_o=>{});
 		  }
 	};
 	
