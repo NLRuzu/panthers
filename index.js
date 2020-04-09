@@ -171,7 +171,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	};
 	
 	
-	 if (message.content.startsWith(ft + "actuprogramada")) {         //  ACTUALIZACIÓN PROGRAMADA
+	 if (message.content.startsWith(ft + "programada")) {         //  ACTUALIZACIÓN PROGRAMADA
 	       if(message.member.roles.find("name", "STAFF")){
 	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
 			var embebido = {
