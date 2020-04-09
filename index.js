@@ -124,6 +124,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  .setThumbnail(sicon)
 		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#697409367565271060>")
 		  .addField("**+twt texto**", "Redactamos un tweet **IC**, solo usar en sala <#697409367565271060>")
+		  .addField("**+anuncio texto**", "Redactamos un anuncio **IC**, ahora ya podréis poner vuestros anuncios. Solo usar en sala <#697409367565271060>")
 		  .addField("**+badu texto**", "Redactamos un nuevo anuncio **IC**, solo usar en sala <#697409367565271060> **Solo podrán usarlo @Jefatura Badulake🛒**")
 		  .addField("**+bug texto**", "Redactamos un nuevo reporte de BUG para el servidor, solo usar en sala <#697409367565271060>")
 		  
@@ -379,7 +380,34 @@ if(message.content.toUpperCase().startsWith("+BADU")){
               message.delete().catch(O_o=>{});
 		 }
 		};
-	/// FIN BADU ///	
+	/// FIN BADU ///
+	
+	// +ANUNCIO //
+if(message.content.toUpperCase().startsWith("+ANUNCIO")){
+
+  var comunicado = message.content.replace("+anuncio ", "");
+    var embebido = {
+                          "embed": {
+                              color: 0x33F6FF,
+                              author: {
+                                  name: message.author.tag,
+                                  icon_url: message.author.avatarURL
+                              },
+                              title: "** 🎬 NUEVO ANUNCIO 🎬 **",
+             			 image: {
+      				url: "https://i.imgur.com/GZ7Jc6y.png"
+    				},
+
+              description: comunicado,
+              timestamp: message.createdAt,
+                          }
+                  };
+
+              bot.channels.get("690912688498278501").send(embebido);
+              message.delete().catch(O_o=>{});
+		
+		}
+	/// FIN BADU ///
 	
 
    
