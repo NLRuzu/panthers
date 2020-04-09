@@ -223,6 +223,33 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  }
 	};
 	
+	if (message.content.startsWith(ft + "actu")) {         //  actu
+		  if(message.member.roles.find("name", "STAFF")){
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+			var embebido = {
+				"embed": {
+ 
+    				"color": 13041408,
+    				"timestamp": "2020-01-31T15:11:42.980Z",
+				"title": "NUEVA ACTUALIZACIÓN LANZADA",
+				"description": "Toda la información referente al contenido de la misma podréis encontrarla en <#691057461146288128>.",
+    				"footer": {
+     				"icon_url": "https://i.imgur.com/8dGnJ8c.png",
+				"text": "BandolerosRP"
+  				  },
+	   		 	"image": {
+      				"url": "https://i.imgur.com/Z9US30c.png"
+    				},
+
+				    "fields": [
+				 ]
+				  }
+				}
+				  	
+							
+	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+		  }
+	};
 	
 	
 	// conectar
@@ -319,7 +346,34 @@ if(message.content.toUpperCase().startsWith("+TWT")){
               bot.channels.get("697538823571374200").send(embebido);
               message.delete().catch(O_o=>{});
       }	
-	/// FIN BUG ///	
+	/// FIN TWITTER ///
+	
+	
+	// +BADU //
+if(message.content.toUpperCase().startsWith("+BADU")){
+
+  var comunicado = message.content.replace("+badu ", "");
+    var embebido = {
+                          "embed": {
+                              color: 0x33F6FF,
+                              author: {
+                                  name: message.author.tag,
+                                  icon_url: message.author.avatarURL
+                              },
+                              title: "**  🛒 NUEVO ANUNCIO DEL BADU 🛒 **",
+             			 image: {
+      				url: "https://i.imgur.com/o08gtvS.png"
+    				},
+
+              description: comunicado,
+              timestamp: message.createdAt,
+                          }
+                  };
+
+              bot.channels.get("690912688498278501").send(embebido);
+              message.delete().catch(O_o=>{});
+      }	
+	/// FIN BADU ///	
 	
 
    
