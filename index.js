@@ -124,6 +124,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  .setThumbnail(sicon)
 		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#697409367565271060>")
 		  .addField("**+twt texto**", "Redactamos un tweet **IC**, solo usar en sala <#697409367565271060>")
+		  .addField("**+badu texto**", "Redactamos un nuevo anuncio **IC**, solo usar en sala <#697409367565271060>")
 		  .addField("**+bug texto**", "Redactamos un nuevo reporte de BUG para el servidor, solo usar en sala <#697409367565271060>")
 		  
 		  return message.channel.send(serverembed);
@@ -351,7 +352,7 @@ if(message.content.toUpperCase().startsWith("+TWT")){
 	
 	// +BADU //
 if(message.content.toUpperCase().startsWith("+BADU")){
-
+ if(message.member.roles.find("name", "Jefatura Badulake🛒")){
   var comunicado = message.content.replace("+badu ", "");
     var embebido = {
                           "embed": {
@@ -360,7 +361,7 @@ if(message.content.toUpperCase().startsWith("+BADU")){
                                   name: message.author.tag,
                                   icon_url: message.author.avatarURL
                               },
-                              title: "**  🛒 NUEVO ANUNCIO DEL BADU 🛒 **",
+                              title: "**  🛒 NUEVO ANUNCIO: BADULAKE 🛒 **",
              			 image: {
       				url: "https://i.imgur.com/o08gtvS.png"
     				},
@@ -372,7 +373,8 @@ if(message.content.toUpperCase().startsWith("+BADU")){
 
               bot.channels.get("690912688498278501").send(embebido);
               message.delete().catch(O_o=>{});
-      }	
+		 }
+		};
 	/// FIN BADU ///	
 	
 
