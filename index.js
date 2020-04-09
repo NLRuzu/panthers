@@ -455,7 +455,6 @@ if(message.content.toUpperCase().startsWith("+ANUNCIO")){
                                   name: message.author.tag,
                                   icon_url: message.author.avatarURL
                               },
-                              title: "** 🎬 NUEVO ANUNCIO 🎬 **",
              			 image: {
       				url: "https://i.imgur.com/GZ7Jc6y.png"
     				},
