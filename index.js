@@ -124,6 +124,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  .setThumbnail(sicon)
 		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#697409367565271060>")
 		  .addField("**+twt texto**", "Redactamos un tweet **IC**, solo usar en sala <#697409367565271060>")
+		  .addField("**+hype**", "lazaremos un hype al chat ooc. Usar en <#697409367565271060>")
 		  .addField("**+anuncio texto**", "Redactamos un anuncio **IC**, ahora ya podréis poner vuestros anuncios. Solo usar en sala <#697409367565271060>")
 		  .addField("**+badu texto**", "Redactamos un nuevo anuncio **IC**, solo usar en sala <#697409367565271060> **Solo podrán usarlo @Jefatura Badulake🛒**")
 		  .addField("**+bug texto**", "Redactamos un nuevo reporte de BUG para el servidor, solo usar en sala <#697409367565271060>")
