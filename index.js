@@ -29,7 +29,7 @@ bot.on("guildMemberAdd", async member => {
 	  
   console.log(`${member.id} ha entrado al server `);
             
-  let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
+  let welcomechannel = member.guild.channels.find(`name`, "⌈📈⌋-𝗘𝗡𝗧𝗥𝗔𝗗𝗔𝗦");
     let embed = { embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a RevengeR Roleplay",
@@ -53,7 +53,7 @@ bot.on("guildMemberAdd", async member => {
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.nickname} ha abandonado el server `);
  
-  let welcomechannel = member.guild.channels.find(`name`, "📉-abandonos");
+  let welcomechannel = member.guild.channels.find(`name`, "⌈📉⌋-𝗔𝗕𝗔𝗡𝗗𝗢𝗡𝗢𝗦s");
   welcomechannel.send({
                embed: {
                         color: 0xc6ff00,
