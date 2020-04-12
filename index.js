@@ -38,7 +38,7 @@ bot.on("guildMemberAdd", async member => {
             }
     };
   
-  welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a Next-Level**`, embed)
+  welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a RevengeR Roleplay**`, embed)
 
     member.send({
         embed: {
