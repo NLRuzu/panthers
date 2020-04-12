@@ -24,7 +24,53 @@ fs.readdir("./commands/", (err, files) => {
   });
  
 });
+ // MENSAJE DE BIENVENIDA NUEVOS USUARIOS //
+bot.on("guildMemberAdd", async member => {
+	  
+  console.log(`${member.id} ha entrado al server `);
+            
+  let welcomechannel = member.guild.channels.find(`name`, "📈-entradas");
+    let embed = { embed: {
+                color: 0xc6ff00,
+                title: "Hola bienvenido a RevengeR Roleplay",
+                description: '**Para informarte de como acceder al servidor. Ve a la sala <#682945921503199274>.**', 
+                
+            }
+    };
+  
+  welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a Next-Level**`, embed)
+
+    member.send({
+        embed: {
+                color: 0xc6ff00,
+                title: "Hola bienvenido a RevengeR Roleplay",
+                description: '**Para informarte de como acceder al servidor. Ve a la sala <#682945921503199274>.**',   
+            }
+        });
+ });
+
+// MENSAJE DE ABANDONO DE USUARIOS
+bot.on("guildMemberRemove", async member => {
+  console.log(`${member.nickname} ha abandonado el server `);
  
+  let welcomechannel = member.guild.channels.find(`name`, "📉-abandonos");
+  welcomechannel.send({
+               embed: {
+                        color: 0xc6ff00,
+                        title: "**HA ABANDONADO**",
+		       	url: "http://gamedev.es/",
+                        description: `${member} ha abandonado la comunidad`,
+                    }
+                });
+});
+
+// ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
+bot.on("guildMemberAdd", function(member) {
+    let role = member.guild.roles.find("name", "No Whitelist");
+    member.addRole(role).catch(console.error);
+	
+});
+
 
 // LISTA DE COMANDOS
 bot.on("message", (message) => {
