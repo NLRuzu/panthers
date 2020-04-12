@@ -536,7 +536,7 @@ if(message.channel.type === "dm") return;
  // ACTIVIDAD DEL BOT (JUGANDO A +HELP) //
 bot.on("ready", async () => {
 	console.log(`${bot.user.username} está online`);
-	bot.user.setActivity("RevengeR Roleplay");
+	bot.user.setActivity("RevengeR RP");
 });
 
 bot.login(process.env.BOT_TOKEN);
