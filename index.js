@@ -29,11 +29,11 @@ bot.on("guildMemberAdd", async member => {
 	  
   console.log(`${member.id} ha entrado al server `);
             
-  let welcomechannel = member.guild.channels.find(`name`, "⌈📈⌋-𝗘𝗡𝗧𝗥𝗔𝗗𝗔𝗦");
+  let welcomechannel = member.guild.channels.find(`name`, "⌈📈⌋-entradas");
     let embed = { embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a RevengeR Roleplay",
-                description: '**Para informarte de como acceder al servidor. Ve a la sala <#682945921503199274>.**', 
+                description: '**Para informarte de como acceder al servidor. Ve a la sala <#698847771876261919>.**', 
                 
             }
     };
@@ -53,7 +53,7 @@ bot.on("guildMemberAdd", async member => {
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.nickname} ha abandonado el server `);
  
-  let welcomechannel = member.guild.channels.find(`name`, "⌈📉⌋-𝗔𝗕𝗔𝗡𝗗𝗢𝗡𝗢𝗦s");
+  let welcomechannel = member.guild.channels.find(`name`, "⌈📉⌋-abandonos");
   welcomechannel.send({
                embed: {
                         color: 0xc6ff00,
