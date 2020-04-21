@@ -333,7 +333,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  }
 	};
 	
-	if (message.content.startsWith(ft + "actu")) {         //  actu
+	if (message.content.startsWith(ft + "nuevaactu")) {         //  actu
 		  if(message.member.roles.find("name", "STAFF")){
 	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
 			var embebido = {
@@ -342,7 +342,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     				"color": 13041408,
     				"timestamp": "2020-01-31T15:11:42.980Z",
 				"title": "NUEVA ACTUALIZACIÓN LANZADA",
-				"description": "Toda la información referente al contenido de la misma podréis encontrarla en <#691057461146288128>.",
+				"description": "Toda la información referente al contenido de la misma podréis encontrarla en <#698868265723887625>.",
     				"footer": {
      				"icon_url": "https://i.imgur.com/2NamaDt.png",
 				"text": "RevengeR RP"
