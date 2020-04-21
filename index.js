@@ -97,7 +97,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
 		  if(message.member.roles.find("name", "STAFF")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
-		  let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");
+		  let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");
 			var embebido = {
 					  "embed": {
 										"color":  0xc6ff00,
@@ -119,7 +119,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			
 
 			message.delete().catch(O_o=>{});
-			bot.channels.get("694894695838384158").send(`[${adminRoleObject}]`, embebido);
+			bot.channels.get("597722035447136256").send(`[${adminRoleObject}]`, embebido);
 
 			}
 		}
@@ -129,7 +129,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     if (message.content.startsWith(ft + "actualizacion")) {        //  +actualizacion mensaje  = Enviamos un comunicado en una sala concreta
 		  if(message.member.roles.find("name", "STAFF")){
 		  var comunicado = message.content.replace("+actualizacion ", "");  
-		  let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");
+		  let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");
 			var embebido = {
 					  "embed": {
 										"color":  0xc6ff00,
@@ -151,29 +151,26 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 			
 
 			message.delete().catch(O_o=>{});
-			bot.channels.get("691057461146288128").send(`[${adminRoleObject}]`, embebido);
+			bot.channels.get("698868265723887625").send(`[${adminRoleObject}]`, embebido);
 
 			}
 		}
 
 
 	
-	
-
-	
 		if (message.content.startsWith(ft + "ayuda")) {            //  +staff   = Informaci贸n de todos los comandos de STAFF
-		if(message.member.roles.find("name", "Whitelist✅")){
+		if(message.member.roles.find("name", "✔️ Whitelist ✔️")){
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
-		  .setDescription("**COMANDOS BANDOLEROSRP**")
+		  .setDescription("**COMANDOS RevengeR RP**")
 		  .setColor("#C6FF00")
 		  .setThumbnail(sicon)
-		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#697409367565271060>")
-		  .addField("**+twt texto**", "Redactamos un tweet **IC**, solo usar en sala <#697409367565271060>")
-		  .addField("**+hype**", "lazaremos un hype al chat ooc. Usar en <#697409367565271060>")
-		  .addField("**+anuncio texto**", "Redactamos un anuncio **IC**, ahora ya podréis poner vuestros anuncios. Solo usar en sala <#697409367565271060>")
+		  .addField("**+sugerencia texto**", "Redactamos una sugerencia para el servidor, solo usar en sala <#698881703166607380>")
+		  .addField("**+twt texto**", "Redactamos un tweet **IC**, solo usar en sala <#698878083364814852>")
+		  .addField("**+hype**", "lazaremos un hype al chat ooc. Usar en <#698881703166607380>")
+		  .addField("**+anuncio texto**", "Redactamos un anuncio **IC**, ahora ya podréis poner vuestros anuncios. Solo usar en sala <#698877790723899415>")
 		  .addField("**+badu texto**", "Redactamos un nuevo anuncio **IC**, solo usar en sala <#697409367565271060> **Solo podrán usarlo @Jefatura Badulake🛒**")
-		  .addField("**+bug texto**", "Redactamos un nuevo reporte de BUG para el servidor, solo usar en sala <#697409367565271060>")
+		  .addField("**+bug texto**", "Redactamos un nuevo reporte de BUG para el servidor, solo usar en sala <#698881703166607380>")
 		  
 		  return message.channel.send(serverembed);
 		  }
@@ -189,7 +186,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
   // SISTEMA NOTIFICACIONES //
         if (message.content.startsWith(ft + "online")) {         //  ONLINE
 	       if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
 			var embebido = {
 				"embed": {
  
@@ -198,11 +195,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				"title": "VOLVEMOS A ESTAR ONLINE",
 		"description": "El servidor vuelve a estar ONLINE de nuevo, disculpen las molestias y gracias por la paciencia.",
     				"footer": {
-     				"icon_url": "https://i.imgur.com/8dGnJ8c.png",
-				"text": "BandolerosRP"
+     				"icon_url": "https://i.imgur.com/2NamaDt.png",
+				"text": "RevengeR RP"
   				  },
 				"image": {
-      				"url": "https://i.imgur.com/3Zhppty.png"
+      				"url": "https://i.imgur.com/ndT84Z8.png"
     				},
      				
    				"fields": [
@@ -211,7 +208,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 				  	
 							
-	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("597722035447136256").send(`[${adminRoleObject}]`, embebido);
 		        message.delete().catch(O_o=>{});
 		   }
 	};
@@ -219,7 +216,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "programada")) {         //  ACTUALIZACIÓN PROGRAMADA
 	       if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
 			var embebido = {
 				"embed": {
  
@@ -228,11 +225,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				"title": "NUEVA ACTUALIZACIÓN PROGRAMADA",
 		"description": "Se vieneee ¡paree!.",
     				"footer": {
-     				"icon_url": "https://i.imgur.com/8dGnJ8c.png",
-				"text": "BandolerosRP"
+     				"icon_url": "https://i.imgur.com/2NamaDt.png",
+				"text": "RevengeR RP"
   				  },
 				"image": {
-      				"url": "https://i.imgur.com/N4nchKD.png"
+      				"url": "https://i.imgur.com/eP1Hvz8.png"
     				},
      				
    				"fields": [
@@ -241,15 +238,15 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 				  	
 							
-	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("597722035447136256").send(`[${adminRoleObject}]`, embebido);
 		        message.delete().catch(O_o=>{});
 		   }
 	};
 	
 	
 	 if (message.content.startsWith(ft + "hype")) {         //  ACTUALIZACIÓN PROGRAMADA
-	       if(message.member.roles.find("name", "Whitelist✅")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+	       if(message.member.roles.find("name", "✔️ Whitelist ✔️")){
+	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
 			var embebido = {
 				"embed": {
  
@@ -258,11 +255,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				"title": "HYPE",
 		"description": "Se vieneee ¡paree!.",
     				"footer": {
-     				"icon_url": "https://i.imgur.com/8dGnJ8c.png",
-				"text": "BandolerosRP"
+     				"icon_url": "https://i.imgur.com/2NamaDt.png",
+				"text": "RevengeR RP"
   				  },
 				"image": {
-      				"url": "https://i.imgur.com/cAqqDY4.png"
+      				"url": "https://i.imgur.com/ZtPSc0P.png"
     				},
      				
    				"fields": [
@@ -271,7 +268,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 				  	
 							
-	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("597722035447136256").send(`[${adminRoleObject}]`, embebido);
 		        message.delete().catch(O_o=>{});
 		   }
 	};
@@ -280,7 +277,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "restart")) {         //  RESTART
 		  if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
 			var embebido = {
 				"embed": {
  
@@ -289,11 +286,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				"title": "REINICIANDO SERVIDOR",
 		"description": "El servidor será reiniciado, en breves podras volver a entrar y disfrutar de él. Disculpen las molestias",
     				"footer": {
-     				"icon_url": "https://i.imgur.com/8dGnJ8c.png",
-				"text": "BandolerosRP"
+     				"icon_url": "https://i.imgur.com/2NamaDt.png",
+				"text": "RevengeR RP"
   				  },
 				"image": {
-      				"url": "https://i.imgur.com/BhZGxZp.png"
+      				"url": "https://i.imgur.com/gY0KHTm.png"
     				},
    				"fields": [
       				]
@@ -301,7 +298,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 				  	
 							
-	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("597722035447136256").send(`[${adminRoleObject}]`, embebido);
 			   message.delete().catch(O_o=>{});
 		  }
 	};
@@ -309,7 +306,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "offline")) {         //  ONLINE
 		  if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
 			var embebido = {
 				"embed": {
  
@@ -318,11 +315,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				"title": "ESTAMOS EN MANTENIMIENTO",
 				"description": "El servidor en este momento se encuentra OFFLINE, disculpen las molestias y gracias por la paciencia.",
     				"footer": {
-     				"icon_url": "https://i.imgur.com/8dGnJ8c.png",
-				"text": "BandolerosRP"
+     				"icon_url": "https://i.imgur.com/2NamaDt.png",
+				"text": "RevengeR RP"
   				  },
 	   		 	"image": {
-      				"url": "https://i.imgur.com/DTuySYB.png"
+      				"url": "https://i.imgur.com/13GG8th.png"
     				},
 
 				    "fields": [
@@ -331,14 +328,14 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 				  	
 							
-	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("597722035447136256").send(`[${adminRoleObject}]`, embebido);
 			   message.delete().catch(O_o=>{});
 		  }
 	};
 	
 	if (message.content.startsWith(ft + "actu")) {         //  actu
 		  if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
 			var embebido = {
 				"embed": {
  
@@ -347,11 +344,11 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				"title": "NUEVA ACTUALIZACIÓN LANZADA",
 				"description": "Toda la información referente al contenido de la misma podréis encontrarla en <#691057461146288128>.",
     				"footer": {
-     				"icon_url": "https://i.imgur.com/8dGnJ8c.png",
-				"text": "BandolerosRP"
+     				"icon_url": "https://i.imgur.com/2NamaDt.png",
+				"text": "RevengeR RP"
   				  },
 	   		 	"image": {
-      				"url": "https://i.imgur.com/Z9US30c.png"
+      				"url": "https://i.imgur.com/f18R4hk.png"
     				},
 
 				    "fields": [
@@ -360,7 +357,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 				}
 				  	
 							
-	bot.channels.get("690912685474185282").send(`[${adminRoleObject}]`, embebido);
+	bot.channels.get("597722035447136256").send(`[${adminRoleObject}]`, embebido);
 			   message.delete().catch(O_o=>{});
 		  }
 	};
@@ -408,14 +405,14 @@ if(message.content.toUpperCase().startsWith("+SUGERENCIA")){
                           }
                   };
 
-              bot.channels.get("697411368369913856").send(embebido);
+              bot.channels.get("698877409793146880").send(embebido);
               message.delete().catch(O_o=>{});
       }	
 	/// FIN SUGERENCIA ///
 	
 // +BUG //
 if(message.content.toUpperCase().startsWith("+BUG")){
-let adminRoleObject = message.guild.roles.find("name", "Programador👨‍💻");	
+let adminRoleObject = message.guild.roles.find("name", "💻Programador💻");	
   var comunicado = message.content.replace("+bug ", "");
     var embebido = {
                           "embed": {
@@ -432,7 +429,7 @@ let adminRoleObject = message.guild.roles.find("name", "Programador👨‍💻")
                           }
                   };
 
-              bot.channels.get("697411968096665610").send(`[${adminRoleObject}]`, embebido);
+              bot.channels.get("698877598658461717").send(`[${adminRoleObject}]`, embebido);
               message.delete().catch(O_o=>{});
       }	
 	/// FIN BUG ///	
@@ -457,7 +454,7 @@ if(message.content.toUpperCase().startsWith("+TWT")){
                           }
                   };
 
-              bot.channels.get("697538823571374200").send(embebido);
+              bot.channels.get("698878083364814852").send(embebido);
               message.delete().catch(O_o=>{});
       }	
 	/// FIN TWITTER ///
@@ -502,7 +499,7 @@ if(message.content.toUpperCase().startsWith("+ANUNCIO")){
                                   icon_url: message.author.avatarURL
                               },
              			 image: {
-      				url: "https://i.imgur.com/GZ7Jc6y.png"
+      				url: "https://i.imgur.com/2CIooGO.png"
     				},
 
               description: comunicado,
@@ -510,7 +507,7 @@ if(message.content.toUpperCase().startsWith("+ANUNCIO")){
                           }
                   };
 
-              bot.channels.get("690912688498278501").send(embebido);
+              bot.channels.get("698877790723899415").send(embebido);
               message.delete().catch(O_o=>{});
 		
 		}
