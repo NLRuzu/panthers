@@ -97,7 +97,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     if (message.content.startsWith(ft + "comunicar")) {        //  +comunicar mensaje  = Enviamos un comunicado en una sala concreta
 		  if(message.member.roles.find("name", "STAFF")){
 		  var comunicado = message.content.replace("+comunicar ", "");  
-		  let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");
+		  let adminRoleObject = message.guild.roles.find("name", "Whitelist");
 			var embebido = {
 					  "embed": {
 										"color":  0xc6ff00,
@@ -129,7 +129,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     if (message.content.startsWith(ft + "actualizacion")) {        //  +actualizacion mensaje  = Enviamos un comunicado en una sala concreta
 		  if(message.member.roles.find("name", "STAFF")){
 		  var comunicado = message.content.replace("+actualizacion ", "");  
-		  let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");
+		  let adminRoleObject = message.guild.roles.find("name", "Whitelist");
 			var embebido = {
 					  "embed": {
 										"color":  0xc6ff00,
@@ -159,7 +159,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 
 	
 		if (message.content.startsWith(ft + "ayuda")) {            //  +staff   = Informaci贸n de todos los comandos de STAFF
-		if(message.member.roles.find("name", "✔️ Whitelist ✔️")){
+		if(message.member.roles.find("name", "Whitelist")){
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
 		  .setDescription("**COMANDOS RevengeR RP**")
@@ -186,7 +186,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
   // SISTEMA NOTIFICACIONES //
         if (message.content.startsWith(ft + "online")) {         //  ONLINE
 	       if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
 			var embebido = {
 				"embed": {
  
@@ -216,7 +216,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "programada")) {         //  ACTUALIZACIÓN PROGRAMADA
 	       if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
 			var embebido = {
 				"embed": {
  
@@ -245,8 +245,8 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	
 	 if (message.content.startsWith(ft + "hype")) {         //  ACTUALIZACIÓN PROGRAMADA
-	       if(message.member.roles.find("name", "✔️ Whitelist ✔️")){
-	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
+	       if(message.member.roles.find("name", "Whitelist")){
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
 			var embebido = {
 				"embed": {
  
@@ -277,7 +277,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "restart")) {         //  RESTART
 		  if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
 			var embebido = {
 				"embed": {
  
@@ -306,7 +306,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "offline")) {         //  ONLINE
 		  if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
 			var embebido = {
 				"embed": {
  
@@ -335,7 +335,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	if (message.content.startsWith(ft + "nuevaactu")) {         //  actu
 		  if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "✔️ Whitelist ✔️");	
+	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
 			var embebido = {
 				"embed": {
  
