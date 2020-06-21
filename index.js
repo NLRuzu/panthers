@@ -38,13 +38,13 @@ bot.on("guildMemberAdd", async member => {
             }
     };
   
-  welcomechannel.send(`**Bienvenido: Nuevo usuario ${member} a RevengeR Roleplay**`, embed)
+  welcomechannel.send(`**Bienvenido: ${member} a RevengeR Roleplay**`, embed)
 
     member.send({
         embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a RevengeR Roleplay",
-                description: '**Para informarte de como acceder al servidor. Ve a la sala <#682945921503199274>.**',   
+                description: '**Para informarte de como acceder al servidor. Ve a la sala <#719523867277787157>.**',   
             }
         });
  });
