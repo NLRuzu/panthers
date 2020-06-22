@@ -32,8 +32,8 @@ bot.on("guildMemberAdd", async member => {
  let welcomechannel = member.guild.channels.find(`name`, "⌈💭⌋-chat-ooc");
     let embed = { embed: {
                 color: 0xc6ff00,
-                title: "Hola bienvenido a RevengeR Roleplay",
-                description: 'Bienvenid@! **Reacciona al icono** que hay en el hilo de <#719523867277787157> para poder acceder al servidor.\nSi has sido invitado por alguien abre un ticket en <#711149222279512114> y etiqueta a la persona que te ha traído.\n**Puedes descargar** <#719248404856963085> para acceder directamente al servidor o buscar RevengeR RP en la barra de búsqueda de FiveM.\n**Espero que disfrutes del servidor y de la comunidad!**', 
+                title: "Sigue las siguientes instrucciones:",
+                description: '**Reacciona al icono** que hay en el hilo de <#719523867277787157> para poder acceder al servidor.\nSi has sido invitado por alguien abre un ticket en <#711149222279512114> y etiqueta a la persona que te ha traído.\n**Puedes descargar** <#719248404856963085> para acceder directamente al servidor o buscar RevengeR RP en la barra de búsqueda de FiveM.\n**Espero que disfrutes del servidor y de la comunidad!**', 
                 
             }
     };
