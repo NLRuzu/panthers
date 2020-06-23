@@ -333,6 +333,35 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 		  }
 	};
 	
+	 if (message.content.startsWith(ft + "dvaceptada")) {         //  ONLINE
+		  if(message.member.roles.find("name", "STAFF")){
+			var embebido = {
+				"embed": {
+ 
+    				"color": 13041408,
+    				"timestamp": "2020-01-31T15:11:42.980Z",
+				"title": "DEVOLUCIÓN ACEPTADA",
+				"description": "Su devolución ha sido aceptada, siga los pasos que se le indican en la foto",
+    				"footer": {
+     				"icon_url": "https://i.imgur.com/2NamaDt.png",
+				"text": "RevengeR RP"
+  				  },
+	   		 	"image": {
+      				"url": "https://i.imgur.com/8fXXdKD.png"
+    				},
+
+				    "fields": [
+				 ]
+				  }
+				}
+				  	
+							
+			message.channel.send(embebido);
+			   message.delete().catch(O_o=>{});
+		  }
+	};
+	
+	
 	if (message.content.startsWith(ft + "nuevaactu")) {         //  actu
 		  if(message.member.roles.find("name", "STAFF")){
 	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
