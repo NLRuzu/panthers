@@ -341,25 +341,79 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     				"color": 13041408,
     				"timestamp": "2020-01-31T15:11:42.980Z",
 				"title": "DEVOLUCIÓN ACEPTADA",
-				"description": "Su devolución ha sido aceptada, siga los pasos que se le indican en la foto",
+				"description": "Su devolución ha sido aceptada, indíquenos cuando esté dentro del servidor y díganos su ID dentro para poder ",
     				"footer": {
      				"icon_url": "https://i.imgur.com/2NamaDt.png",
 				"text": "RevengeR RP"
   				  },
 	   		 	"image": {
-      				"url": "https://i.imgur.com/8fXXdKD.png"
+      				"url": "https://i.imgur.com/juMnpYI.png"
     				},
 
 				    "fields": [
 				 ]
 				  }
 				}
-				  	
-							
+				  				
 			message.channel.send(embebido);
 			   message.delete().catch(O_o=>{});
 		  }
 	};
+	
+	 if (message.content.startsWith(ft + "dvrechazada")) {         //  DEVOLUCIÓN RECHAZADA
+		  if(message.member.roles.find("name", "STAFF")){
+			var embebido = {
+				"embed": {
+ 
+    				"color": 13041408,
+    				"timestamp": "2020-01-31T15:11:42.980Z",
+				"title": "DEVOLUCIÓN RECHAZADA",
+				"description": "Su devolución ha sido rechazada, asegúrese de cumplir todos los requisitos y formato correcto que se especifica en <#713330364646555678> ",
+    				"footer": {
+     				"icon_url": "https://i.imgur.com/2NamaDt.png",
+				"text": "RevengeR RP"
+  				  },
+	   		 	"image": {
+      				"url": "https://i.imgur.com/MJFxy9U.png"
+    				},
+
+				    "fields": [
+				 ]
+				  }
+				}
+				  				
+			message.channel.send(embebido);
+			   message.delete().catch(O_o=>{});
+		  }
+	};
+	
+	 if (message.content.startsWith(ft + "dvespera")) {         //  DEVOLUCIÓN EN ESPERA
+		  if(message.member.roles.find("name", "STAFF")){
+			var embebido = {
+				"embed": {
+ 
+    				"color": 13041408,
+    				"timestamp": "2020-01-31T15:11:42.980Z",
+				"title": "DEVOLUCIÓN EN ESPERA",
+				"description": "Su devolución se encuentra actualmente en ESPERA, tenga paciencia le notificaremos a la máxima brevedad posible",
+    				"footer": {
+     				"icon_url": "https://i.imgur.com/2NamaDt.png",
+				"text": "RevengeR RP"
+  				  },
+	   		 	"image": {
+      				"url": "https://i.imgur.com/cV08Nnp.png"
+    				},
+
+				    "fields": [
+				 ]
+				  }
+				}
+				  				
+			message.channel.send(embebido);
+			   message.delete().catch(O_o=>{});
+		  }
+	};
+	
 	
 	
 	if (message.content.startsWith(ft + "nuevaactu")) {         //  actu
