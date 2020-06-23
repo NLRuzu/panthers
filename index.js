@@ -341,7 +341,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
     				"color": 13041408,
     				"timestamp": "2020-01-31T15:11:42.980Z",
 				"title": "DEVOLUCIÓN ACEPTADA",
-				"description": "Su devolución ha sido aceptada, indíquenos cuando esté dentro del servidor y díganos su ID dentro para poder ",
+				"description": "Su devolución ha sido aceptada, indíquenos cuando esté dentro del servidor y díganos su ID dentro para poder entregársela ",
     				"footer": {
      				"icon_url": "https://i.imgur.com/2NamaDt.png",
 				"text": "RevengeR RP"
