@@ -64,6 +64,22 @@ bot.on("guildMemberRemove", async member => {
                 });
 });
 
+// MENSAJE DE BIENVENIDA DE USUARIOS
+bot.on("guildMemberAdd", async member => {
+  console.log(`${member.nickname} ha abandonado el server `);
+ 
+  let welcomechannel = member.guild.channels.find(`name`, "⌈🛬⌋-aeropuerto");
+  welcomechannel.send({
+               embed: {
+                        color: 0xc6ff00,
+                        title: "**HA ENTRADO**",
+		       	url: "http://gamedev.es/",
+                        description: `${member} ha entrado al servidor`,
+                    }
+                });
+});
+
+
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
 bot.on("guildMemberAdd", function(member) {
    let role = member.guild.roles.find("name", "❎ No Whitelist ❎");
