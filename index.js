@@ -203,7 +203,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
   // SISTEMA NOTIFICACIONES //
         if (message.content.startsWith(ft + "online")) {         //  ONLINE
 	       if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
+	   let adminRoleObject = message.guild.roles.find("name", "RevengeR RP 💀");	
 			var embebido = {
 				"embed": {
  
@@ -233,7 +233,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "programada")) {         //  ACTUALIZACIÓN PROGRAMADA
 	       if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
+	   let adminRoleObject = message.guild.roles.find("name", "RevengeR RP 💀");	
 			var embebido = {
 				"embed": {
  
@@ -263,7 +263,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "hype")) {         //  ACTUALIZACIÓN PROGRAMADA
 	       if(message.member.roles.find("name", "Whitelist")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
+	   let adminRoleObject = message.guild.roles.find("name", "RevengeR RP 💀");	
 			var embebido = {
 				"embed": {
  
@@ -294,7 +294,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "restart")) {         //  RESTART
 		  if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
+	   let adminRoleObject = message.guild.roles.find("name", "RevengeR RP 💀");	
 			var embebido = {
 				"embed": {
  
@@ -323,7 +323,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "offline")) {         //  ONLINE
 		  if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
+	   let adminRoleObject = message.guild.roles.find("name", "RevengeR RP 💀");	
 			var embebido = {
 				"embed": {
  
@@ -435,7 +435,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	if (message.content.startsWith(ft + "nuevaactu")) {         //  actu
 		  if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist");	
+	   let adminRoleObject = message.guild.roles.find("name", "RevengeR RP 💀");	
 			var embebido = {
 				"embed": {
  
@@ -467,7 +467,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 	 if (message.content.startsWith(ft + "conectar")) {         //  ONLINE
 		if(message.member.roles.find("name", "STAFF")){
-	   let adminRoleObject = message.guild.roles.find("name", "Whitelist✅");	
+	   let adminRoleObject = message.guild.roles.find("name", "RevengeR RP 💀");	
 			var embebido = {
 				
   
