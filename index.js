@@ -50,43 +50,43 @@ bot.on("guildMemberAdd", async member => {
  });
 
 // MENSAJE DE ABANDONO DE USUARIOS
-bot.on("guildMemberRemove", async member => {
-  console.log(`${member.nickname} ha abandonado el server `);
+//bot.on("guildMemberRemove", async member => {
+ // console.log(`${member.nickname} ha abandonado el server `);
  
-  let welcomechannel = member.guild.channels.find(`name`, "⌈📉⌋-abandonos");
-  welcomechannel.send({
-               embed: {
-                        color: 0xc6ff00,
-                        title: "**HA ABANDONADO**",
-		       	url: "http://gamedev.es/",
-                        description: `${member} ha abandonado la comunidad`,
-                    }
-                });
-});
+  //let welcomechannel = member.guild.channels.find(`name`, "⌈📉⌋-abandonos");
+ // welcomechannel.send({
+              // embed: {
+                   //     color: 0xc6ff00,
+                    //    title: "**HA ABANDONADO**",
+		     //  	url: "http://gamedev.es/",
+                      //  description: `${member} ha abandonado la comunidad`,
+                  //  }
+            //    });
+//});
 
 // MENSAJE DE BIENVENIDA DE USUARIOS
-bot.on("guildMemberAdd", async member => {
-  console.log(`${member.nickname} ha abandonado el server `);
+//bot.on("guildMemberAdd", async member => {
+ // console.log(`${member.nickname} ha abandonado el server `);
  
-  let welcomechannel = member.guild.channels.find(`name`, "⌈🛬⌋-aeropuerto");
-  welcomechannel.send({
-               embed: {
-                        color: 0xc6ff00,
-                        title: "**HA ENTRADO**",
-		       	url: "http://gamedev.es/",
-                        description: `${member} ha entrado al servidor`,
-                    }
-                });
-});
+  //let welcomechannel = member.guild.channels.find(`name`, "⌈🛬⌋-aeropuerto");
+ // welcomechannel.send({
+             //  embed: {
+                        //color: 0xc6ff00,
+                      //  title: "**HA ENTRADO**",
+		      // 	url: "http://gamedev.es/",
+                     //   description: `${member} ha entrado al servidor`,
+                  //  }
+             //   });
+//});
 
 
 // ROL DE ENTRADA AL SERVIDOR - NO VERIFICADO //
-bot.on("guildMemberAdd", function(member) {
-   let role = member.guild.roles.find("name", "❎ No Whitelist ❎");
-   let role2 = member.guild.roles.find("name", "RevengeR RP 💀");
-   member.addRole(role).catch(console.error);
-   member.addRole(role2).catch(console.error);	
-});
+//bot.on("guildMemberAdd", function(member) {
+  // let role = member.guild.roles.find("name", "❎ No Whitelist ❎");
+   //let role2 = member.guild.roles.find("name", "RevengeR RP 💀");
+  // member.addRole(role).catch(console.error);
+   //member.addRole(role2).catch(console.error);	
+//});
 
 
 // LISTA DE COMANDOS
