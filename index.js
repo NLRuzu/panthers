@@ -211,8 +211,8 @@ if(message.guild.roles.find("name", "Fundador") || message.guild.roles.find("nam
 
 		let miembro = message.guild.member(User);
 		
-		miembro.add(role).catch(console.error);
-		miembro.remove(role2).catch(console.error);
+		miembro.addRole(role).catch(console.error);
+		miembro.removeRole(role).catch(console.error);
 		
 		User.send({
 			embed: {
