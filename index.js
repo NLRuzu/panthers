@@ -210,8 +210,9 @@ if(message.guild.roles.find("name", "Fundador") || message.guild.roles.find("nam
 		let role2 = message.guild.roles.find("name", "❎ No Whitelist ❎");
 
 		let miembro = message.guild.member(User);
-		miembro.roles.add(role).catch(console.error);
-		miembro.roles.remove(role2).catch(console.error);
+		miembro.guild.roles.cache.add(role)
+		miembro.guild.roles.cache.remove(role2)
+		
 		User.send({
 			embed: {
 				color: 0x04ff00,
