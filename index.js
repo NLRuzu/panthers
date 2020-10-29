@@ -209,11 +209,11 @@ if(message.guild.roles.find("name", "Fundador") || message.guild.roles.find("nam
 		
 		let role2 = message.guild.roles.find("name", "❎ No Whitelist ❎");
 	
-		let role = message.guild.roles.cache.find(r => r.name === "Verificado");
+		let role = message.guild.roles.find("name", "Verificado");
 		let miembro = message.guild.member(User);
 
-		let member = message.mentions.members.first();
-		member.roles.add(role).catch(console.error);
+	
+		miembro.roles.add(role).catch(console.error);
 		
 		User.send({
 			embed: {
