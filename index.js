@@ -212,7 +212,7 @@ if(message.guild.roles.find("name", "Fundador") || message.guild.roles.find("nam
 		let miembro = message.guild.member(User);
 	
 	
-		message.member.addRole(role);
+		message.member.guild.roles.add(role);
 	
 		miembro.guild.roles.cache.add(role)
 		miembro.guild.roles.cache.remove(role2)
