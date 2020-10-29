@@ -177,7 +177,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 		if (message.content.startsWith(ft + "ayuda")) {            //  +staff   = Informaci贸n de todos los comandos de STAFF
 	
-		  if (message.member.roles.find(r => r.name === "Whitelist")) {
+		  if (message.guild.roles.find(r => r.name === "Whitelist")) {
 		  let sicon = message.guild.iconURL;
 		  let serverembed = new Discord.RichEmbed()
 		  .setDescription("**COMANDOS RevengeR RP**")
