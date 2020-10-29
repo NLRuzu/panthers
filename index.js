@@ -206,14 +206,13 @@ if (message.content.startsWith(ft + "verificar")) {           //  +verificar @us
 	message.delete();
 if(message.guild.roles.find("name", "Fundador") || message.guild.roles.find("name", "Director de Staff") || message.guild.roles.find("name", "Director de Soporte") || message.guild.roles.find("name", "Administrador")|| message.guild.roles.find("name", "Moderador")|| message.guild.roles.find("name", "[📙] Soporte InGame")){
 		let User = message.mentions.users.first();
-		
-		let role2 = message.guild.roles.find("name", "❎ No Whitelist ❎");
-	
 		let role = message.guild.roles.find("name", "Verificado");
-		let miembro = message.guild.member(User);
+		let role2 = message.guild.roles.find("name", "❎ No Whitelist ❎");
 
-	
-		miembro.roles.add(role).catch(console.error);
+		let miembro = message.guild.member(User);
+		
+		miembro.add(role).catch(console.error);
+		miembro.remove(role2).catch(console.error);
 		
 		User.send({
 			embed: {
