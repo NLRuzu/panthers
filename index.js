@@ -4,6 +4,41 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 const botconfig = require("./botconfig.json");
 let ft = "+";
+	
+/// VERIFICAR ///
+
+if (message.content.startsWith(ft + "verificar")) {        //  +verificar @user   = Verificamos a un usuario
+	message.delete();
+if(message.guild.roles.find("name", "Fundador") || message.guild.roles.find("name", "Director de Staff") || message.guild.roles.find("name", "Director de Soporte") || message.guild.roles.find("name", "Administrador")|| message.guild.roles.find("name", "Moderador")|| message.guild.roles.find("name", "[📙] Soporte InGame")){
+		let User = message.mentions.users.first();
+		let role = message.guild.roles.find("name", "Verificado");
+		let role2 = message.guild.roles.find("name", "❎ No Whitelist ❎");
+
+		let miembro = message.guild.member(User);
+		miembro.addRole(role).catch(console.error);
+		miembro.removeRole(role2).catch(console.error);
+		User.send({
+			embed: {
+				color: 0x04ff00,
+				title: "**HAS SIDO VERIFICADO**",
+					  url: "http://gamedev.es/",
+				description: "**¡Enhorabuena! has sido verificado, ahora puedes ver todo el contenido del discord del servidor. \n\nPara más información accede al canal de texto <#698847771876261919>.**",
+			}
+		});
+		
+	
+		bot.channels.get("747351431492796438").send({
+			embed: {
+				author: {
+					name: message.author.tag,
+					icon_url: message.author.avatarURL
+				},
+				color: 0x04ff00,
+				description: "**Ha verificado a **" + User + " **correctamente**",
+			}
+		});
+	}
+}
 
 
 // COMMANDS // 
