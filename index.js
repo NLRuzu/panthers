@@ -210,6 +210,10 @@ if(message.guild.roles.find("name", "Fundador") || message.guild.roles.find("nam
 		let role2 = message.guild.roles.find("name", "❎ No Whitelist ❎");
 
 		let miembro = message.guild.member(User);
+	
+	
+		message.member.addRole(role);
+	
 		miembro.guild.roles.cache.add(role)
 		miembro.guild.roles.cache.remove(role2)
 		
