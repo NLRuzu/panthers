@@ -202,7 +202,7 @@ if (message.channel.id == message.channel.id) { 				    // COMANDOS SOLO STAFF
 	
 /// VERIFICAR ///
 
-if (message.content.startsWith(ft + "ayuda")) {           //  +verificar @user   = Verificamos a un usuario
+if (message.content.startsWith(ft + "verificar")) {           //  +verificar @user   = Verificamos a un usuario
 	message.delete();
 if(message.guild.roles.find("name", "Fundador") || message.guild.roles.find("name", "Director de Staff") || message.guild.roles.find("name", "Director de Soporte") || message.guild.roles.find("name", "Administrador")|| message.guild.roles.find("name", "Moderador")|| message.guild.roles.find("name", "[📙] Soporte InGame")){
 		let User = message.mentions.users.first();
