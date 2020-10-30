@@ -24,16 +24,16 @@ fs.readdir("./commands/", (err, files) => {
   });
  
 });
- // MENSAJE DE BIENVENIDA NUEVOS USUARIOS //
+  // MENSAJE DE BIENVENIDA NUEVOS USUARIOS //
 bot.on("guildMemberAdd", async member => {
 	  
   console.log(`${member.id} ha entrado al server `);
             
- let welcomechannel = member.guild.channels.find(`name`, "⌈💭⌋-chat-ooc");
+ let welcomechannel = member.guild.channels.find(`name`, "⌈💛⌋-bienvenida");
     let embed = { embed: {
                 color: 0xc6ff00,
-                title: "Sigue las siguientes instrucciones:",
-                description: '**Reacciona al icono** que hay en el hilo de <#719523867277787157> para poder acceder al servidor.\nSi has sido invitado por alguien abre un ticket en <#711149222279512114> y etiqueta a la persona que te ha traído.\n**Puedes descargar** <#719248404856963085> para acceder directamente al servidor o buscar RevengeR RP en la barra de búsqueda de FiveM.\n**Espero que disfrutes del servidor y de la comunidad!**', 
+                title: "Información IMPORTANTE:",
+                description: '**El acceso al servidor es **SIN WHITELIST GENERAL** solo tendrás que realizar el examen de whitelist si quieres entrar a alguna de las facciones legales *(LSPD, LSMD, Innova, Horizon o LS CUSTOM)*\n Una vez entres tendrás que poner `+solicitar` en la sala <#747351400400420894> y esperar que te verifiquen para tener acceso a todo el discord.\n**Espero que disfrutes del servidor y de la comunidad!**', 
                 
             }
     };
@@ -44,7 +44,7 @@ bot.on("guildMemberAdd", async member => {
         embed: {
                 color: 0xc6ff00,
                 title: "Hola bienvenido a RevengeR Roleplay",
-                description: '**Para informarte de como acceder al servidor. Ve a la sala <#719523867277787157>.**',   
+				description: '**El acceso al servidor es **SIN WHITELIST GENERAL** solo tendrás que realizar el examen de whitelist si quieres entrar a alguna de las facciones legales *(LSPD, LSMD, Innova, Horizon o LS CUSTOM)*\n Una vez entres tendrás que poner `+solicitar` en la sala <#747351400400420894> y esperar que te verifiquen para tener acceso a todo el discord.\n**Espero que disfrutes del servidor y de la comunidad!**',  
             }
         });
  });
