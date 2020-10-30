@@ -211,7 +211,7 @@ if(message.guild.roles.find("name", "Fundador") || message.guild.roles.find("nam
 
 		let miembro = message.guild.member(User);
 		
-		message.guild.member.addRole(role).catch(console.error);
+		miembro.guild.addRole(role).catch(console.error);
 		miembro.removeRole(role).catch(console.error);
 		
 		User.send({
