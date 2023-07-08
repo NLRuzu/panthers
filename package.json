@@ -11,6 +11,6 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "fortnite": "^4.1.1",
-    "fortnite-api": "^2.12.2"
+    "fortnite-api": "^3.4.0"
   }
 }
